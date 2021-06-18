@@ -1,0 +1,18 @@
+Player align PlayerLookPat
+/CheckCanvas off
+Prompt 'Hello, did you have something to ask?'
+Wait 1
+Label 'Loop'
+/PatientCanvas on
+If
+	/PatientCanvas/Name pressed
+Then
+/PatientCanvas/Name reset
+Prompt 'My name is Tan Ah Kow. My IC Number is S0000000X'
+Wait 2
+Prompt ''
+	$patient play TurnRight
+Do '01/CorrectPatient.txt'
+ENDIF
+Wait 1
+Goto 'Loop'

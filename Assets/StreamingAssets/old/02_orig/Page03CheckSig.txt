@@ -1,0 +1,7 @@
+If
+ConsentForm/FormGeom currentpageis 3
+Then
+SigMark on
+Else
+SigMark off
+Endif

@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 1e73434ea7fc66e478dfa449a08e4939
+timeCreated: 1533648343
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 1
+    100002: 2
+    100004: 3
+    100006: border
+    100008: box
+    100010: door
+    100012: door_1
+    100014: door_2
+    100016: lamps
+    100018: //RootNode
+    100020: room
+    100022: window
+    100024: window_1
+    100026: window_2
+    100028: window_key
+    100030: window_key_2
+    100032: window_key_3
+    100034: window_open
+    100036: window_open_1
+    100038: window_open_2
+    400000: 1
+    400002: 2
+    400004: 3
+    400006: border
+    400008: box
+    400010: door
+    400012: door_1
+    400014: door_2
+    400016: lamps
+    400018: //RootNode
+    400020: room
+    400022: window
+    400024: window_1
+    400026: window_2
+    400028: window_key
+    400030: window_key_2
+    400032: window_key_3
+    400034: window_open
+    400036: window_open_1
+    400038: window_open_2
+    2300000: 1
+    2300002: 2
+    2300004: 3
+    2300006: border
+    2300008: box
+    2300010: door
+    2300012: door_1
+    2300014: door_2
+    2300016: lamps
+    2300018: room
+    2300020: window
+    2300022: window_1
+    2300024: window_2
+    2300026: window_key
+    2300028: window_key_2
+    2300030: window_key_3
+    2300032: window_open
+    2300034: window_open_1
+    2300036: window_open_2
+    3300000: 1
+    3300002: 2
+    3300004: 3
+    3300006: border
+    3300008: box
+    3300010: door
+    3300012: door_1
+    3300014: door_2
+    3300016: lamps
+    3300018: room
+    3300020: window
+    3300022: window_1
+    3300024: window_2
+    3300026: window_key
+    3300028: window_key_2
+    3300030: window_key_3
+    3300032: window_open
+    3300034: window_open_1
+    3300036: window_open_2
+    4300000: 1
+    4300002: 2
+    4300004: 3
+    4300006: window_key_3
+    4300008: window_key_2
+    4300010: box
+    4300012: window_2
+    4300014: window_open_2
+    4300016: window_open_1
+    4300018: window_1
+    4300020: border
+    4300022: room
+    4300024: window
+    4300026: window_key
+    4300028: window_open
+    4300030: lamps
+    4300032: door
+    4300034: door_1
+    4300036: door_2
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

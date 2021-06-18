@@ -1,0 +1,17 @@
+Room	0	RoomXLGPatient_base																										
+Bed	1	PatientBed01	Patient	1																								
+Screen	1	PrivacyScreen01																										
+Bed	2	PatientBed01	Patient	1																								
+BedsideHead	2	RackInfusionBag01	InfusionBag	1	InfusionBag03																							
+Cart	2	Trolley02																										
+Screen	3	PrivacyScreen01																										
+Bed	3	PatientBed01	Patient	1																								
+BedsideHead	3	RackInfusionBag01	InfusionBag	1	InfusionBag03																							
+Bed	5	PatientBed01	Patient	1	PatientTemp																							
+BedsideHead	5	RackInfusionBag01	InfusionBag	1	InfusionBag03																							
+Screen	9	PrivacyScreen01																										
+Bed	6	PatientBed01	Patient	1	PatientTemp																							
+BedsideHead	6	RackInfusionBag01	InfusionBag	1	InfusionBag03																							
+Desk	7	Table01	Computer	1		Document	2		Document	3		Document	4															
+Chair	2	ChairOffice01																										
+Desk	8	DeskSet01	Computer	1	ComputerSetCLMM01	Phone	2	Telephone01	Document	3	DocForms	Document	4	DocGXMForm														

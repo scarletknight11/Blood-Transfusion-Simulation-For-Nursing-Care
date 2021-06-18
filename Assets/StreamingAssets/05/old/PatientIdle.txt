@@ -1,0 +1,64 @@
+#PatientIdle - main patient Loop
+# $Patient - patient object
+# $WristTag
+# $IDLabel
+
+Debug 'PatientIdle'
+Wait 1
+Player align PlayerPatPos
+JoystickCanvas on
+PatientCanvas off
+
+$Patient reset
+Debug 'PatientIdle: turning outline on'
+$Patient outline.on
+Debug 'PatientIdle: turned outline on'
+Wait 1
+$WristTag outline.on
+$IDLabel outline.on
+Label 'Loop'
+
+
+	If
+		$Patient pressed
+	Then
+		$Patient reset
+		Do '05/PatientMeet.txt'
+	Endif
+
+
+
+	If
+		$WristTag pressed
+	Then
+		$item = 'WristTag' 
+		$question = 'Is the ID label correct?'
+		$LabelPos = 'Positions/WristSpot'
+		$tasknum = 2
+		$Answer = 'Y'
+		Do '05/CheckScorableItem.txt'
+	Endif
+
+	If
+		$IDLabel pressed
+	Then
+		$IDLabel reset
+		$IDLabel outline.off
+		Do '05/IDCheck.txt'
+	Endif
+
+	If
+		GXM pressed
+	Then
+		GXM reset
+		Do '05/GXMForm.txt'
+	Endif
+
+	If
+		InfusionSet pressed
+	Then
+		InfusionSet reset
+		Do '05/Bag.txt'
+	Endif
+	Wait .1
+Goto 'Loop'

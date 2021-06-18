@@ -1,0 +1,7 @@
+If
+    ScoreTracker iscomplete 3
+Then
+    Do '05/GXMFormBlood.txt'
+Else
+    Do '05/GXMFormCheck.txt'
+Endif

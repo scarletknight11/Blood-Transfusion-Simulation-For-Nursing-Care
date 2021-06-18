@@ -1,0 +1,29 @@
+ChamberCheck off
+ChangeChamber on
+ChangeChamber/Chamber/DripRate setsaline 0
+SoundPlayer playsound 4
+Label 'Loop'
+If
+	ChangeChamber/Chamber/Increase pressed
+Then
+	ChangeChamber/Chamber/Increase reset
+	ChangeChamber/Chamber/DripRate raisesaline
+	SoundPlayer raiseinterval
+Endif
+If
+	ChangeChamber/Chamber/Decrease pressed
+Then
+	ChangeChamber/Chamber/Decrease reset
+	ChangeChamber/Chamber/DripRate reducesaline
+Endif
+If
+	ChangeChamber/Chamber/DripRate salineamount 3
+Then
+	Wait 2
+	SoundPlayer stopsound
+	ScoreTracker gain 1
+	ScoreTracker complete 5
+	Do '07/FourHourStart.txt'
+Else
+	Goto 'Loop'
+Endif

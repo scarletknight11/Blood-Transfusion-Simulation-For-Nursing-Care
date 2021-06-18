@@ -1,0 +1,14 @@
+/Enemy3 off
+/Room1/Door rotateY 1.2
+GM Sleep 1
+GM Sleep 1
+Enemy jump
+GM Sleep 2
+Enemy scale 1.0,0.50,1.0
+/Room1/Enemies/ANY scale 1.0,2.0,1.0
+GM Sleep 1
+/Room1/Enemies/ALL scale 1.0,1.0,1.0
+/RoomLight off
+GM Sleep 1
+/RoomLight on
+GM Goto 2

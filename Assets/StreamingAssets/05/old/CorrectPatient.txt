@@ -1,0 +1,16 @@
+/PatientCanvas off
+Player lookAt Patient/WristTag 0.0,0.4,-0.05
+ZoomSpot Menu.Question 'Is the ID label correct?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+    ZoomSpot Menu.Done
+Wait 1
+If
+    ZoomSpot Menu.Result Y
+Then
+    Patient/WristTag reset
+    ScoreTracker gain 1
+    ScoreTracker complete 2
+    Do '05/PatientIdle.txt'
+Endif
+Wait 1

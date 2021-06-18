@@ -1,0 +1,36 @@
+wait 1
+Player align PlayerFridge
+If
+   ScoreTracker isComplete 4
+Then
+   Return
+Endif
+wait .3
+ZoomSpot Menu.Question Place Ice Pack on Table?
+   ZoomSpot Menu.on ZoomSpot
+WaitFor 
+   ZoomSpot Menu.Done 
+Wait .1
+If
+    ZoomSpot Menu.Result Y
+Then
+   wait .3
+   IcePack align IceTable
+   Prompt 'Close fridge door'
+   wait 1
+   $RefrigeratorDoor play close
+   Prompt 'Fridge door closed'
+#   $FreezerDoor changeshader good
+   $RefrigeratorDoor outline.color good
+#   Refrigerator/Refrigerator changeshader good
+   ScoreTracker gain 1
+   ScoreTracker complete 3
+
+   #Do '03/Scene03Start.txt'
+Else
+   $RefrigeratorDoor play close
+   Wait .1
+   #Do '03/Scene03Start.txt'
+Endif
+
+Label 'end'

@@ -1,0 +1,18 @@
+BloodBag reset
+Set reset
+Player lookat ClampLook
+ZoomSpot Menu.Question 'Close Clamp?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+ZoomSpot Menu.Result Y
+Then
+	Prompt 'The Clamp has been closed.'
+	Wait 1
+	Prompt ''
+	Do '06/COWStart.txt'
+Else
+	Do '06/InfusionStart.txt'
+Endif

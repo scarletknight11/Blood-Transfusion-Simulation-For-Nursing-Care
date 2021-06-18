@@ -1,0 +1,33 @@
+Prompt 'SetCheck'
+/JoystickCanvas off
+ZoomSpot Menu.Question 'Infusion Set'
+ZoomSpot Menu.Choices 'Turn' 'Cancel' 'Put Back'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+    ZoomSpot Menu.Done
+Wait 1
+If
+    ZoomSpot Menu.Result 'Turn'
+Then
+    $InfusionSet reset
+#    $InfusionSet rotatetoy 0
+    $InfusionSet rotatetox 180
+Endif
+
+If
+    ZoomSpot Menu.Result 'Select'
+Then
+    $InfusionSet reset
+    /JoystickCanvas on
+    Do '04/SettoCow.txt'
+Else
+    $InfusionSet reset
+    $InfusionSet selectable false
+    $InfusionSet moveto $SetOrig
+    Player lookAt $InfusionSet
+    $InfusionSet matchrotation $SetOrig
+    $InfusionSet playerreplace
+    /JoystickCanvas on
+Endif
+
+/JoystickCanvas on

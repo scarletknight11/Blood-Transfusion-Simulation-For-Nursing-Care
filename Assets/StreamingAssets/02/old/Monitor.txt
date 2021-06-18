@@ -1,0 +1,11 @@
+If
+    ScoreTracker iscomplete 0
+Then
+Else
+    /Canvas/SelectionPanel off
+    wait .1
+    Player lookat $Monitor close
+    Do '02/CheckPreMonitor.txt'
+#    Player lookat $Deflook
+#    Player align $DefLook
+Endif

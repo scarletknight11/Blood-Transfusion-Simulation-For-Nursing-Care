@@ -1,0 +1,12 @@
+If
+ScoreTracker rangecomplete 2-4
+Then
+GXMForm/FormGeom changeshader good
+Else
+GXMForm/FormGeom changeshader bad
+Endif
+GXMForm reset
+GM Wait 1
+Player align DefCamPos
+GM Wait 1
+GM Do '02/Scene02Test.txt'

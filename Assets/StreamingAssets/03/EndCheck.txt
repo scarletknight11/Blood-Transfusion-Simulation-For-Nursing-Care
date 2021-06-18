@@ -1,0 +1,6 @@
+/Canvas/SelectionPanel off
+/Canvas/Table off
+ScoreTracker getcompletepercent
+Do 'Perfect.txt'
+Do 'Success.txt'
+Do 'Failure.txt'

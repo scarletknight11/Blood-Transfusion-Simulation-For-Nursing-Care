@@ -1,0 +1,29 @@
+/Enemy3 off
+GM Create 1block myWin1
+myWin1 moveTo /Room1/Windows/Window1
+GM Create 1block myWin2
+myWin2 moveTo /Room1/Windows/Window2
+GM Create 5block my5block
+my5block moveTo /Room1/Enemies/Enemy2
+GM Sleep 1
+my5block moveTo 0.0 3.0 0.0
+my5block scale 1.0 3.0 1.0
+GM Load level2.txt
+/Room1/Door rotateY 1.2
+GM Sleep 1
+GM Sleep 1
+Enemy jump
+GM Sleep 2
+Enemy scale 1.0,0.50,1.0
+GM Sleep1
+/RoomLight off
+GM Sleep 1
+/RoomLight on
+GM Sleep 1
+/Room1/Enemies/Enemy2 scale 2.0,2.0,2.0
+GM Sleep 1
+/Enemy3 on
+GM Sleep 1
+/Enemy3 follow true
+GM Sleep 4
+/Enemy3 follow false

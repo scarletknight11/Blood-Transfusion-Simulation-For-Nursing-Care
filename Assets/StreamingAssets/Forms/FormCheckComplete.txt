@@ -1,0 +1,17 @@
+#FormCheckComplete - check if entire form is complete and light up green or red
+# $formpage - name of page object
+
+$formgeom = $ formpage  + '/FormGeom'
+#Prompt $formgeom
+#Wait 5
+$formgeom outline.on
+#If
+#    ScoreTracker rangecomplete $range
+#Then
+#    $formgeom outline.color good
+#Else
+#    $formgeom outline.color bad
+#Endif
+$formpage reset
+#GM Wait .1
+#Player align DefCamPos

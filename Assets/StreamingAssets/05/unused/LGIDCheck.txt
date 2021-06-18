@@ -1,0 +1,21 @@
+#IDCheck - does two checks
+
+If
+    ScoreTracker iscomplete 4
+Then
+    $item = 'IDLabel'
+    $item rotatetoz 90
+    $LabelPos = $IDLabelPos
+    $question = 'Is the Blood Type and number correct?'
+    $Answer = 'Y'
+    $tasknum = 9
+Else
+#    Do '05/IDLabel.txt'
+    $item = 'IDLabel'
+    $item rotatetoz 90
+    $LabelPos = $IDLabelPos
+    $question = 'Is this the correct patient?'
+    $Answer = 'Y'
+    $tasknum = 4
+Endif
+Do '05/CheckScorableItem.txt'

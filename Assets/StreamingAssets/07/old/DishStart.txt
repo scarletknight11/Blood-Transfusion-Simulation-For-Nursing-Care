@@ -1,0 +1,9 @@
+WipeCanvas off
+SyringeCanvas off
+Prompt ''
+Player align DeskStart
+StandingComputerdesk/KidneyDish align DishPos
+Wait 1
+Player lookat StandingComputerdesk/KidneyDish
+Wait 1
+Do '07/Dish.txt'

@@ -1,0 +1,30 @@
+Debug 'PatientCheck.txt'
+#Start->PatientChoice->PatientMeet->PatientCheck
+#Wait 2
+Player lookat $PlayerLookPat
+/CheckCanvas off
+/JoystickCanvas off
+
+/PatientCanvas on
+/PatientCanvas/Choices/ALL off
+$Button = '/PatientCanvas/Choices/Name'
+$Button on
+$PatientFace align $PatLookPlayer
+Speaker2 'Hello, did you have something to ask?'
+Wait .1
+Label 'PCLoop'
+	/PatientCanvas on
+	If
+		$Button pressed
+	Then
+		Speaker2 ''
+		$Button reset
+		Speaker1 'My name is Tan Ah Kow. My IC Number is S0000000X'
+		Wait 2
+		Speaker1 ''
+		$PatientFace align $PatLookReset
+		Do '01/LG01CorrectPatient.txt'
+		Return
+	Endif
+	Wait .1
+Goto 'PCLoop'

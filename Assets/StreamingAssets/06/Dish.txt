@@ -1,0 +1,39 @@
+WipeCanvas off
+SyringeCanvas off
+$KidneyDish reset
+Prompt ''
+$KidneyDish align DishPos
+Wait 1
+Player lookat $KidneyDish
+Wait .1
+$Wipe1 outline.on
+$Syringe outline.on
+$Wastebin outline.on
+
+Label 'DishLoop'
+	If
+		$Wipe1 pressed
+	Then 
+		$Wipe1 resetPressed
+		Do '06/WipeCheck.txt'
+		$Wipe1 outline.off
+	Endif
+
+	If
+		$Syringe pressed
+	Then
+		$Syringe resetPressed
+		$Syringe align $WristTag
+		Do '06/SyringeCheck.txt'
+		$Syringe outline.off
+	Endif
+
+	If
+		$Wastebin pressed
+	Then
+		$Wastebin resetPressed
+		Do '06/Garbage.txt'
+		$Wastebin outline.off
+	Endif
+	Wait .1
+Goto 'DishLoop'

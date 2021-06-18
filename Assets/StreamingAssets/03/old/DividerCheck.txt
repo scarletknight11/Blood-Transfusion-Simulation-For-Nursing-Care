@@ -1,0 +1,21 @@
+#If
+#    ScoreTracker iscomplete 4
+#Then
+#    Goto 6
+#Endif
+
+If
+    ScoreTracker iscomplete 0
+Then
+    BloodBox/Divider play In
+Else
+    Return
+Endif
+
+If
+    ScoreTracker iscomplete 4
+Then
+    ScoreTracker gain 1
+    ScoreTracker complete 5
+    wait 1
+Endif

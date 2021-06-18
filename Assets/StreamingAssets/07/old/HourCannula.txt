@@ -1,0 +1,15 @@
+CannulaCanvas off
+Player align CannulaSpot 
+ZoomSpot Menu.Question 'Is the site clear?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+If
+ZoomSpot Menu.Result Y
+Then
+ScoreTracker gain 1
+ScoreTracker complete 3
+Do '07/HourStart.txt'
+Else
+Do '07/HourStart.txt'
+Endif

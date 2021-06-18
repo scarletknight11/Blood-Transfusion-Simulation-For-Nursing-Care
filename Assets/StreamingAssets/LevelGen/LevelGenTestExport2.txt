@@ -1,0 +1,57 @@
+Room	0	RoomMedExam_base												
+Bed	1	PatientBed01												
+Wall	1	Poster05												
+BedsideHead	1	RackInfusionBottle01	InfusionBottle	1	InfusionBottle01	InfusionBottleLiquid	1	InfusionBottleLiquid01	InfusionBottle	2	InfusionBottle04	InfusionBottleLiquid	2	InfusionBottleLiquid03
+BedsideMid	1													
+BedsideFoot	1													
+Cart	1	Trolley01												
+Screen	1	PrivacyScreen01												
+Screen	2	PrivacyScreen01												
+Bed	2	ExaminationBed01												
+Wall	2													
+BedsideHead	2													
+BedsideMid	2													
+BedsideFoot	2													
+Cart	2													
+Screen	3													
+Screen	4													
+Bed	3	OperatingTable01												
+Wall	3													
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														

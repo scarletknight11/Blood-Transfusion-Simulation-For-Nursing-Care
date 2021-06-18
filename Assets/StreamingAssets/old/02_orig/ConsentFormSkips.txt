@@ -1,0 +1,8 @@
+If
+ScoreTracker rangecomplete 5-8
+Then
+Goto 'Skip'
+Else
+Do '02/ConsentForm.txt'
+Endif
+Label 'Skip'

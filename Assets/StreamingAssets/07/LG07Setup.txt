@@ -1,0 +1,44 @@
+ScoreTracker setstages 7
+End off
+
+$Patient = 'Bed2/Patient1/TEMP_Patient'
+#$Patient = 'Bed2/Patient1/TempPatient_Rigged'
+$PatientFace = $Patient + '/metarig/spine/spine.001/spine.002/spine.003/spine.004'
+$PatLookPlayer = $Patient + '/TurntoPlayer'
+$PatLookReset = $Patient + '/TurnForward'
+
+#$Patient = 'Bed2/Patient1'
+$PlayerPatLook = 'Bed2 close'
+
+$Vitalsmonitor = 'BedsideHeadLeft2/Computer1'
+$Monitorlook = 'BedsideHeadLeft2/Computer1/Medium'
+
+
+$InfusionStand = 'BedsideHead2'
+$Cannula = 'BedsideHead2/IV4'
+$InfusionSet = 'BedsideHead2/InfusionBag1'
+$InfusionClamp = 'BedsideHead2/IV3'
+
+$COWComputer = 'Cart2/Computer1'
+$DeskStart = 'Cart2/Computer1 far'
+
+$PressureCuff = 'Cart2/Misc7'
+$CuffPos = 'Bed2/Patient1/cube'
+
+$Soap = 'COW1(Clone)/LiquidSoap(Clone)'
+$SoapSpot = 'Cart2/Pos06'
+
+$Gloves = 'COW1(Clone)/Gloves(Clone)'
+
+$DishDefPos = 'COW1(Clone)/DishPos'
+$GlovesDefPos = 'COW1(Clone)/GlovesPos'
+
+$KidneyDish = 'COW1(Clone)/KidneyDish(Clone)'
+$Wipe1 = 'Cart2/Misc2/Wipe1'
+$Wipe2 = 'Cart2/Misc2/Wipe2'
+$Syringe = 'Cart2/Misc2/Syringe'
+$DishPos = 'Cart2/Pos02'
+$Vitalsmonitor off
+$Gloves align $GlovesDefPos
+$KidneyDish align $DishDefPos
+Do '07/07Start.txt'

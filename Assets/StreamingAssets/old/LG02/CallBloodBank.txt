@@ -1,0 +1,19 @@
+Wait .3
+ZoomSpot Menu.Question Call Blood Bank?
+ZoomSpot Menu.on ZoomSpot
+WaitFor 
+ZoomSpot Menu.Done 
+Wait 1
+If
+    ZoomSpot Menu.Result Y
+Then
+   ScoreTracker gain 1
+   ScoreTracker complete 1
+   wait 1
+   Phone changeshader good
+Else
+Endif
+Wait .31
+Player align DefLook
+Wait .31
+Do 'EndCheck.txt'

@@ -1,0 +1,19 @@
+Player lookAt ConsentForm/DateLine 0.0,0.1,-0.05
+GM Wait 1
+   ZoomSpot Menu.Question Are the dates valid?
+   ZoomSpot Menu.on ZoomSpot
+GM WaitFor 
+   ZoomSpot Menu.Done 
+GM Wait 1
+GM If
+    ZoomSpot Menu.Result Y
+GM Then
+GM  Create CheckMark 'DateMark'
+ScoreTracker gain 1
+ScoreTracker complete 5
+GM Else
+GM   Create XMark 'DateMark'
+GM Endif
+   DateMark MoveTo ConsentForm/DateLine
+GM Wait 1
+   ConsentForm lookAtMe 0.0,0.3,-0.05

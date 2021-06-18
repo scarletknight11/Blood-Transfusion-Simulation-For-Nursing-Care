@@ -1,0 +1,4 @@
+########################################
+#create and position a window just for fun to know reached end
+GM Create 1block myWin2        
+myWin2 moveTo /ExamRoom1/Windows/Window2

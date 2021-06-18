@@ -1,0 +1,19 @@
+Wait 1
+   ZoomSpot Menu.Question Is there a valid prescription?
+   ZoomSpot Menu.on ZoomSpot
+WaitFor 
+   ZoomSpot Menu.Done 
+Wait 1
+If
+    ZoomSpot Menu.Result Y
+Then
+   Monitor changeshader good
+   wait 1
+   ScoreTracker gain 1
+   ScoreTracker complete 0
+Else
+   ScoreTracker gain 0
+Endif
+Wait .51
+Player align DefLook
+Wait .51

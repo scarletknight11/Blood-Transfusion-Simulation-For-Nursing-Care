@@ -1,0 +1,44 @@
+/PatientCanvas off
+JoystickCanvas on
+WipeCanvas off
+SyringeCanvas off
+$InfusionStand off
+DripCanvas off
+ClampCanvas off
+Prompt ''
+
+$Patient outline.on
+$Vitalsmonitor outline.on
+$COWComputer outline.on
+$Nurse align $NursePatPos 2 #Player
+
+Player align PlayerStart
+Label 'Loop'
+	If
+		$Patient pressed
+	Then
+		$Patient reset
+		$Patient outline.off
+		Do '06/PatientCheck.txt'
+		Player align PlayerStart
+	Endif
+
+	If
+		$Vitalsmonitor pressed
+	Then
+		$Vitalsmonitor outline.off
+		$Vitalsmonitor reset
+		Do '06/Monitor.txt'
+		Player align PlayerStart
+	Endif
+	
+	If
+		$COWComputer pressed
+	Then
+		$COWComputer outline.off
+		$COWComputer reset
+		Do '06/COWStart.txt'
+		Player align PlayerStart
+	Endif
+	Wait 1
+Goto 'Loop'

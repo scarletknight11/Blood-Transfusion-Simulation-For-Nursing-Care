@@ -1,0 +1,79 @@
+# $formPage - name of form's current page, e.g. GMX or ConsentForm/Pages/Page01
+# $question - question to ask, e.g. 'Is the page signed?'
+# $formitem - object location name e.g. GMX/Signature
+# $item     - item number for ScoreTracker
+
+   Debug 'CheckFormItemStatus.txt start'
+#   Wait 1
+   $formitem clickable.reset
+   Debug 'Clickable.reset ' + formitem
+   #Wait .3
+   #Debug ''
+
+   $mark =  formitem+'itemMark'
+   If
+      $formitem exists $mark 
+   Then
+      Debug 'About to delete ' + mark
+#      Wait 2
+      Destroy $mark
+      Debug 'Deleted ' + mark
+#      Wait 2
+   Endif
+
+
+   $formitem lookAtMe 0 .1 -.03
+   Wait .2
+   $formPage Menu.Question $question
+
+   Debug 'CheckFormItemStatus:Menu.on' + formPage + ':' + formitem
+#   Wait 2
+
+   If
+      isOff $formPage
+   Then
+      Debug 'CheckFormItemStatus:formPage is off for ' + formpage + ':' +  formitem
+#      Wait 5
+      Return
+   Endif
+
+   Debug 'Turning Menu ON'
+
+   $formPage Menu.on $formitem
+   Debug 'Menu should be ON'
+   #Wait 2
+
+   Debug 'CheckFormItemStatus:Menu should be on for' + formpage + ':' +  formitem
+#   Wait 5
+
+   
+   WaitFor 
+      $formPage Menu.Done 
+
+   Wait .1
+   If
+      $formPage Menu.Result Y
+   Then
+      Create CheckMark $mark
+      ScoreTracker gain 1
+      ScoreTracker complete $item
+   Else
+      Create XMark $mark
+      Debug 'CREATE XMARK'
+ #    Wait 5
+      ScoreTracker incomplete $item
+   Endif
+
+   $formitem reset
+
+   #Debug 'Aligning mark ' + mark + ' with ' + formitem
+   $mark align $formitem
+   #Debug 'Aligned mark ' + mark + ' with ' + formitem
+   $mark AttachTo $formitem
+   #Debug 'Attached mark ' + mark + ' to ' + formitem
+   Wait 1.1991
+   $formPage lookAtMe 0 .35 -.1
+#   $formPage lookAt medium  #zoom out still looking at $formPage
+   Wait .1
+   Debug 'CheckFormItemStatus.txt end'
+#   Wait 2

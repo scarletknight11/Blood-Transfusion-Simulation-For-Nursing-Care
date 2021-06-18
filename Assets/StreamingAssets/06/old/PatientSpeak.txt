@@ -1,0 +1,19 @@
+Prompt 'Nurse, are you giving me the blood transfusion?'
+Wait 2
+Speaker1 'Yes. When the blood is transfusing, let me know'
+Wait 2
+Speaker1 'if you feel unwell, like chills, rigor, or fever.'
+Wait 2
+Speaker1 'Also let me know if you notice any'
+Wait 2
+Speaker1 ' red sports or rashes over your body.'
+Wait 2
+Prompt 'How long will it take?'
+Wait 2
+Speaker1 'The transfusion takes about 4 hours.'
+Wait 2
+Prompt 'Okay. Thank you'
+Wait 2
+Speaker1 ''
+Prompt ''
+Do '06/06Start.txt'

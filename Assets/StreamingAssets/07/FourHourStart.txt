@@ -1,0 +1,103 @@
+/FourStartCanvas on
+/PatientCanvas off
+/CannulaCanvas off
+/ComplaintCanvas off
+/TimeCanvas off
+ChamberCheck off
+ChamberCanvas off
+/ChangeChamber off
+/StartCanvas off
+ClampCanvas off
+/Player align PlayerStart
+Speaker1 ''
+$InfusionSet outline.off
+If
+ScoreTracker iscomplete 6
+Then
+$Vitalsmonitor outline.off
+Else
+$Vitalsmonitor outline.on
+Endif
+If
+ScoreTracker iscomplete 7
+Then
+$Cannula outline.off
+Else
+$Cannula outline.on
+Endif
+If
+ScoreTracker iscomplete 8
+Then
+$Patient outline.off
+Else
+$Patient outline.on
+Endif
+If
+ScoreTracker iscomplete 10
+Then
+$Soap outline.off
+Else
+$Soap outline.on
+Endif
+If
+ScoreTracker iscomplete 11
+Then
+$Gloves outline.off
+Else
+$Gloves outline.on
+Endif
+If
+ScoreTracker iscomplete 15
+Then
+$KidneyDish outline.off
+Else
+$KidneyDish outline.on
+Endif
+Prompt 'After 4 hours of starting Blood Transfusion'
+Wait 2
+Prompt ''
+Label 'Loop'
+If
+	$Vitalsmonitor pressed
+Then
+	$Vitalsmonitor reset
+	Do '07/Vitals.txt'
+Endif
+If
+	$Cannula pressed
+Then
+	$Cannula reset
+	Do '07/FinalCannulaCanvas.txt'
+Endif
+If
+	$Patient pressed
+Then
+	$Patient reset
+	Do '07/Patient03.txt'
+Endif
+If
+	$InfusionClamp pressed
+Then
+	$InfusionClamp reset
+	Do '07/Clamp.txt'
+Endif
+If
+	$Soap pressed
+Then
+	$Soap reset
+	Do '07/Sanitizer.txt'
+Endif
+If
+	$Gloves pressed
+Then
+	$Gloves reset
+	Do '07/Gloves.txt'
+Endif
+If
+	$KidneyDish pressed
+Then
+	$KidneyDish reset
+	Do '07/DishStart.txt'
+Endif
+Wait 1
+Goto 'Loop'

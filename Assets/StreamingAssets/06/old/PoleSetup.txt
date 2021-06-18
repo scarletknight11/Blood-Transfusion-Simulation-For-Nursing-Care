@@ -1,0 +1,21 @@
+Player align PoleLook
+BloodCanvas off
+ZoomSpot Menu.Question 'Hang set on drip pole?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+ZoomSpot Menu.Result Y
+Then
+	/InfusionStand on
+	Player align IVLook
+	BloodBag align Wastebin
+	ScoreTracker gain 1
+	ScoreTracker complete 8
+	Set off
+Wait 1
+	Do '06/InfusionStart.txt'
+Else
+	Goto 2
+Endif

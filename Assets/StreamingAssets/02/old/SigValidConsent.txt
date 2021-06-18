@@ -1,0 +1,19 @@
+Player lookAt ConsentForm/SignatureLine 0.0,0.1,-0.05
+GM Wait 1
+   ZoomSpot Menu.Question Are the signatures valid?
+   ZoomSpot Menu.on ZoomSpot
+GM WaitFor 
+   ZoomSpot Menu.Done 
+GM Wait 1
+GM If
+    ZoomSpot Menu.Result Y
+GM Then
+GM  Create CheckMark 'SigMark'
+ScoreTracker gain 1
+ScoreTracker complete 6
+GM Else
+GM   Create XMark 'SigMark'
+GM Endif
+   SigMark MoveTo ConsentForm/SignatureLine
+GM Wait 1
+   ConsentForm lookAtMe 0.0,0.3,-0.05

@@ -1,0 +1,4 @@
+<map id="RoomObject.Spawn" name="RoomObject.Spawn">
+<area shape="rect" id="node2" href="$class_room_generator.html#ae830ed790aac77b46d07122adfeabf8b" title="An object finished spawning in. If we&#39;ve finished spawning all objects, tell the Game Manager to star..." alt="" coords="195,5,389,43"/>
+<area shape="rect" id="node3" href="$class_game_manager.html#a0a09751dc063771cce98baeaff6dca56" title="StartScenario is a public function that allows another script to start the scene&#39;s scenario (RoomGene..." alt="" coords="438,11,632,37"/>
+</map>

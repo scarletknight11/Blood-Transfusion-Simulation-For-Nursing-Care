@@ -1,0 +1,15 @@
+Debug 'LG04SetPicking'
+
+Label 'Scene04_SetLoop'
+	Wait .1
+	If
+		$InfusionSet pressed
+	Then
+		$InfusionSet reset
+		$InfusionSet moveto ZoomSpot
+		$InfusionSet localrotatetoy 90
+		#$InfusionSet rotatetox 180
+		$InfusionSet playerchose
+		Wait 1
+		Do '04/LG04SetCheck.txt'
+	Endif

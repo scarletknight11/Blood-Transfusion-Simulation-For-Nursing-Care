@@ -1,0 +1,7 @@
+/Canvas/SelectionPanel off
+/Canvas/BoxPanel1 on
+Player lookAt BloodBox
+Player follow BloodBox
+ Wait 1
+Player follow false
+ Goto 2

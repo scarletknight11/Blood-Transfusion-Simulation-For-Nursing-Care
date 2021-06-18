@@ -1,0 +1,31 @@
+#EndCheck - check score and present end screen, called by Phone.txt
+Canvas off
+ScoreTracker getcompletepercent
+#Do 'Perfect.txt'
+If
+    ScoreTracker allcomplete
+Then
+    PerfectEnd on
+Else
+    #Do 'Success.txt'
+    If
+        ScoreTracker percentachieved 88
+    Then
+        GoodEnd on
+        UICompletionTracker showtext
+    Else
+        #Do 'Failure.txt'
+        BadEnd on
+        UICompletionTracker showtext
+    Endif
+Endif
+
+
+Label 'Loop'
+    If
+        End pressed
+    Then
+        End reset
+        SceneManager switchtoscene Scenes/MainMenu
+    Endif
+Goto 'Loop'

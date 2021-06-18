@@ -1,0 +1,53 @@
+#Document4 = GXMForm
+#Document3 = ConsentForms
+End off
+
+$Desk = 'Desk8'
+$Monitor = $Desk + '/Computer1' #'Monitor'
+$GXMForm = $Desk + '/Document4'
+$ConsentForms = $Desk + '/Document3'
+$Phone = $Desk + '/Phone2' #'Phone'
+
+$GXMForm rotatetoy 180
+$ConsentForms rotatetoy 180
+
+$ConsentForms outline.on
+$ConsentFormsButtons = $ConsentForms + '/Buttons'
+#prompt $ConsentFormsButtons
+turnOff $ConsentFormsButtons
+#$ConsentForms outline.color good
+#Wait 5
+
+
+#$Deflook = $Desk + ' medium'
+#$Deflook = 'DefLook medium'
+$Deflook = $Desk + '/ShotMedium'
+
+$GXMForm outline.on
+$ConsentForms outline.on
+$Phone outline.on
+$Monitor outline.on
+
+$MonLook = $Monitor + ' close'
+$GXMLook = $GXMForm + '/ShotMedium'
+#$GXMLook = $GXMForm + ' medium'
+#$ConLook = $ConsentForms + ' medium'
+$ConLook = $ConsentForms + '/ShotMedium'
+$PhoLook = $Phone +' close'
+
+#ScoreTracker setstages 2
+ScoreTracker numItems 9
+
+$ItemCompDone = 0
+$ItemPhoneDone = 1
+$ItemGXMpatient = 2
+$ItemGXMblood = 3
+$ItemGXMvalid = 4
+$ItemConsentDates = 5
+$ItemConsentSignature = 6
+$ItemConsentPatient = 7
+$ItemConsentIC = 8
+
+Player lookat $Deflook
+wait 1
+Do '02/02MainLoop.txt'

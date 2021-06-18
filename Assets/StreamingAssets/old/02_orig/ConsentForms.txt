@@ -1,0 +1,53 @@
+ConsentForms lookAtMe 0.0,0.3,-0.05
+Label 'PageCheck'
+Do '02/ConsentFormMarkCheck.txt'
+If 
+    ConsentForm/Canvas/Exit pressed
+Then
+    ConsentForm/Canvas/Exit reset
+    Do '02/ConsentEnd.txt'
+    Player align DefLook
+    ConsentForm/FormGeom reset
+    Do '02/Scene02Test.txt'
+Endif
+If
+    ConsentForm/FormGeom currentpageis 0
+Then
+    Goto 'PatientLine'
+Else
+    Goto 'SkipPatient'
+Endif
+Label 'PatientLine'
+If
+    ConsentForm/PatientLine pressed
+Then 
+    ConsentForm/PatientLine reset
+    Do '02/PatientCheckConsent.txt'
+Endif
+Label 'SkipPatient'
+If
+    ConsentForm/FormGeom currentpageis 3
+Then
+    Goto 47
+Else
+    Goto 'PageCheck'
+Endif
+If
+    ConsentForm/DateLine pressed
+Then 
+    ConsentForm/DateLine reset
+    Do '02/DateCheckConsent.txt'
+Endif
+If
+    ConsentForm/SignatureLine pressed
+Then 
+    ConsentForm/SignatureLine reset
+    Do '02/SigValidConsent.txt'
+Endif
+If
+    ConsentForm/ValidLine pressed
+Then 
+    ConsentForm/ValidLine reset
+    Do '02/ValidConsent.txt'
+Endif
+Goto 'PageCheck'

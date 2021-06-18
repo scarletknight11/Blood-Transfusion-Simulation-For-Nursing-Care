@@ -1,0 +1,19 @@
+Player align MonitorLook
+FourStartCanvas off
+ZoomSpot Menu.Question 'Are the vitals good?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+ZoomSpot Menu.Result Y
+Then
+Wait 1
+ScoreTracker gain 1
+ScoreTracker complete 6
+Vitalsmonitor reset
+	Do '07/FourHourStart.txt'
+Else
+Vitalsmonitor reset
+	Do '07/FourHourStart.txt'
+Endif

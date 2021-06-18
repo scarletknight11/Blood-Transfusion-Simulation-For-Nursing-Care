@@ -1,0 +1,9 @@
+Label 'Loop'
+    If
+        DoorSingle pressed
+    Then
+        DoorSingle reset
+        Do '04/Door.txt'
+    Endif
+    Wait .1
+Goto 'Loop'

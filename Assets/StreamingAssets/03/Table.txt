@@ -1,0 +1,39 @@
+wait .1
+Player align PlayerPos
+wait .1
+$Table outline.off
+$Paper outline.on
+$Divider outline.on
+$Lid outline.on
+
+Label 'Loop'
+    wait .1
+    If
+        $Lid pressed
+    Then
+        $Lid reset
+        Do '03/LidOpen.txt'
+    ENDIF
+
+    If
+        $IcePack pressed
+    Then
+        $IcePack reset
+        Do '03/IceBoxCheck.txt'
+    ENDIF
+
+    If
+        $Divider pressed
+    Then
+        $Divider reset
+        Do '03/DividerCheck.txt'
+    ENDIF
+
+    If
+        $Paper pressed
+    Then
+        $Paper reset
+        Do '03/GXMCheck.txt'
+    ENDIF
+
+Goto 'Loop'

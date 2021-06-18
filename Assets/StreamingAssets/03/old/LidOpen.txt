@@ -1,0 +1,13 @@
+If
+    ScoreTracker iscomplete 1
+Then
+    Do '03/LidClose.txt'
+Else
+    BloodBox play Open
+    ScoreTracker gain 2
+    ScoreTracker complete 0
+    ScoreTracker complete 1
+    wait 1
+    BloodBox/Divider play Out
+    $lidoff = (lidoff = false)
+Endif

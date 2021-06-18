@@ -1,0 +1,22 @@
+#TURN ON/OFF MARKS DEPENDING ON IF ON RIGHT PAGE
+If
+ConsentForm exists PatiMark
+Then
+Do '02/Page01Check.txt'
+Endif
+If
+ConsentForm exists ConMark
+Then
+Do '02/Page03CheckCon.txt'
+Endif
+If
+ConsentForm exists DateMark
+Then
+Do '02/Page03CheckDate.txt'
+Endif
+If
+ConsentForm exists SigMark
+Then
+Do '02/Page03CheckSig.txt'
+Endif
+

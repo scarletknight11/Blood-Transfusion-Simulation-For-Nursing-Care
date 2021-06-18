@@ -1,0 +1,6 @@
+If 
+  $formitem pressed
+Then
+  $formitem reset
+  Do 'Forms/CheckFormItemStatus.txt'
+Endif

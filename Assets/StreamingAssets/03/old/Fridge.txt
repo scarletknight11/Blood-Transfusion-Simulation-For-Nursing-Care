@@ -1,0 +1,5 @@
+If
+    ScoreTracker iscomplete 2
+Then
+    Do '03/IceFromFridge.txt'
+Endif

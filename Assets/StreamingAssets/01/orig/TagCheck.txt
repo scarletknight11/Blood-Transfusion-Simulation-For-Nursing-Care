@@ -1,0 +1,19 @@
+Player align TagView
+ZoomSpot Menu.Question 'Is the name correct?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+ZoomSpot Menu.Result Y
+Then
+Wait 1
+	$WristTag reset
+	ScoreTracker gain 1
+	ScoreTracker complete 5
+Do '01/PatientChoice.txt'
+Else
+$WristTag reset
+Do '01/PatientChoice.txt'
+Endif
+Wait 1

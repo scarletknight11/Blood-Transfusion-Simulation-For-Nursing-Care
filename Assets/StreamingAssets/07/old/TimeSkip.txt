@@ -1,0 +1,21 @@
+/TimeCanvas on
+Label 'Loop'
+If
+	TimeKeeper timeequals 60
+Then
+	Do '07/TimeCorrect.txt'
+Endif
+If
+	/TimeCanvas/Time/Increase pressed
+Then
+	/TimeCanvas/Time/Increase reset
+	TimeKeeper increasetime
+Endif
+If
+	/TimeCanvas/Time/Decrease pressed
+Then
+	/TimeCanvas/Time/Decrease reset
+	TimeKeeper decreasetime
+Endif
+Wait 1
+Goto 'Loop'

@@ -1,0 +1,22 @@
+#IsThisCorrect
+# $item - item to check
+# $tasknum - which number task would be done
+# $LabelPos - place to align item
+# $Answer - the correct answer for the sccorable item
+$item align ZoomSpot
+Debug 'CheckScorableItem' + $item
+
+ZoomSpot Menu.Question $question
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+	ZoomSpot Menu.Done
+Wait .1
+$item reset
+$item outline.off
+If
+	ZoomSpot Menu.Result $Answer
+Then
+	ScoreTracker gain 1
+	ScoreTracker complete $tasknum
+Endif
+$item align $LabelPos 0.2

@@ -1,0 +1,14 @@
+/Patient on
+/Room1/Door rotateY 1.2
+GM Sleep 1
+GM If
+/RoomLight isOn
+GM Then
+Enemy jump
+/RoomLight off
+GM Sleep 2
+GM Else
+/RoomLight on
+GM Sleep 2
+GM Endif
+#GM Goto 2

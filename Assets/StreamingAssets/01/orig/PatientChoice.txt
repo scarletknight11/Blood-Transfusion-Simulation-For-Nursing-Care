@@ -1,0 +1,33 @@
+Player align PlayerPatPos
+COW moveto COWPatientPos
+JoystickCanvas on
+PatientCanvas off
+CheckCanvas off
+wait 1
+Label 'Loop'
+If
+	Nurse pressed
+Then
+	Nurse reset
+	Player lookat Nurse
+	Do '01/NurseCall.txt'
+ENDIF
+If
+	Patient pressed
+Then
+	Patient reset
+	Do '01/PatientMeet.txt'
+Endif
+If
+	WristTag pressed
+Then
+	WristTag reset
+	Do '01/TagCheck.txt'
+Endif
+If
+	IDLabel pressed
+Then
+	IDLabel reset
+	Do '01/LabelBlood.txt'
+Endif
+Goto 'Loop'

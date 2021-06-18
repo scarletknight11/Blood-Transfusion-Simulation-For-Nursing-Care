@@ -1,0 +1,23 @@
+/JoystickCanvas off
+$Nurse outline.on
+$Nurse Menu.Question 'Call Nurse?'
+$Nurse Menu.on ZoomSpot
+WaitFor
+    $Nurse Menu.Done
+Wait 1
+If
+    $Nurse Menu.Result Y
+Then
+    $Nurse reset
+    $Nurse outline.off
+    $Nurse selectable false
+    $Nurse align $NursePatPos 3
+    ScoreTracker gain 1
+    ScoreTracker complete 3
+#    Do '01/LG01PatientChoice.txt'
+Else
+    $Nurse reset
+#    Do '01/LG01PatientChoice.txt'
+Endif
+/JoystickCanvas on
+#Wait 1

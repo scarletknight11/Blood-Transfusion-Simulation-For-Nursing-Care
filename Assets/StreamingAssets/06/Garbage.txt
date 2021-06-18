@@ -1,0 +1,11 @@
+Player lookat $DeskStart
+$KidneyDish align $DishDefPos
+Wait 1
+$Wastebin play Open
+$Wipe1 align $Wastebin
+$Wipe2 align $Wastebin
+$Syringe align $Wastebin
+ScoreTracker gain 1
+ScoreTracker complete 6
+Wait 1
+Do '06/COWStart.txt'

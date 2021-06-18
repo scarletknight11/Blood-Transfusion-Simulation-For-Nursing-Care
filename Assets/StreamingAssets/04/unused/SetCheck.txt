@@ -1,0 +1,26 @@
+Prompt 'SetCheck'
+/JoystickCanvas off
+ZoomSpot Menu.Question 'Flip Set?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+    ZoomSpot Menu.Done
+Wait 1
+If
+    ZoomSpot Menu.Result Y
+Then
+    $InfusionSet reset
+#    $InfusionSet rotatetoy 0
+    $InfusionSet localrotatetoy 180
+    Do '04/SetChosen.txt'
+    /JoystickCanvas on
+Else
+    Do '04/SetChosen.txt'
+    /JoystickCanvas on
+    Return
+    $InfusionSet reset
+    $InfusionSet moveto $SetOrig 
+    $InfusionSet matchrotation $SetOrig
+    $InfusionSet playerreplace
+#    Do '04/SetPicking.txt'
+Endif
+Wait .3

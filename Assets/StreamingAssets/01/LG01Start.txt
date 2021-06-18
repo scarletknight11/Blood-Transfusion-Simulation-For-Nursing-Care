@@ -1,0 +1,62 @@
+Debug 'Entering Start.txt'
+Player lookat $Deflook
+	/CheckCanvas off
+	/PatientCanvas off
+
+
+$GXMForm outline.on
+$IDLabel outline.on
+$Bed outline.on
+$TaskSpoke = 0
+$TaskBlood = 0
+
+Label '01Loop'
+	/CheckCanvas off
+	/PatientCanvas off
+	#/PatientCanvas on
+	#Do '01/LG01PatientCheck.txt'
+
+
+	#If
+	#	$Nurse pressed
+	#Then
+	#	Do '01/LG01NurseCall.txt'
+	#Endif
+
+	If
+		$GXMForm pressed
+	Then
+		$GXMForm outline.color good
+#		Wait 5
+#		$GXMForm outline.off
+		$GXMForm resetPressed
+		$GXMForm align $GXMDeskPos
+		$GXMForm parentto $COW
+		ScoreTracker gain 1
+		ScoreTracker complete 1
+	ENDIF
+
+	Wait .1
+	
+	If
+		$IDLabel pressed
+	Then
+		$IDLabel outline.color good
+#		$IDLabel outline.off
+		$IDLabel resetPressed
+		$IDLabel align $IDDeskPos
+		$IDLabel parentto $COW
+		ScoreTracker gain 1
+		ScoreTracker complete 0
+	ENDIF
+	Wait 1
+	If
+		$Bed pressed
+	Then
+		$Bed outline.off
+		$Bed resetPressed
+		ScoreTracker gain 1
+		ScoreTracker complete 2
+		Do '01/LG01PatientChoice.txt'
+	ENDIF
+Goto '01Loop'

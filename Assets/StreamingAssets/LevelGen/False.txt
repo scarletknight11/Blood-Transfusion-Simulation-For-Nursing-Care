@@ -1,0 +1,4 @@
+Room	0	RoomMedExam_base												
+Bed	1	PatientBed01	Patient	1	PatientTemp									
+Wall	1	Poster02												
+BedsideHead	1	RackInfusionBottle01	InfusionBottle	1		InfusionBottleLiquid	1	InfusionBottleLiquid03	InfusionBottle	2		InfusionBottleLiquid	2	InfusionBottleLiquid03

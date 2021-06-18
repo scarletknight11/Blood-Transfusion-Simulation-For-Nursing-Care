@@ -1,0 +1,4 @@
+End off
+ScoreTracker setstages 2
+wait 1
+Do '02/Scene02Test.txt'

@@ -1,0 +1,63 @@
+#GXMForm.txt - Loop and check all the form items
+Debug 'GXMForm.txt'
+#Wait 3
+
+$GXMForm clickable false
+$GMXView = $GXMForm+'/ShotClose'
+Player align $GMXView
+$ValidItem = $GXMForm + '/ValidLine'
+$ValidItem clickable false
+
+Prompt ''
+
+$GXMForm resetPressed
+$itemCheck = 'Forms/CheckFormItemPressed.txt'
+$formPage = $GXMForm
+
+Debug 'GXMForm.txt : Entering Loop'
+
+Label 'GXMLoop'
+    Debug 'GXMForm.txt : In Loop'
+
+    #### BLOODLINE
+    $item = '7'
+#    Do 'Forms/CheckItemSkip.txt'
+#    $formitem = $GXMForm + '/BloodLine'
+    $formitem = 'BloodLine'
+    $question = 'Is this the correct blood type?'
+    Do $itemCheck
+
+    #### SIGNATURELINE
+    Wait 0.03
+
+    $item = '3'
+#    Do 'Forms/CheckItemSkip.txt'
+    $formitem = 'SignatureLine'
+    $question = 'Is this the correct name and IC Number?'
+    Do $itemCheck
+
+    #### EXIT
+    $Exit = $GXMForm + '/Buttons/Exit'
+    If
+      $Exit pressed
+    Then
+      Debug 'Exiting Form'
+      $Exit reset
+  #    $range = '2-4'
+  #    Do 'Forms/FormCheckComplete.txt'
+      Return                
+    Endif
+    Wait 0.03
+
+Goto 'GXMLoop'
+
+#  If
+#    ScoreTracker iscomplete 3
+#  Then
+#    Player align $PlayerPatPos
+#    $GXMForm clickable true
+#    Return
+ # #  Do '05/PatientIdle.txt'
+ # #Else
+ # #  Goto 'GXMLoop'
+ # Endif

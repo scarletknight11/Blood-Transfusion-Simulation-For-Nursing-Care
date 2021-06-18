@@ -1,0 +1,11 @@
+Prompt 'I am prompt 1'
+Wait 1
+Speaker1 'I am speaker 1'
+Wait 1
+Speaker2 'I am speaker 2'
+Wait 1
+Speaker1 'Hello'
+Wait 1
+Speaker2 ''
+Wait 1
+Goto 1

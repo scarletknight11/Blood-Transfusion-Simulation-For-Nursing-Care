@@ -1,0 +1,55 @@
+ScoreTracker setstages 6
+End off
+$Patient = 'Bed2/Patient1/TEMP_Patient'
+$WristTag = 'Bed2/Patient1/WristTag'
+$Nurse = 'Nurse1'
+$PatientFace = $Patient + '/metarig/spine/spine.001/spine.002/spine.003/spine.004'
+$PatLookPlayer = $Patient + '/TurntoPlayer'
+$PatLookReset = $Patient + '/TurnForward'
+$NurseFace = $Nurse + '/Eyes'
+$NursePatPos = 'Bed02Nurse'
+$Player = 'Player'
+$IVLook = 'Positions/IVLook'
+
+#$PatLook = 'Bed2 close'
+$PatLook = 'PatLook'
+$DeskStart = 'Cart2/Computer1 far'
+
+$Vitalsmonitor = 'BedsideHeadLeft2/Computer1'
+$Monitorlook = $Vitalsmonitor+ '/Close'
+
+$InfusionStand = 'InfusionStandScene06(Clone)'
+$SetBag = $InfusionStand+ '/LINE/InfusionSet'
+
+$COWComputer = 'Cart2/Computer1'
+$Soap = 'Cart2/Misc6'
+$Gloves = 'Cart2/Misc9'
+$KidneyDish = 'Cart2/Misc2'
+$BloodBag = 'Cart2/Misc4'
+$Set = 'Cart2/Misc3'
+$PressureCuff = 'Cart2/Misc7'
+$Wipe = 'Cart2/Misc2/Wipe1'
+$Wipe1 = 'Cart2/Misc2/Wipe1'
+$Wipe2 = 'Cart2/Misc2/Wipe2'
+$Syringe = 'Cart2/Misc2/Syringe'
+$BrokenClamp = 'COW0(Clone)/InfusionClamp(Clone)'
+
+$DishDefPos = 'COW0(Clone)/DishPos'
+$GlovesDefPos = 'COW0(Clone)/GlovesPos'
+$CuffDefPos = 'COW0(Clone)/CuffPos'
+$SetTablePos = 'table1(Clone)/MiddlePos'
+$BagTableSpot = 'table1(Clone)/LeftPos'
+$CuffPos = 'Bed2/Patient1/CuffLoc'
+
+$Wastebin = 'WastebinScene06(Clone)'
+#$Wastebin = 'Bin2'
+$BrokenClamp align $Wastebin
+$Vitalsmonitor off
+$bbpos = 'COW0(Clone)/Pos06'
+$BloodBag align $bbpos
+$BloodBag rotatetoz 90
+$InfusionStand rotatetoy 0
+$Gloves align $GlovesDefPos
+$PressureCuff align $CuffDefPos
+$KidneyDish align $DishDefPos
+Do '06/06Start.txt'

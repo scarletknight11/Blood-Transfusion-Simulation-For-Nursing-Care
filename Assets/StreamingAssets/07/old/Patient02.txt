@@ -1,0 +1,12 @@
+/HourCanvas off
+/PatientCanvas on
+Player align PlayerPatLook
+Label 'Loop'
+If
+	PatientCanvas/Speak pressed
+Then
+	PatientCanvas/Speak reset
+	Do '07/HourPatientComplaintsClear.txt'
+Endif
+Wait 1
+Goto 'Loop'

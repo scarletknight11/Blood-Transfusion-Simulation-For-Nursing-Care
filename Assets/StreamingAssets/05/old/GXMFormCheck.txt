@@ -1,0 +1,21 @@
+Player lookAt GXM/BloodLine 0.0,0.4,-0.05
+ Wait 2
+   GXM Menu.Question Is this the correct name and IC Number?
+   GXM Menu.on GXM/BloodLine
+ WaitFor 
+   GXM Menu.Done 
+ Wait 1
+ If
+    GXM Menu.Result Y
+ Then
+GXM reset
+	ScoreTracker gain 1
+	ScoreTracker complete 3
+Wait 1
+	Do '05/PatientIdle.txt'
+Else
+GXM reset
+Wait 1
+	Do '05/PatientIdle.txt'
+ Endif
+

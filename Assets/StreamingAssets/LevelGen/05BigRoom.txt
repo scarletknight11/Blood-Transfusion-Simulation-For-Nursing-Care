@@ -1,0 +1,27 @@
+Room	0	RoomXLGPatient_base																											
+Bed	1	PatientBed01	Patient	1	PatientTemp																								
+Wall	1	Poster01																											
+BedsideHead	1	RackInfusionBottle01	InfusionBottle	1	InfusionBottle02	InfusionBottleLiquid	1	InfusionBottleLiquid01	InfusionBottle	2		InfusionBottleLiquid	2																
+Screen	1	PrivacyScreen01																											
+Bed	2	PatientBedClickable01	Patient	1	PatientTemp																								
+Wall	2	Poster02																											
+BedsideHead	2	RackInfusionBag03																											
+BedsideFoot	2	BloodBox02																											
+Cart	2	COW00	Computer	1	ComputerSetCOW01	Misc	2	KidneyDish01	Misc	3	DocGXMForm	Misc	4	InfusionSet	Misc	5	IDLabel02	Misc	6	LiquidSoap01	Misc	7	FoldedBloodPressureCuff01	Misc	8		Misc	9	Gloves01
+Screen	3	PrivacyScreen01																											
+Bed	3	PatientBed01	Patient	1																									
+Wall	3	Poster03																											
+Screen	5	PrivacyScreen01																											
+Bed	4	PatientBed01	Patient	1	PatientTemp																								
+Wall	4	Poster04																											
+Screen	7	PrivacyScreen01																											
+Bed	5	PatientBed01	Patient	1	PatientTemp																								
+Wall	5	Poster05																											
+BedsideHead	5	RackInfusionBag01	InfusionBag	1	InfusionBag03																								
+Screen	9	PrivacyScreen01																											
+Bed	6	PatientBed01	Patient	1	PatientTemp																								
+Wall	6	Poster06																											
+BedsideHead	6	RackInfusionBag01	InfusionBag	1	InfusionBag03																								
+Screen	11	PrivacyScreen01																											
+Cart	7	Trolley01																											
+Nurse	1	NurseClickable01																											

@@ -1,0 +1,22 @@
+/FourHourCanvas off
+/PatientCanvas on
+Player align PlayerPatLook
+	$patient play TurnLeft
+Label 'Loop'
+If
+	PatientCanvas/Choices/Speak pressed
+Then
+	PatientCanvas/Choices/Speak reset
+Patient reset
+
+	Do '07/FinalPatientComplaintsClear.txt'
+Endif
+If
+	PatientCanvas/Choices/Leave pressed
+Then
+	PatientCanvas/Choices/Leave reset
+	$Patient reset
+	Do '07/FourHourStart.txt'
+Endif
+Wait 1
+Goto 'Loop'

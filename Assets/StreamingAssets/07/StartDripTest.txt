@@ -1,0 +1,14 @@
+Label 'Loop'
+If
+	ChamberCheck/Chamber/StartDrip pressed
+Then
+	ChamberCheck/Chamber/StartDrip reset
+	Do '07/ChangeDrip.txt'
+Endif
+If
+	ChamberCheck/Chamber/Volume says 258
+Then
+	Goto 'Loop'
+Else
+	Do '07/ChamberCheck.txt'
+Endif

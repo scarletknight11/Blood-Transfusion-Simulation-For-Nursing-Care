@@ -1,0 +1,33 @@
+Label '02Loop'
+
+    If
+        Monitor pressed
+    Then
+        Monitor reset
+        Do '02/Monitor.txt'
+    Endif
+
+    If
+        GXMForm pressed
+    Then
+        GXMForm reset 
+        Do '02/GXMForm.txt'
+    Endif
+
+    If
+        ConsentForms pressed
+    Then
+        ConsentForms selectable false
+        ConsentForms reset
+        Do '02/ConsentForms.txt'
+    Endif
+
+    If
+      Phone pressed
+    Then
+      Phone reset
+      Do '02/Phone.txt'
+    Endif
+
+    Wait .03
+Goto '02Loop'

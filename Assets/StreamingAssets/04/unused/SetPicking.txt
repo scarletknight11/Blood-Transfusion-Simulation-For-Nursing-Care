@@ -1,0 +1,15 @@
+Debug 'SetPicking'
+
+Label 'Scene04_SetLoop'
+	Wait .1
+	If
+		$InfusionSet pressed
+	Then
+		$InfusionSet reset
+		$InfusionSet moveto ZoomSpot
+		$InfusionSet rotatetoy 180
+		$InfusionSet rotatetox 180
+		$InfusionSet playerchose
+#		Do '04/SetPicked.txt'
+		Do '04/SetCheck.txt'
+	Endif

@@ -1,0 +1,7 @@
+If
+ConsentForm/FormGeom currentpageis 0
+Then
+PatiMark on
+Else
+PatiMark off
+Endif

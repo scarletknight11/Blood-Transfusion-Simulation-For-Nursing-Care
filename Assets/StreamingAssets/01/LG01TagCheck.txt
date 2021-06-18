@@ -1,0 +1,24 @@
+Debug 'TagCheck.txt'
+#Start->PatientChoice->TagCheck
+
+Player align $TagView
+ZoomSpot Menu.Question 'Is the name correct?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+	ZoomSpot Menu.Done
+Wait .1
+If
+	ZoomSpot Menu.Result Y
+Then
+	Wait 1
+	$WristTag reset
+	$WristTag outline.color good
+	$WristTag selectable false
+	ScoreTracker gain 1
+	ScoreTracker complete 5
+#	Do '01/LG01PatientChoice.txt'
+Else
+	$WristTag reset
+#	Do '01/LG01PatientChoice.txt'
+Endif
+Wait .1

@@ -1,0 +1,498 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Packed Assets
+  m_EditorClassIdentifier: 
+  m_GroupName: Packed Assets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: f5f28525f35760e42a3b869db6be1b56
+  m_SerializeEntries:
+  - m_GUID: 07c0dd5408ea85c4da636a5bd7ec0bd7
+    m_Address: ChairOffice01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Chair
+  - m_GUID: 099cb011c883b85429fe982a57b6222e
+    m_Address: Poster03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: 0ac796e923aba664d8ed9500b5b8f8b0
+    m_Address: RackInfusionBottle01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: 0d8d3dbff6371b544b77f9018eb04c5f
+    m_Address: Trolley01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cart
+  - m_GUID: 179916eac09f26e458324a2faa2a919f
+    m_Address: InfusionBottle01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBottle
+  - m_GUID: 1976ffee3bbf8244fb420cbe4f877837
+    m_Address: RackInfusionBottle02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: 1a02d1fcccb37a747a3565fa5c397374
+    m_Address: InfusionBottleLiquid03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBottleLiquid
+  - m_GUID: 1ffb70fcf2c81b14b801e1bcfe54255c
+    m_Address: Poster05
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: 20104b784b910f740ba312d06944fc5e
+    m_Address: Poster01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: 2386a8d6b568b8f4f95fc7f73bd82ef3
+    m_Address: NoticeBoard01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: 3976873d3fe89294682af2b689df003f
+    m_Address: OperatingTable01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bed
+  - m_GUID: 3c0ce3dbaf35743449df61aa2a8362ab
+    m_Address: ChairNoArms01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Chair
+  - m_GUID: 3d48fa272e99ef74e89a64eaf5eec000
+    m_Address: NoSmokingSign01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: 44ac0ec534e5ae547b27368951e8e804
+    m_Address: ExaminationBed01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bed
+  - m_GUID: 56596b58b85751348898ec3fc2934b59
+    m_Address: InfusionBag01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBag
+  - m_GUID: 56609cc5199a3f84f81f5f78dc613ee0
+    m_Address: InfusionBottleLiquid01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBottleLiquid
+  - m_GUID: 5da255e86649d4a46ab02cf36bd106ba
+    m_Address: PatientBed01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bed
+  - m_GUID: 616884fd988f10341ad82d615653ccb0
+    m_Address: ComputerSet01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Computer
+  - m_GUID: 6a182f24ae7289743b7e9598d80d8294
+    m_Address: ChairArms01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Chair
+  - m_GUID: 6bf2610a948cf7246ab81ef54568fe88
+    m_Address: XRayViewBox02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: 6dd9be33e3f56c44eaa0578b97a1c5a7
+    m_Address: InfusionBottleLiquid02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBottleLiquid
+  - m_GUID: 6e9fdd9a5211df74a92d3dc0e6c43d8f
+    m_Address: DeskSet01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Desk
+  - m_GUID: 8208ee86ee884a54397439247e9646e6
+    m_Address: GenAnaesthesiaMachine01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: 85742c4562a183f4e9bed4e71f9fcca9
+    m_Address: PrivacyScreen02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Screen
+  - m_GUID: 9506ce063daf31e4f9f7a4b7f90ae074
+    m_Address: DocGXMForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Document
+  - m_GUID: 96b14fc8733a85d44988106deb9888ab
+    m_Address: PrivacyScreen01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Screen
+  - m_GUID: 9799413305460924b93f20ba0f35e40c
+    m_Address: Trolley03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cart
+  - m_GUID: 9a0331e0ede14d3458372dcca30c08a4
+    m_Address: InfusionBottle04
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBottle
+  - m_GUID: 9c9923b2123d7b542a96afb000b1d9a0
+    m_Address: Poster04
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: 9cab6aa9856c84641ab5bbce078323cc
+    m_Address: InfusionBottle03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBottle
+  - m_GUID: a7f091aeb16d2024aaa3b106320dfcf0
+    m_Address: InfusionBag05
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBag
+  - m_GUID: ad860a9f91bc6424a8d16fbd83e04a4c
+    m_Address: InfusionBag03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBag
+  - m_GUID: cdaaa946d259da64fa54701b4eff64ca
+    m_Address: RackInfusionBag02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: cf03e305695a40240bef3808e07dad73
+    m_Address: XRayViewBox01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: d169fc64ba89baa44888a4a80df6dd20
+    m_Address: BathroomMirror01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: d1e2bfe3ebd24f54d857998874c732bf
+    m_Address: InfusionBottle05
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBottle
+  - m_GUID: da1e14c1e7ea5cc41b255f16b028674c
+    m_Address: InfusionBag02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBag
+  - m_GUID: da83fee8760c1c042941412b29f5ed17
+    m_Address: Telephone01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Phone
+  - m_GUID: db0f9d8fd82a0cd4cb86f8cf59280666
+    m_Address: Trolley02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cart
+  - m_GUID: e12d80a96b99b1940b97aada008dc084
+    m_Address: InfusionBag04
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBag
+  - m_GUID: e1c553bb1a1d3084db9375c1ebbf4ed0
+    m_Address: Poster02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: edf493db83b53e54582d2a57a13e707d
+    m_Address: RackInfusionBag01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: f64aa64ab36bc5f439abdbc7807babef
+    m_Address: Poster06
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: fa8f773ac538d5c49867ece1bd33927e
+    m_Address: InfusionBottle02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBottle
+  - m_GUID: fb286e356808ea645aa555e236165516
+    m_Address: Poster07
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Wall
+  - m_GUID: d184c84ac0936134f8079e28c2d77538
+    m_Address: DocConsentForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Document
+  - m_GUID: ba3b9f643dea47c42a3a318a2cfb044c
+    m_Address: TestConsentForms
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Document
+  - m_GUID: f5c193ba1ecf174488d52ff0b6317b00
+    m_Address: TestGXMForm
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Document
+  - m_GUID: 3d9782d27c7954a8c993cbaa6965970b
+    m_Address: DocForms
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Document
+  - m_GUID: 5741a563ae9cadc4f8cdc87254a7d3a3
+    m_Address: PatientTemp
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Patient
+  - m_GUID: 23e5be786ad9a44c283f78f627320f9a
+    m_Address: PatientOldMan
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Patient
+  - m_GUID: 311f1c35fa518c142aa844010b7c0351
+    m_Address: Table01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Desk
+  - m_GUID: dea0d887b22622842901f414966cd0cd
+    m_Address: COW01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cart
+  - m_GUID: eee465fd8769c8f48bd4426313c06556
+    m_Address: IDLabel01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Document
+  - m_GUID: b074208c533f15643ab3d595c1043f86
+    m_Address: PatientBedClickable01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bed
+  - m_GUID: 62c79c5de7b92ca4291d581add17394b
+    m_Address: Placeholder
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 469570465400f4948b476f7c3a2e4f5e
+    m_Address: RackInfusionBag03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: 87160fc9c4eccf0498e66871eb9f063e
+    m_Address: KidneyDish01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MedSmall
+  - m_GUID: 7de374962ea531447a8e68a0274155f3
+    m_Address: LiquidSoap01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MedSmall
+  - m_GUID: ce47f883b81adcd40859b9a6331b9b27
+    m_Address: Gloves01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MedSmall
+  - m_GUID: c2b3b9c66c93808468368d57936a49b0
+    m_Address: IDLabel02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Document
+  - m_GUID: d309e603c9288b94dbdebf382bddc09a
+    m_Address: ComputerSetCOW01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Computer
+  - m_GUID: 0ba14efed5321f64f8327e06784d54fd
+    m_Address: InfusionSet
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBag
+  - m_GUID: 96603cb7709d0f84586071e9feff4853
+    m_Address: BloodBox02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: d5e755f99266b8242845dbdcf8ed11ca
+    m_Address: MonitorOnStand01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: 7e1d41fbd9ab4ef4287a10a11e1aa1d3
+    m_Address: InfusionStandScene06
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: 302b2368ab4b93f43af4c89a9741049b
+    m_Address: VitalsMonitor01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Computer
+  - m_GUID: a12fb736a0de0ae43be5d9355750fb22
+    m_Address: MonitorStand02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: 4f92836934c24f844ae338f94bcc7f9f
+    m_Address: Wastebin01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bin
+  - m_GUID: 2f7734bb7f6cda04fbb5ff6c534129ed
+    m_Address: WastebinScene06
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bin
+  - m_GUID: a602a4d3246b51e4989b0d8a4c050534
+    m_Address: BloodBagScene06
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InfusionBag
+  - m_GUID: bf4f189c5d905704da4317f77e37a09c
+    m_Address: InfusionClamp01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MedSmall
+  - m_GUID: 99c77de3b0d04f84da76ab0ed1b2b169
+    m_Address: Cannula01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MedSmall
+  - m_GUID: caf0eef5763a64c4b850697bf17c49c2
+    m_Address: CannulaScene07
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MedSmall
+  - m_GUID: c9e69a318240aba4d9c540ce3cc9925b
+    m_Address: InfusionClamp02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MedSmall
+  - m_GUID: 658c432b3a050c146befa8dd7ae37713
+    m_Address: InfusionStandScene07
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: e4f033d06fc0d1d43973649f3b31a2bb
+    m_Address: IVLINE01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MedSmall
+  - m_GUID: d6fa131e2796bef4bb477bd4b22980fb
+    m_Address: Refrigerator01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cabinet
+  - m_GUID: 96b146f3cdfd0a349b90e5aed6368ce4
+    m_Address: Refrigerator02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cabinet
+  - m_GUID: c233e71649621e746ae23553bf7f81cc
+    m_Address: RefrigeratorScene03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cabinet
+  - m_GUID: 3d4a8fb351ab01d4eb32cb79bd48ca84
+    m_Address: IcePack01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MedSmall
+  - m_GUID: c9fb174261b3c63409ebf993aea09ceb
+    m_Address: IcePackScene03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MedSmall
+  - m_GUID: e5a391e48b229ce419d017188b164846
+    m_Address: BloodBoxScene03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Bedside
+  - m_GUID: 42060d4c1c5ced241ba4b517d8292758
+    m_Address: RefrigeratorGlass01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cabinet
+  - m_GUID: b144223978ae42b45a077e7e6361676a
+    m_Address: PaperScene03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Document
+  - m_GUID: 96975735d21385349a259f839040aec5
+    m_Address: TableScene03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Desk
+  - m_GUID: 94175fe4b44d13d4e90d9576ee84f28a
+    m_Address: Table02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Desk
+  - m_GUID: aec47be22e7fe684393af7017707552c
+    m_Address: Table02Scene03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Desk
+  - m_GUID: ecedee66281a2fb429b019faca3fc36b
+    m_Address: ComputerSetCLMM01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Computer
+  - m_GUID: c84b77f2414ec9040833b72d4261f80e
+    m_Address: StandingShelfBins01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cabinet
+  - m_GUID: 47656617caf974542854acb0413b0cdd
+    m_Address: StandingShelf01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cabinet
+  - m_GUID: 26ea84c47f15f5549b9f0a30a4207929
+    m_Address: CounterCabinet01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cabinet
+  - m_GUID: d74daf70a82a171438d8a8335ba2309e
+    m_Address: TapeRoll01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MedSmall
+  - m_GUID: 0d12110c42fc04f4f9d417382f56d04a
+    m_Address: DeskSet02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Desk
+  - m_GUID: be49e5f377f982c4da9937e0c259114b
+    m_Address: COW00
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Cart
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 3132ff6bffb476e40ac16e9a1fcb5174, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f0e0afa89c7b8844e9cd7978477e7a11, type: 2}

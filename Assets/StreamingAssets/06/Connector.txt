@@ -1,0 +1,20 @@
+#CowStart->Connector
+ZoomSpot Menu.Question 'Disinfect and remove connector?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+ZoomSpot Menu.Result Y
+Then
+	Prompt 'You disinfect and remove the connector'
+	Wait 1
+	ScoreTracker gain 1
+	ScoreTracker complete 12
+	$InfusionStand off
+	Player align PlayerStart
+	Wait 1
+	Do '06/FinalClamp.txt'
+Else
+	Goto 1
+Endif

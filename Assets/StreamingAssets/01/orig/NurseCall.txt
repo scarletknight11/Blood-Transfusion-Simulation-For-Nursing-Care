@@ -1,0 +1,19 @@
+/JoystickCanvas off
+Nurse Menu.Question 'Call Nurse?'
+Nurse Menu.on ZoomSpot
+WaitFor
+Nurse Menu.Done
+Wait 1
+If
+Nurse Menu.Result Y
+Then
+Nurse reset
+Nurse align NursePatPos
+ScoreTracker gain 1
+ScoreTracker complete 3
+Do '01/PatientChoice.txt'
+Else
+Nurse reset
+Do '01/PatientChoice.txt'
+Endif
+Wait 1

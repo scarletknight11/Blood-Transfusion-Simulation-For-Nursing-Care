@@ -1,0 +1,21 @@
+/StartCanvas off
+/PatientCanvas off
+Player align $Monitorlook
+ZoomSpot Menu.Question 'Turn on to show vital signs?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+	ZoomSpot Menu.Result Y
+Then
+	$Vitalsmonitor reset
+	ScoreTracker gain 1
+	ScoreTracker complete 1
+	$Vitalsmonitor on
+	Wait 3
+	Do '06/06Start.txt'
+Else
+$Vitalsmonitor reset
+	Do '06/06Start.txt'
+Endif

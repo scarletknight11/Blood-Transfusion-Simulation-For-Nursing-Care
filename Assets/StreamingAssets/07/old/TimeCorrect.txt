@@ -1,0 +1,27 @@
+Label 'Loop'
+If
+	TimeCanvas/Time pressed
+Then
+	Do '07/HourStart.txt'
+Endif
+If
+	/TimeCanvas/Time/Increase pressed
+Then
+	/TimeCanvas/Time/Increase reset
+	TimeKeeper increasetime
+Endif
+If
+	/TimeCanvas/Time/Decrease pressed
+Then
+	/TimeCanvas/Time/Decrease reset
+	TimeKeeper decreasetime
+Endif
+Wait 1
+If
+	TimeKeeper timeequals 60
+Then
+	Goto 'Loop'
+Else
+	Do '07/TimeSkip.txt'
+Endif
+Goto 'Loop'

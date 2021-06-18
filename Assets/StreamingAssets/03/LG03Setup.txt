@@ -1,0 +1,32 @@
+#  0 openBox
+#  1 removeSelector
+#  2 openFridge
+#  3 iceTable
+#  4 iceBox
+#  5 selectorBox
+#  6 GXMbox
+#  7 closeBox
+
+#BloodBox MoveTo Table/BoxTable
+#Create telephone 'telephone'
+#telephone MoveTo Table/TelephoneLoc
+
+$Table = 'Desk1'
+
+$RefrigeratorDoor = 'Cabinet2/Fridge/RefrigeratorDoor'
+$IcePack = 'Cabinet2/Misc2'
+$IceTable = 'Desk1/FrontMiddle'
+$IceBox = 'Desk1/Misc8/Box'
+
+$Paper = 'Desk1/Document1'
+$PaperBox = 'Desk1/Misc8/Box'
+
+$BloodBox = 'Desk1/Misc8'
+$Lid = 'Desk1/Misc8/Lid'
+$Divider = 'Desk1/Misc8/Divider'
+$BoxTable = 'Desk1/BoxTable'
+
+$lidoff = false
+ScoreTracker setstages 3
+End off
+Do '03/Scene03Start.txt'

@@ -1,0 +1,31 @@
+/PatientCanvas off
+JoystickCanvas on
+WipeCanvas off
+SyringeCanvas off
+InfusionStand off
+BloodCanvas  off
+DripCanvas off
+ClampCanvas off
+Prompt ''
+/Player align PlayerStart
+Label 'Loop'
+If
+	Patient pressed
+Then
+	Patient reset
+	Do '06/PatientCheck.txt'
+Endif
+If
+	Vitalsmonitor pressed
+Then
+	Vitalsmonitor reset
+	Do '06/Monitor.txt'
+Endif
+If
+	StandingComputerdesk pressed
+Then
+	StandingComputerdesk reset
+	Do '06/COWStart.txt'
+Endif
+Wait 1
+Goto 'Loop'

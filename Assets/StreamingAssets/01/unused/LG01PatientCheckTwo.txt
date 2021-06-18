@@ -1,0 +1,26 @@
+Prompt 'PatientCheckTwo.txt'
+Wait 2
+Player lookat $PlayerLookPat
+/CheckCanvas off
+/JoystickCanvas off
+
+/PatientCanvas on
+/PatientCanvas/Buttons/ALL off
+$Button = '/PatientCanvas/Buttons/Name'
+$Button on
+
+Prompt 'Hello, did you have something to ask?'
+#Wait 1
+Label 'PC2Loop'
+	/PatientCanvas on
+	If
+		Button pressed
+	Then
+		Button reset
+		Prompt 'My name is Tan Ah Kow. My IC Number is S0000000X'
+		Wait 2
+		Do '01/LG01CorrectpatientTwo.txt'
+		Prompt ''
+	Endif
+	Wait .1
+Goto 'PC2Loop'

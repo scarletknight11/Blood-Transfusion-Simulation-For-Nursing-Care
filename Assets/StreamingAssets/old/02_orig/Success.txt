@@ -1,0 +1,17 @@
+If
+ScoreTracker percentachieved 88
+Then
+GoodEnd on
+UICompletionTracker showtext
+Else
+Goto 17
+Endif
+Label 'Loop'
+If
+End pressed
+Then
+End reset
+SceneManager switchtoscene Scenes/MainMenu
+Endif
+Goto 'Loop'
+Wait 1

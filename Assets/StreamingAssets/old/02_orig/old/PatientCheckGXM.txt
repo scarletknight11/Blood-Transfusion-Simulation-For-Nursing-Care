@@ -1,0 +1,20 @@
+Player lookAt GXMForm/SignatureLine 0.0,0.1,-0.05
+ Wait 1
+   ZoomSpot Menu.Question Is this the correct patient?
+   ZoomSpot Menu.on ZoomSpot
+ WaitFor 
+   ZoomSpot Menu.Done 
+ Wait 1
+ If
+    ZoomSpot Menu.Result Y
+ Then
+  Create checkmark 'PatMark'
+ScoreTracker gain 1
+ScoreTracker complete 2
+ Else
+   Create XMark 'PatMark'
+Endif
+   PatMark MoveTo GXMForm/SignatureLine
+GXMForm/SignatureLine reset
+ Wait 1
+GXMForm lookAtMe 0.0,0.3,-0.05

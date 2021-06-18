@@ -1,0 +1,20 @@
+Player lookAt GXMForm/ValidLine 0.0,0.1,-0.05
+GM Wait 1
+   ZoomSpot Menu.Question Is it valid?
+   ZoomSpot Menu.on ZoomSpot
+GM WaitFor 
+   ZoomSpot Menu.Done 
+GM Wait 1
+GM If
+    ZoomSpot Menu.Result Y
+GM Then
+GM  Create CheckMark 'ValMark'
+ScoreTracker gain 1
+ScoreTracker complete 4
+GM Else
+GM   Create XMark 'ValMark'
+GM Endif
+   ValMark MoveTo GXMForm/ValidLine
+GXMForm/ValidLine reset
+ Wait 1
+GXMForm lookAtMe 0.0,0.3,-0.05

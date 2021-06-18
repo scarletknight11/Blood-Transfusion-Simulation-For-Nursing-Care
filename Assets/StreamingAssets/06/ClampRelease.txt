@@ -1,0 +1,17 @@
+Player lookat ClampLook
+ZoomSpot Menu.Question 'Release Clamp?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+ZoomSpot Menu.Result Y
+Then
+	Prompt 'The Clamp has been released.'
+	Wait 1
+	ScoreTracker gain 1
+	ScoreTracker complete 10
+	Do '06/ClampClose.txt'
+Else
+	Do '06/InfusionStart.txt'
+Endif

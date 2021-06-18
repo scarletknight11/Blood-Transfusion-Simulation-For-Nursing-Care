@@ -1,0 +1,41 @@
+/Canvas/SelectionPanel on
+/Canvas/Table off
+Paper/FormGeom outline.off
+Table outlineon
+$RefrigeratorDoor outline.on
+
+Label 'Scene3_MainLoop'
+    Player align PlayerPos
+    If
+        /Canvas/MainMenu pressed
+    Then
+        /Canvas/MainMenu reset
+        Do '03/EndCheck.txt'
+    Endif
+
+    If
+        BloodBox pressed
+    Then
+        ScoreTracker gain 1
+        ScoreTracker complete 0
+        #Wait 1
+        BloodBox align BoxTable
+        #wait 1
+    Endif
+
+    If
+        Table pressed	
+    Then
+        Do '03/Table.txt'
+        Table reset
+    Endif
+
+    If
+        $RefrigeratorDoor pressed
+    Then
+        Do '03/IceFromFridge.txt'
+        $RefrigeratorDoor reset
+    ENDIF
+
+    Wait 1
+Goto 'Scene3_MainLoop'

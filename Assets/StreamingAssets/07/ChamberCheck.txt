@@ -1,0 +1,10 @@
+ChamberCanvas off
+ChamberCheck on
+Player align BagZoom
+Label 'Loop'
+If
+	ChamberCheck/Chamber/Volume says 258
+Then
+	Do '07/DripCheck.txt'
+Endif
+Goto 'Loop'

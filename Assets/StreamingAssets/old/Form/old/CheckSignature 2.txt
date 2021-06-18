@@ -1,0 +1,22 @@
+   $form = 'MedForm/SignatureLine'
+   $question = 'Is it signed?'
+   View lookAt $form 0.0,0.2,-0.05
+#     View lookAt MedForm/SignatureLine 0.0,0.2,-0.05
+   Wait 2
+   MedForm Menu.Question $question
+   MedForm Menu.on $form
+   WaitFor 
+   MedForm Menu.Done 
+   Wait 1
+   If
+    MedForm Menu.Result YES
+   Then
+    Create CheckMark SigMark
+   Else
+     Create XMark SigMark
+   Endif
+#   SigMark MoveTo MedForm/SignatureLine
+   SigMark MoveTo $form
+   Wait 3
+   MedForm lookAtMe 0.0,0.3,-0.05  #zoom out still looking at MedForm
+   Wait 1

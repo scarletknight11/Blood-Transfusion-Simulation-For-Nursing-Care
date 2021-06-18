@@ -1,0 +1,74 @@
+WipeCanvas off
+/SyringeCanvas off
+/IVCanvas off
+/DripCanvas off
+Player lookat $DeskStart
+
+$Soap outline.on
+$Gloves outline.on
+$KidneyDish outline.on
+$BloodBag outline.on
+$Set outline.on
+$PressureCuff outline.on
+$Vitalsmonitor outline.on
+$Patient outline.off
+$Vitalsmonitor outline.off
+
+Label 'Loop'
+	If
+		$Soap pressed
+	Then
+		$Soap outline.off
+		$Soap resetPressed
+		Do '06/Sanitizer.txt'
+	Endif
+	If
+		$Gloves pressed
+	Then
+		$Gloves outline.off
+		$Gloves resetPressed
+		Do '06/Gloves.txt'
+	Endif
+	If
+		$KidneyDish pressed
+	Then
+		$KidneyDish outline.off
+		$KidneyDish reset
+		Do '06/Dish.txt'
+	Endif
+	If
+		$BloodBag pressed
+	Then
+		$BloodBag outline.off
+		$BloodBag resetPressed
+		$BloodBag align $BagTableSpot
+		$BloodBag rotatetoz 90
+	Endif
+	If
+		$Set pressed
+	Then
+		$Set outline.off
+		$Set resetPressed
+		$Set align $SetTablePos
+		Do '06/BagCombine.txt'
+	Endif
+	If
+		$PressureCuff pressed
+	Then
+		$PressureCuff outline.off
+		$PressureCuff resetPressed
+		$PressureCuff align $CuffPos
+		ScoreTracker gain 1
+		ScoreTracker complete 11
+		Player lookat $CuffPos
+		Do '06/Connector.txt'
+	Endif
+	If
+		$Vitalsmonitor pressed
+	Then
+		$Vitalsmonitor outline.off
+		$Vitalsmonitor resetPressed
+		Do '06/MonitorTwo.txt'
+	Endif
+	Wait .1
+Goto 'Loop'

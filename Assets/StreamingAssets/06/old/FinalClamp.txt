@@ -1,0 +1,16 @@
+Player lookat ClampLook
+ClampCanvas on
+Label 'Loop'
+If
+	ClampCanvas/Release pressed
+Then
+	ClampCanvas/Release reset
+	Prompt 'The Clamp has been released.'
+	ScoreTracker gain 1
+	ScoreTracker complete 13
+	Wait 2
+	Prompt ''
+	ClampCanvas off
+	Do 'EndCheck.txt'
+Endif
+Goto 'Loop'

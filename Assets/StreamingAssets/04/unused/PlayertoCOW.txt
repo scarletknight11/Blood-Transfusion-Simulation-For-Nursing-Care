@@ -1,0 +1,23 @@
+Player moveto PlayerCOWLook
+Wait 1
+Player lookat COWFocus
+$KidneyDish outline.on
+$DoorSingle outline.on
+Label 'KidneyLoop'
+	If
+		$KidneyDish pressed
+	Then
+		ScoreTracker gain 1
+		ScoreTracker complete 0
+		$KidneyDish reset
+		$KidneyDish moveto $KidDishOrig
+		Wait .2
+		$KidneyDish outline.off
+	Endif
+	If
+		$DoorSingle pressed
+	Then
+		$DoorSingle reset
+		Do '04/Door.txt'
+	Endif
+Goto 'KidneyLoop'

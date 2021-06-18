@@ -1,0 +1,71 @@
+$bool1 = true
+$bool2 = true
+Label Iftest
+Prompt 'bool1=' + bool1 + ', bool2=' + bool2
+  If 
+    $bool2
+  Then
+    $bar = '11'
+    Prompt 'In Then block 1'
+    Wait 1
+  Else
+    $bar = '10'
+    Prompt 'In Else block 0'
+    $bool1 = (bool1 = false)
+    Wait 1
+  Endif
+Prompt 'bool1=' + bool1 + ', bool2=' + bool2
+Wait 4
+  If 
+    $bool2 = false
+  Then
+    $bar = '11'
+    Prompt 'In Then block 1'
+    Wait 1
+  Else
+    $bar = '10'
+    Prompt 'In Else block 0'
+    $bool1 = (bool1 = false)
+    Wait 1
+  Endif
+Prompt 'bool1=' + bool1 + ', bool2=' + bool2
+Wait 4
+If 
+  $bool1
+Then
+  $bar = '1'
+  Prompt 'In Then block 1'
+  If 
+    $bool2
+  Then
+    $bar = '11'
+    Prompt 'In Then block 1.1'
+    Wait 1
+  Else
+    $bar = '10'
+    Prompt 'In Else block 1.0'
+    $bool1 = (bool1 = false)
+    Wait 1
+  Endif
+  Wait 2
+Else
+  $bar = '0'
+  Prompt 'In Else block 0'
+  If 
+    $bool2
+  Then
+    $bar = '01'
+    Prompt 'In Then block 0.1'
+    Wait 1
+  Else
+    $bar = '00'
+    Prompt 'In Else block 0.0'
+    $bool1 = (bool1 = false)
+    Wait 1
+  Endif
+  Wait 2
+Endif
+Prompt 'Bar changed to ' + bar
+$bool2 = $bool2
+Wait 3
+Goto Iftest

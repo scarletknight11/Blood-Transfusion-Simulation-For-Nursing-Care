@@ -1,0 +1,33 @@
+WipeCanvas off
+SyringeCanvas off
+Prompt ''
+Player lookat StandingComputerdesk/KidneyDish
+Wait 1
+If
+ScoreTracker iscomplete 15
+Then
+Goto 13
+Else
+Prompt 'Clean needleless connector?'
+Endif
+Label 'Loop'
+DishCanvas on
+If
+	Wipe1 pressed
+Then 
+	Wipe1 reset
+	Do '07/WipeCheck.txt'
+Endif
+If
+	Syringe pressed
+Then
+	Syringe reset
+	Do '07/SyringeCheck.txt'
+Endif
+If
+	Cannula pressed
+Then
+	Cannula reset
+	Do '07/ConnectorDisconnect.txt'
+Endif
+Goto 'Loop'

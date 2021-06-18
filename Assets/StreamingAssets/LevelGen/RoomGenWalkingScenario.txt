@@ -1,0 +1,87 @@
+#Debug.on
+#DebugCommands.on
+#Game.delay 0.2
+#DebugCanvas.on
+
+$Patient1 = 'Bed1/Patient1/TEMP_Patient'
+$Pat1Face = $Patient1 + '/metarig/spine/spine.001/spine.002/spine.003/spine.004'
+$Pat1LookPlayer = $Patient1 + '/TurntoPlayer'
+$Pat1LookReset = $Patient1 + '/TurnForward'
+
+$Nurse1 = 'Nurse1'
+$Nurse1HomePos = 'BedNursePos01'
+$Nurse1AltPos = 'Cart4'
+
+$Patient2 = 'Bed2/Patient1/TEMP_Patient'
+$Pat2Face = $Patient2 + '/metarig/spine/spine.001/spine.002/spine.003/spine.004'
+$Pat2LookPlayer = $Patient2 + '/TurntoPlayer'
+$Pat2LookReset = $Patient2 + '/TurnForward'
+
+$Patient3 = 'Bed3/Patient1/TEMP_Patient'
+$Pat3Face = $Patient3 + '/metarig/spine/spine.001/spine.002/spine.003/spine.004'
+$Pat3LookPlayer = $Patient3 + '/TurntoPlayer'
+$Pat3LookReset = $Patient3 + '/TurnForward'
+
+$Nurse3 = 'Nurse3'
+$Nurse3HomePos = 'BedNursePos03'
+$Nurse3AltPos = 'Cart2'
+
+$Patient4 = 'Bed4/Patient1/TEMP_Patient'
+$Pat4Face = $Patient4 + '/metarig/spine/spine.001/spine.002/spine.003/spine.004'
+$Pat4LookPlayer = $Patient4 + '/TurntoPlayer'
+$Pat4LookReset = $Patient4 + '/TurnForward'
+
+
+Wait 1
+
+Label 'MainLoop'
+
+	$Nurse1 align $Nurse1AltPos 4
+
+	Wait 5
+
+	$Pat1Face align $Pat1LookPlayer
+
+	Wait 1
+
+	$Pat4Face align $Pat4LookPlayer
+
+	Wait 2
+
+	$Nurse3 align $Nurse3AltPos 4
+
+	Wait 2
+
+	$Pat2Face align $Pat2LookPlayer
+	Wait 0.5
+	$Pat2Face align $Pat2LookReset
+	Wait 0.5
+	$Pat2Face align $Pat2LookPlayer
+	Wait 0.5
+	$Pat2Face align $Pat2LookReset
+	Wait 0.5
+	$Pat2Face align $Pat2LookPlayer
+
+	Wait 8
+
+	$Pat4Face align $Pat4LookReset
+
+	Wait 1
+
+	$Nurse1 align $Nurse1HomePos 4
+
+	Wait 3
+
+	$Pat1Face align $Pat1LookReset
+	
+	Wait 5
+
+	$Nurse3 align $Nurse3HomePos 4
+
+	Wait 5
+
+	$Pat2Face align $Pat2LookReset
+
+	Wait 8
+
+Goto 'MainLoop'

@@ -1,0 +1,95 @@
+#ConsentForms.txt - Loop and check all the form items
+
+$ConsentForms lookAtMe 0.0 0.3 -0.05
+$ConsentForms outline.off
+
+#Prompt 'about to move'
+#Wait 2
+#Player align $ConLook
+#Prompt 'Moved'
+#Wait 5
+$ConsentForms selectable false
+turnOn $ConsentFormsButtons
+
+#$autoAdvance = false
+#If
+#  $autoAdvance=true
+#Then
+#  $itemCheck = 'Forms/CheckFormItemStatus.txt'
+#Else
+#  $itemCheck = 'Forms/CheckFormItemPressed.txt'
+#Endif
+#$itemCheck now set in CheckItemSkip.txt
+$itemCheck = 'Forms/CheckFormItemPressed.txt'
+
+
+Label 'ConsentPageCheck'
+
+    ##PAGE 1
+    $formpage = 'Consent1'
+
+    If
+        $formpage isOn
+    Then
+        $formpage selectable false
+        Debug 'Checking formpage ' + formpage
+        
+        #Patient Line
+        $item = '5'
+        $formitem = 'Consent1/PatientLine'
+        $question = 'Is it the correct patient?'
+        Do $itemCheck
+    Endif
+
+    ##PAGE 4
+    $formpage = 'Consent4'
+
+    If
+        $formpage isOn
+    Then
+        $formpage selectable false
+        Debug 'Checking formpage ' + formpage
+        #Wait .5
+
+        #Date Line
+        $item = '6'
+        $formitem = 'Consent4/DateLine'
+        $question = 'Is the date correct?'
+        Do $itemCheck
+
+        #Signature Line
+        $item = '7'
+        $formitem = 'Consent4/SignatureLine'
+        $question = 'Is the signature correct?'
+        Do $itemCheck
+
+        #Valid Line
+        $item = '8'
+        $formitem = 'Consent4/ValidLine'
+        $question = 'Is it valid?'
+        Do $itemCheck
+
+
+    Endif
+    
+    #check for exit button
+    $Exit = ConsentForms + '/Buttons/Exit'
+    Debug 'Check exit button : ' + Exit
+    #Wait .5
+
+    If 
+        $Exit pressed
+    Then
+        turnOff $ConsentFormsButtons
+        Debug 'EXITING FORM'
+        $Exit reset
+        $range = '5-8'
+        $formpage = ConsentForms
+        Do 'Forms/FormCheckComplete.txt'
+#        Player align $DefLook
+#        Player lookat $Deflook
+        Return                
+    Endif
+
+Wait .1
+Goto 'ConsentPageCheck'

@@ -1,0 +1,6 @@
+<map id="B83.LogicExpressionParser.ValueProvider" name="B83.LogicExpressionParser.ValueProvider">
+<area shape="rect" id="node5" href="$class_b83_1_1_logic_expression_parser_1_1_expression_variable.html" title="B83.LogicExpressionParser.\lExpressionVariable" alt="" coords="103,169,291,207"/>
+<area shape="rect" id="node2" href="$interface_b83_1_1_logic_expression_parser_1_1_i_number_provider.html" title="INumberProvider" alt="" coords="4,6,125,31"/>
+<area shape="rect" id="node3" href="$interface_b83_1_1_logic_expression_parser_1_1_i_logic_result.html" title="ILogicResult" alt="" coords="150,6,244,31"/>
+<area shape="rect" id="node4" href="$interface_b83_1_1_logic_expression_parser_1_1_i_string_provider.html" title="IStringProvider" alt="" coords="269,6,379,31"/>
+</map>

@@ -1,0 +1,24 @@
+/FourStartCanvas off
+/COWCanvas on
+Player align DeskStart
+Label 'Loop'
+If
+	COWCanvas/Sanitizer pressed
+Then
+	COWCanvas/Sanitizer reset
+	Do '07/Sanitizer.txt'
+Endif
+If
+	COWCanvas/Sanitizer/Gloves pressed
+Then
+	COWCanvas/Sanitizer/Gloves reset
+	Do '07/Gloves.txt'
+Endif
+If
+	COWCanvas/Sanitizer/Dish pressed
+Then
+	COWCanvas/Sanitizer/Dish reset
+	Do '07/Dish.txt'
+Endif
+Wait 1
+Goto 'Loop'

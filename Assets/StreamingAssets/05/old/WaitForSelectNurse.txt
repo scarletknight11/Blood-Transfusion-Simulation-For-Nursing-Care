@@ -1,0 +1,12 @@
+Label 'Loop'
+
+	$Nurse outline.on
+	If
+		$Nurse pressed
+	Then
+		$Nurse outline.off
+		Player lookat $Nurse
+		Do '05/NurseCall.txt'
+	Endif
+	Wait .1
+Goto 'Loop'

@@ -1,0 +1,21 @@
+Soap align ZoomSpot
+ZoomSpot Menu.Question 'Use Sanitizer?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+ZoomSpot Menu.Result Y
+Then
+Soap reset
+	ScoreTracker gain 1
+	ScoreTracker complete 10
+	Soap align SoapSpot
+Wait 1
+	Do '07/FourHourStart.txt'
+Else
+Soap reset
+	Soap align SoapSpot
+Wait 1
+	Do '07/FourHourStart.txt'
+Endif

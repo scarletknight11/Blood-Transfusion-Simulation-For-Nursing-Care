@@ -1,0 +1,73 @@
+#ConsentForms.txt - Loop and check all the form items
+
+ConsentForms lookAtMe 0.0 0.3 -0.05
+ConsentForms selectable false
+
+$autoAdvance = true
+If
+  $autoAdvance = true
+Then
+  $itemCheck = 'Forms/CheckFormItemStatus.txt'
+Else
+  $itemCheck = 'Forms/CheckFormItemPressed.txt'
+Endif
+
+
+
+Label 'ConsentPageCheck'
+
+    ##PAGE 1
+    $formpage = 'Consent1'
+
+    If
+        $formpage on
+    Then
+        #Patient Line
+        $item = '5'
+        Do 'Forms/CheckItemSkip.txt'
+        $formitem = 'PatientLine'
+        $question = 'Is it the correct patient?'
+        Do $itemCheck
+    Endif
+
+    ##PAGE 4
+    $formpage = 'Consent4'
+
+    If
+        $formpage on
+    Then
+        #Date Line
+        $item = '6'
+        Do 'Forms/CheckItemSkip.txt'
+        $formitem = 'Consent4/DateLine'
+        $question = 'Is the date correct?'
+        Do $itemCheck
+
+        #Signature Line
+        $item = '7'
+        Do 'Forms/CheckItemSkip.txt'
+        $formitem = 'Consent4/SignatureLine'
+        $question = 'Is the signature correct?'
+        Do $itemCheck
+
+        #Valid Line
+        $item = '8'
+        Do 'Forms/CheckItemSkip.txt'
+        $formitem = 'Consent4/ValidLine'
+        $question = 'Is it valid?'
+        Do $itemCheck
+    Endif
+    
+    #check for exit button
+    If 
+        ConsentForms/Buttons/Exit pressed
+    Then
+        ConsentForms/Buttons/Exit reset
+        $range = '5-8'
+        Do 'Forms/FormCheckComplete.txt'
+        Player align DefLook
+        Return                
+    Endif
+
+
+Goto 'ConsentPageCheck'

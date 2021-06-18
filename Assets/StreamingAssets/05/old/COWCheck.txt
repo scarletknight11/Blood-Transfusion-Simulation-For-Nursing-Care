@@ -1,0 +1,27 @@
+Player lookat DeskLook
+Patient reset
+/JoystickCanvas on
+Label 'Loop'
+	If
+		GXM pressed
+	Then
+		GXM reset
+		Do '05/GXMForm.txt'
+	Endif
+
+	If
+		IDLabel pressed
+	Then
+		IDLabel reset
+		Do '05/IDLabel.txt'
+	Endif
+
+	If
+		InfusionSet pressed
+	Then
+		InfusionSet reset
+		Return
+	Endif
+
+	Wait .1
+Goto 'Loop'

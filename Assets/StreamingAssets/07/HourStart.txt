@@ -1,0 +1,47 @@
+/StartCanvas off
+/PatientCanvas off
+/CannulaCanvas off
+/ComplaintCanvas off
+/TimeCanvas off
+Speaker1 ''
+$Vitalsmonitor outline.off
+/Player align PlayerStart
+Prompt 'After 1 hour of starting Blood Transfusion'
+$InfusionSet outline.on
+If
+ScoreTracker iscomplete 3
+Then
+$Cannula outline.off
+Else
+$Cannula outline.on
+Endif
+If
+ScoreTracker iscomplete 4
+Then
+$Patient outline.off
+Else
+$Patient outline.on
+Endif
+Wait 2
+Prompt ''
+Label 'Loop'
+If
+	$Cannula pressed
+Then
+	$Cannula reset
+	Do '07/HourCannulaCanvas.txt'
+Endif
+If
+	$Patient pressed
+Then
+	$Patient reset
+	Do '07/Patient02.txt'
+Endif
+If
+	$InfusionSet pressed
+Then
+	$InfusionSet reset
+	Do '07/ChamberCanvas.txt'
+Endif
+Wait 1
+Goto 'Loop'

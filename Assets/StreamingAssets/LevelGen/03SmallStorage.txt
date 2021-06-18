@@ -1,0 +1,7 @@
+Room	0	RoomSmlStorage_base																										
+Desk	1	Table02Scene03	Document	1	PaperScene03	Document	2		Document	3		Document	4		Computer	5		Document	6		Phone	7		Misc	8	BloodBoxScene03		
+Cabinet	1	Refrigerator02																										
+Cabinet	2	RefrigeratorScene03	Misc	1		Misc	2	IcePackScene03																				
+Wall	1	Poster06																										
+Wall	2	NoSmokingSign01																										
+Wall	3	Poster03																										

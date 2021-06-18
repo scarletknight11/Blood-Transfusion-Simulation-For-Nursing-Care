@@ -1,0 +1,22 @@
+
+$InfusionSet align ZoomSpot
+$InfusionSet localrotatetox 180
+#$InfusionSet localrotatetoy 90
+$item = $InfusionSet
+$Answer = 'Y'
+$tasknum = 6
+$LabelPos = 'ZoomSpot'
+$question = 'Is the Blood Type and number correct?'
+Do '05/CheckScorableItem.txt'
+$BloodCheck2 = true
+$InfusionSet align ZoomSpot
+$InfusionSet localrotatetox 18
+$InfusionSet localrotatetoy 90
+$InfusionSet localrotatetoz 180
+$LabelPos = $BloodLocation
+$tasknum = 11
+$Answer = 'N'
+$question = 'Are there any clots?'
+Do '05/CheckScorableItem.txt'
+
+Return

@@ -1,0 +1,65 @@
+\hypertarget{class_game_manager}{}\section{Game\+Manager Class Reference}
+\label{class_game_manager}\index{Game\+Manager@{Game\+Manager}}
+
+
+Inheritance diagram for Game\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_game_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_game_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Game\+Object {\bfseries Find\+Game\+Object} (string obj\+Name)\hypertarget{class_game_manager_a3423fc3d472a1fe8d5531d30c286038f}{}\label{class_game_manager_a3423fc3d472a1fe8d5531d30c286038f}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_game_manager_a0a09751dc063771cce98baeaff6dca56}{Start\+Scenario} ()\hypertarget{class_game_manager_a0a09751dc063771cce98baeaff6dca56}{}\label{class_game_manager_a0a09751dc063771cce98baeaff6dca56}
+
+\begin{DoxyCompactList}\small\item\em Start\+Scenario is a public function that allows another script to start the scene\textquotesingle{}s scenario (\hyperlink{class_room_generator}{Room\+Generator} starts this function once all room objects have finished spawning in). \end{DoxyCompactList}\item 
+static void \hyperlink{class_game_manager_af79e05cc1c84a19d49af65f7e8b63b97}{Object\+Created} (Game\+Object created\+GO)\hypertarget{class_game_manager_af79e05cc1c84a19d49af65f7e8b63b97}{}\label{class_game_manager_af79e05cc1c84a19d49af65f7e8b63b97}
+
+\begin{DoxyCompactList}\small\item\em Object Created function called after Level Generator verifies that a dynamic object requested to be created by the Game Manager has finished spawning into the scene. \end{DoxyCompactList}\item 
+static Game\+Object \hyperlink{class_game_manager_a9b6d25273c6357c9baee92434fa2cbf2}{Find\+This\+Object} (string obj\+Name)\hypertarget{class_game_manager_a9b6d25273c6357c9baee92434fa2cbf2}{}\label{class_game_manager_a9b6d25273c6357c9baee92434fa2cbf2}
+
+\begin{DoxyCompactList}\small\item\em Find\+This\+Object finds a single game object. Public function that should be used for object finding by other scripts, such as message handlers. Returns a reference to the game object searched for. Function first checks room object inventory managed by \hyperlink{class_room_generator}{Room\+Generator}, then searches by name if object not in room inventory. Returns null if object not found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_game_manager}{Game\+Manager} {\bfseries instance} = null\hypertarget{class_game_manager_a7666e8468dac197b9eb32dd32128524f}{}\label{class_game_manager_a7666e8468dac197b9eb32dd32128524f}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void {\bfseries Awake} ()\hypertarget{class_game_manager_a707008ca02672c2dc850ccf571a6be6d}{}\label{class_game_manager_a707008ca02672c2dc850ccf571a6be6d}
+
+\item 
+override void \hyperlink{class_game_manager_a899d26c5780c61d0238baf32cbcbf373}{Start} ()\hypertarget{class_game_manager_a899d26c5780c61d0238baf32cbcbf373}{}\label{class_game_manager_a899d26c5780c61d0238baf32cbcbf373}
+
+\begin{DoxyCompactList}\small\item\em Start function ensures that Event\+System and Physics\+Raycaster are both in scene so that I\+Pointer events will function properly and user can click on objects in the scene. Also creates new Expression Parser object. \end{DoxyCompactList}\item 
+override bool \hyperlink{class_game_manager_a6c763733689eff3693175e79c6c6b210}{process\+Objects\+Command} (string obj\+Name, string command, string cparams)\hypertarget{class_game_manager_a6c763733689eff3693175e79c6c6b210}{}\label{class_game_manager_a6c763733689eff3693175e79c6c6b210}
+
+\begin{DoxyCompactList}\small\item\em process\+Objects\+Command processes commands meant for multiple objects. Supports A\+NY and A\+LL patterns. e.\+g.\+: Lights/\+A\+LL \end{DoxyCompactList}\item 
+Game\+Object\mbox{[}$\,$\mbox{]} {\bfseries Find\+Game\+Objects} (string obj\+Name)\hypertarget{class_game_manager_a4d402ce0ed803b3a5ae995d8ef94c571}{}\label{class_game_manager_a4d402ce0ed803b3a5ae995d8ef94c571}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/pjd37/\+Documents/\+Git\+Hub/\+Blood\+Transfusion/\+B\+T/\+Assets/\+Scripts/Game\+Manager.\+cs\end{DoxyCompactItemize}

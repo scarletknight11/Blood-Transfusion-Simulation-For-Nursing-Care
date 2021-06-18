@@ -1,0 +1,18 @@
+   View lookAt MedForm/DateLine 0.0,0.2,-0.05
+GM Wait 2
+   MedForm Menu.Question Is it dated?
+   MedForm Menu.on MedForm/DateLine
+GM WaitFor 
+   MedForm Menu.Done 
+GM Wait 1
+GM If
+    MedForm Menu.Result YES
+GM Then
+GM  Create CheckMark DateMark
+GM Else
+GM   Create XMark DateMark
+GM Endif
+   DateMark MoveTo MedForm/DateLine
+GM Wait 3
+   MedForm lookAtMe 0.0,0.3,-0.05  #zoom out still looking at MedForm
+GM Wait 2

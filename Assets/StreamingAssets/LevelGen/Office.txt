@@ -1,0 +1,4 @@
+Room	0	RoomLrgOffice_base												
+Desk	1	DeskSet01	Computer	1	ComputerSet01	Phone	2	Telephone01	Document	3	DocForms	Document	4	DocGXMForm
+Desk	2	DeskSet01	Computer	1	ComputerSet01	Phone	2	Telephone01		
+Chair	2	ChairOffice01			

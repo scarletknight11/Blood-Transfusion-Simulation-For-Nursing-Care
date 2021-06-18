@@ -1,0 +1,54 @@
+Debug 'Entering PatientCheck.txt'
+Wait .1
+/CheckCanvas off
+/JoystickCanvas off
+/PatientCanvas on
+Player align PlayerLookPat
+$patientHead play TurnLeft
+Wait 1
+Prompt 'Hello, did you have something to ask?'
+
+Label 'Loop'
+
+	Debug 'Entering PatientCheck.txt'
+	Wait .1
+	If
+		/PatientCanvas/Name pressed
+	Then
+		/PatientCanvas/Name reset
+		Prompt 'My name is Tan Ah Kow. My IC Number is S0000000X'
+		Wait 2
+		Prompt ''
+		$item = $None
+		$question = 'Is this the correct patient?'
+		$tasknum = 8	
+$Answer = 'Y'
+		$LabelPos = $None
+
+	$patientHead play TurnRight
+		Do '05/CheckScorableItem.txt'
+		Do '05/PatientIdle.txt'
+	Endif
+
+	If
+		/PatientCanvas/Name/Blood pressed
+	Then
+		/PatientCanvas/Name/Blood reset
+		Speaker1 'Hello.  I need to do some verification before I conduct the blood transfuion.  May I have your blood type?'
+		Wait 2
+		Prompt 'A+'
+		Wait 2
+		Speaker1 ''
+		Prompt ''
+		#Do '05/CorrectBlood.txt'
+		$item = $None
+		$question = 'Is this the correct blood type?'
+$Answer = 'Y'
+		$tasknum = 5
+		$LabelPos = $None
+	$patientHead play TurnRight
+		Do '05/CheckScorableItem.txt'
+		Do '05/PatientIdle.txt'	
+	Endif
+	Wait 1
+Goto 'Loop'

@@ -1,0 +1,21 @@
+Gloves align ZoomSpot
+ZoomSpot Menu.Question 'Put on Gloves?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+ZoomSpot Menu.Result Y
+Then
+$Gloves reset
+	ScoreTracker gain 1
+	ScoreTracker complete 11
+	Gloves align GlovesSpot
+Wait 1
+	Do '07/FourHourStart.txt'
+Else
+$Gloves reset
+	Gloves align GlovesSpot
+Wait 1
+	Do '07/FourHourStart.txt'
+Endif

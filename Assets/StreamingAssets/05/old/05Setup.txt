@@ -1,0 +1,19 @@
+
+
+$Patient = 'Patient/TEMP_Patient'
+$WristTag = 'WristTag'
+$IDLabel = 'IDLabel'
+$None = 'Null'
+$InfusionSet = 'InfusionSet'
+$GXMFirst = true
+
+$Nurse = 'Nurse'
+$NursePatPos = 'NursePatPos'
+$PlayerPatPos = 'PlayerPatPos'
+$PlayerLookPat = 'Bed2/Close'
+
+$GXMForm = 'GXM'
+
+ScoreTracker setstages 5
+End off
+Do '05/05Start.txt'

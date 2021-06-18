@@ -1,0 +1,209 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using DG.Tweening;
+
+// This component can't function without a MessageHandlerBase component
+[RequireComponent(typeof(MessageHandlerBase))]
+
+public class MessageHandlerCamera : MonoBehaviour
+{
+    MessageHandlerBase myMessageHandler;
+
+    void OnEnable()
+    {
+        myMessageHandler = GetComponent<MessageHandlerBase>();
+
+        if (myMessageHandler)
+        {
+            myMessageHandler.RegisterDelegate(HandleMessage);
+        }
+    }
+
+    void OnDisable()
+    {
+        if (myMessageHandler)
+        {
+            myMessageHandler.UnregisterDelegate(HandleMessage);
+        }
+    }
+
+    void HandleMessage(MessageType msgType, GameObject senderGO, MessageData msgData)
+    {
+        switch (msgType)
+        {
+            case MessageType.moveto:
+                // Get transform data (Vector3) for new position
+                TransformData transData = msgData as TransformData;
+                if (transData != null)
+                {
+                    transform.position = transData.newVec;
+                }
+                break;
+/** <summary>
+* LOOKAT message sets camera position and rotation.
+* lookAt targetObject offset
+* lookAt targetObject viewerObject(for position)
+* lookAt targetObject ("close", "medium", or "far"(using CameraTargetParams data))
+* </summary>
+*/
+            case MessageType.lookat:
+                // Get transform data (Vector3) for new position
+                LookAtData lookData = msgData as LookAtData;
+                if (lookData != null)
+                {
+                    GameObject targetGO = null;
+                    CameraTargetParams camParams = null;
+                    // tpos = position in space camera should look at
+                    // vpos = position in space for camera to move to
+                    // vrot = rotation for camera to pivot to
+                    Vector3 tpos = Vector3.zero, vpos = Vector3.zero, vrot = Vector3.zero;
+                    // Need to use tpos or has rotation already been set?
+                    bool rotationSet = false;
+
+                    // Find target object
+                    if (GameManager.instance != null)
+                    {
+                        // If present, use GameManager's functionality to find object
+                        targetGO = GameManager.FindThisObject(lookData.target);
+                    }
+                    else
+                    {
+                        targetGO = GameObject.Find(lookData.target); // Otherwise, find it the old fashioned way
+                    }
+
+                    // Get target's camera parameters, if any
+                    if (targetGO != null)
+                    {
+                        // Find the game objects camera parameters, if any
+                        camParams = targetGO.GetComponent<CameraTargetParams>();
+                    }
+
+                    // Find position in space to look at
+                    if (camParams != null)
+                    {
+                        if (camParams.lookAt != null)
+                        {
+                            // Should look at this position, not target object's pivot point
+                            tpos = camParams.lookAt.transform.position;
+                        }
+                        else
+                        {
+                            // Look at target object's pivot point
+                            tpos = targetGO.transform.position;
+                        }
+                    }
+                    else
+                    {
+                        // No camera parameters? Look at target object's pivot point
+                        tpos = targetGO.transform.position;
+                    }
+
+                    // Use offset from target game object, if any
+                    if (lookData.offset != null)
+                    {
+                        vpos = tpos + lookData.offset;
+                    }
+                    // OTHERWISE, use CAMERA PARAMETER settings
+                    // IF CLOSE MEDIUM or FAR, use Camera Parameter settings
+                    else if (lookData.offsetStr == "close" || lookData.offsetStr == "closeup")
+                    {
+                        if (camParams != null)
+                        {
+                            // Check for target's camera parameters
+                            if (camParams.close != null)
+                            {
+                                // Object being looked at has specific positions where camera should go
+                                vpos = camParams.close.position;
+                                if (camParams.lookAt == null)
+                                {
+                                    vrot = camParams.close.rotation.eulerAngles;
+                                    rotationSet = true;
+                                }
+                            }
+                            else
+                            {
+                                Debug.Log("MESSAGE HANDLER: LOOKAT: CLOSE " + this.name + " failed to find CLOSE camera parameters on " + targetGO.name);
+                                vpos = targetGO.transform.position + new Vector3(0f, 0.5f, 0.75f);
+                            }
+                        }
+                    }
+                    else if (lookData.offsetStr == "medium" || lookData.offsetStr == "med")
+                    {
+                        if (camParams != null)
+                        {
+                            // Check for target's camera parameters
+                            if (camParams.medium != null)
+                            {
+                                // Object being looked at has specific positions where camera should go
+                                vpos = camParams.medium.position;
+                                if (camParams.lookAt == null)
+                                {
+                                    vrot = camParams.medium.rotation.eulerAngles;
+                                    rotationSet = true;
+                                }
+                            }
+                            else
+                            {
+                                Debug.Log("MESSAGE HANDLER: LOOKAT: MEDIUM " + this.name + " failed to find MEDIUM camera parameters on " + targetGO.name);
+                                vpos = targetGO.transform.position + new Vector3(0f, 1f, 1.5f);
+                            }
+                        }
+                    }
+                    else if (lookData.offsetStr == "far")
+                    {
+                        if (camParams != null)
+                        {
+                            // Check for target's camera parameters
+                            if (camParams.far != null)
+                            {
+                                // Object being looked at has specific positions where camera should go
+                                vpos = camParams.far.position;
+                                if (camParams.lookAt == null)
+                                {
+                                    vrot = camParams.far.rotation.eulerAngles;
+                                    rotationSet = true;
+                                }
+                            }
+                            else
+                            {
+                                Debug.Log("MESSAGE HANDLER: LOOKAT: FAR " + this.name + " failed to find FAR camera parameters on " + targetGO.name);
+                                vpos = targetGO.transform.position + new Vector3(0f, 1.5f, 2f);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        // Parameter is name of a game object located where camera should move to
+                        GameObject vgo;
+                        if (GameManager.instance != null)
+                        {
+                            // If present, use GameManager's functionality to find object
+                            vgo = GameManager.FindThisObject(lookData.offsetStr);
+                        }
+                        else
+                        {
+                            vgo = GameObject.Find(lookData.offsetStr); // move camera to object's position
+                        }
+                        vpos = vgo.transform.position;
+                    }
+
+                    // Move the camera
+                    Camera.main.transform.position = vpos;
+
+                    // IF camera rotation has already been set, rotate to that setting
+                    if (rotationSet)
+                    {
+                        Camera.main.transform.eulerAngles = vrot;
+                    }
+                    else
+                    // ELSE look at target position
+                    {
+                        Camera.main.transform.LookAt(tpos);
+                    }
+                }
+                break; //lookat
+        }
+        }
+    }

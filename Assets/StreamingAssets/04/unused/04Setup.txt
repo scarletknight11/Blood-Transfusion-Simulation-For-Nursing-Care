@@ -1,0 +1,26 @@
+# 0 = RightSet
+# 1 = DishAdded
+
+Debug.on
+Debug 'Scene04Setup.txt'
+End off
+
+#Speaker1 'hello'
+#Speaker2 'hi there!'
+#Wait 3
+$Player = 'Player'
+$Shelf = 'Shelf'
+$InfusionSet01 = 'InfusionSet01'
+$InfusionSet02 = 'InfusionSet02'
+$InfusionSet03 = 'InfusionSet03'
+$SetOrig01 = 'Set01Orig'
+$SetOrig02 = 'Set02Orig'
+$SetOrig03 = 'Set03Orig'
+$KidneyDish = 'KidneyDish'
+$KidDishOrig = 'KidDishOrig'
+$DoorSingle = 'DoorSingle'
+
+$Shelf outline.on
+
+ScoreTracker setstages 4
+Do '04/Scene04Start.txt'

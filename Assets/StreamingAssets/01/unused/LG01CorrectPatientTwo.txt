@@ -1,0 +1,17 @@
+/PatientCanvas off
+ZoomSpot Menu.Question 'Is this the right patient?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+ZoomSpot Menu.Result Y
+Then
+	ScoreTracker gain 1
+	ScoreTracker complete 8
+	$Patient reset
+#	Do '01/LG01PatientChoice.txt'
+Else
+#	Do '01/LG01PatientChoice.txt'
+Endif
+Wait 1

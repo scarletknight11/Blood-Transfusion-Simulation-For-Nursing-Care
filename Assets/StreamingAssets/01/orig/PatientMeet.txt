@@ -1,0 +1,24 @@
+Player align PlayerLookPat
+	$patient play TurnLeft
+/JoystickCanvas off
+/CheckCanvas on
+Label 'Loop'
+If
+	/CheckCanvas/Speak pressed
+Then
+	/CheckCanvas/Speak reset
+	Do '01/PatientTalkCheck.txt'
+Endif
+Wait 1
+If
+	/CheckCanvas/Speak/Blood pressed
+Then
+	/CheckCanvas/Speak/Blood reset
+	Prompt 'Blood has been collected.'
+	ScoreTracker gain 1
+	ScoreTracker complete 6
+	$patient play TurnRight
+	Do '01/PatientChoice.txt'
+Endif
+Wait 1
+Goto 'Loop'

@@ -1,0 +1,5 @@
+Canvas off
+ScoreTracker getcompletepercent
+Do 'Perfect.txt'
+Do 'Success.txt'
+Do 'Failure.txt'

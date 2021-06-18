@@ -1,0 +1,154 @@
+\hypertarget{class_room_generator}{}\section{Room\+Generator Class Reference}
+\label{class_room_generator}\index{Room\+Generator@{Room\+Generator}}
+
+
+Inheritance diagram for Room\+Generator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_room_generator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Room\+Generator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_room_generator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_room_generator_ae830ed790aac77b46d07122adfeabf8b}{Room\+Object\+Spawn\+Complete} ()
+\begin{DoxyCompactList}\small\item\em An object finished spawning in. If we\textquotesingle{}ve finished spawning all objects, tell the Game Manager to start the scenario.\end{DoxyCompactList}\item 
+void \hyperlink{class_room_generator_ae121bd18747826525bfb7a1373fb8815}{Object\+Create\+Complete} (Game\+Object created\+GO)
+\begin{DoxyCompactList}\small\item\em A script requested that a dynamic object be created and it just finished.\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_room_generator_a33a166564d1f35811cef377d7d54542d}{Load\+A\+Room\+File} (string new\+Room\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Public function to call for a Room File load.\end{DoxyCompactList}\item 
+static void \hyperlink{class_room_generator_afd47621ed5bd8fa1188597457e058b4f}{Set\+The\+Scene} (\hyperlink{class_room_script}{Room\+Script} room\+Script)
+\begin{DoxyCompactList}\small\item\em Once the room is loaded into the scene, start spawning in all of the main Room Objects.\end{DoxyCompactList}\item 
+static void \hyperlink{class_room_generator_ace5a03c289af51e9ef00640179f3eb53}{Spawn\+Sub\+Objects} (\hyperlink{class_sub_object_parent}{Sub\+Object\+Parent} sub\+Object\+Parent)
+\begin{DoxyCompactList}\small\item\em Once a parent Room Object finishes spawning in, spawn in all of its sub-\/objects.\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} \hyperlink{class_room_generator_aedfb98ab4eafe99b40b6e6d3aa7ac4b7}{setup\+Files}
+\item 
+Dictionary$<$ string, \hyperlink{class_room_object}{Room\+Object} $>$ \hyperlink{class_room_generator_a7fc000f4bdbb82d0c149090dfbbb1807}{room\+Objects} = new Dictionary$<$string, \hyperlink{class_room_object}{Room\+Object}$>$()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_room_generator}{Room\+Generator} {\bfseries instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\hypertarget{class_room_generator_a5988edfe5286dada37acfcb9c2fc3693}{}\label{class_room_generator_a5988edfe5286dada37acfcb9c2fc3693}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Room\+Generator@{Room\+Generator}!Load\+A\+Room\+File@{Load\+A\+Room\+File}}
+\index{Load\+A\+Room\+File@{Load\+A\+Room\+File}!Room\+Generator@{Room\+Generator}}
+\subsubsection[{\texorpdfstring{Load\+A\+Room\+File(string new\+Room\+File\+Name)}{LoadARoomFile(string newRoomFileName)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Room\+Generator.\+Load\+A\+Room\+File (
+\begin{DoxyParamCaption}
+\item[{string}]{new\+Room\+File\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_room_generator_a33a166564d1f35811cef377d7d54542d}{}\label{class_room_generator_a33a166564d1f35811cef377d7d54542d}
+
+
+Public function to call for a Room File load.
+
+\index{Room\+Generator@{Room\+Generator}!Object\+Create\+Complete@{Object\+Create\+Complete}}
+\index{Object\+Create\+Complete@{Object\+Create\+Complete}!Room\+Generator@{Room\+Generator}}
+\subsubsection[{\texorpdfstring{Object\+Create\+Complete(\+Game\+Object created\+G\+O)}{ObjectCreateComplete(GameObject createdGO)}}]{\setlength{\rightskip}{0pt plus 5cm}void Room\+Generator.\+Object\+Create\+Complete (
+\begin{DoxyParamCaption}
+\item[{Game\+Object}]{created\+GO}
+\end{DoxyParamCaption}
+)}\hypertarget{class_room_generator_ae121bd18747826525bfb7a1373fb8815}{}\label{class_room_generator_ae121bd18747826525bfb7a1373fb8815}
+
+
+A script requested that a dynamic object be created and it just finished.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_generator_ae121bd18747826525bfb7a1373fb8815_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Room\+Generator@{Room\+Generator}!Room\+Object\+Spawn\+Complete@{Room\+Object\+Spawn\+Complete}}
+\index{Room\+Object\+Spawn\+Complete@{Room\+Object\+Spawn\+Complete}!Room\+Generator@{Room\+Generator}}
+\subsubsection[{\texorpdfstring{Room\+Object\+Spawn\+Complete()}{RoomObjectSpawnComplete()}}]{\setlength{\rightskip}{0pt plus 5cm}void Room\+Generator.\+Room\+Object\+Spawn\+Complete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_room_generator_ae830ed790aac77b46d07122adfeabf8b}{}\label{class_room_generator_ae830ed790aac77b46d07122adfeabf8b}
+
+
+An object finished spawning in. If we\textquotesingle{}ve finished spawning all objects, tell the Game Manager to start the scenario.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_generator_ae830ed790aac77b46d07122adfeabf8b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_generator_ae830ed790aac77b46d07122adfeabf8b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Room\+Generator@{Room\+Generator}!Set\+The\+Scene@{Set\+The\+Scene}}
+\index{Set\+The\+Scene@{Set\+The\+Scene}!Room\+Generator@{Room\+Generator}}
+\subsubsection[{\texorpdfstring{Set\+The\+Scene(\+Room\+Script room\+Script)}{SetTheScene(RoomScript roomScript)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Room\+Generator.\+Set\+The\+Scene (
+\begin{DoxyParamCaption}
+\item[{{\bf Room\+Script}}]{room\+Script}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_room_generator_afd47621ed5bd8fa1188597457e058b4f}{}\label{class_room_generator_afd47621ed5bd8fa1188597457e058b4f}
+
+
+Once the room is loaded into the scene, start spawning in all of the main Room Objects.
+
+\index{Room\+Generator@{Room\+Generator}!Spawn\+Sub\+Objects@{Spawn\+Sub\+Objects}}
+\index{Spawn\+Sub\+Objects@{Spawn\+Sub\+Objects}!Room\+Generator@{Room\+Generator}}
+\subsubsection[{\texorpdfstring{Spawn\+Sub\+Objects(\+Sub\+Object\+Parent sub\+Object\+Parent)}{SpawnSubObjects(SubObjectParent subObjectParent)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Room\+Generator.\+Spawn\+Sub\+Objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Sub\+Object\+Parent}}]{sub\+Object\+Parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_room_generator_ace5a03c289af51e9ef00640179f3eb53}{}\label{class_room_generator_ace5a03c289af51e9ef00640179f3eb53}
+
+
+Once a parent Room Object finishes spawning in, spawn in all of its sub-\/objects.
+
+
+
+\subsection{Member Data Documentation}
+\index{Room\+Generator@{Room\+Generator}!room\+Objects@{room\+Objects}}
+\index{room\+Objects@{room\+Objects}!Room\+Generator@{Room\+Generator}}
+\subsubsection[{\texorpdfstring{room\+Objects}{roomObjects}}]{\setlength{\rightskip}{0pt plus 5cm}Dictionary$<$string, {\bf Room\+Object}$>$ Room\+Generator.\+room\+Objects = new Dictionary$<$string, {\bf Room\+Object}$>$()}\hypertarget{class_room_generator_a7fc000f4bdbb82d0c149090dfbbb1807}{}\label{class_room_generator_a7fc000f4bdbb82d0c149090dfbbb1807}
+Keeps track of objects in the room \index{Room\+Generator@{Room\+Generator}!setup\+Files@{setup\+Files}}
+\index{setup\+Files@{setup\+Files}!Room\+Generator@{Room\+Generator}}
+\subsubsection[{\texorpdfstring{setup\+Files}{setupFiles}}]{\setlength{\rightskip}{0pt plus 5cm}string \mbox{[}$\,$\mbox{]} Room\+Generator.\+setup\+Files}\hypertarget{class_room_generator_aedfb98ab4eafe99b40b6e6d3aa7ac4b7}{}\label{class_room_generator_aedfb98ab4eafe99b40b6e6d3aa7ac4b7}
+Array of level setup filenames 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/pjd37/\+Documents/\+Git\+Hub/\+Blood\+Transfusion/\+B\+T/\+Assets/\+Scripts/\+Level\+Gen/Room\+Generator.\+cs\end{DoxyCompactItemize}

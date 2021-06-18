@@ -1,0 +1,17 @@
+#CheckItemSkip - if scoretracker has item complete, then item requires a pressed
+# $item - item number in score tracker
+#Debug 'CheckItemSkip.txt for ' + item
+#Wait 2
+
+  If
+    ScoreTracker iscomplete $item
+  Then
+    $temp = $ 'Item ' + item + ' is complete'
+    Debug $temp
+#    $itemCheck = 'Forms/CheckFormItemPressed.txt'
+  Else
+    $temp = $ 'Item ' + item + ' is NOT complete'
+    Debug $temp
+#    $itemCheck = 'Forms/CheckFormItemStatus.txt'
+  Endif
+#  Prompt 'Done CheckItemSkip.txt for ' + item

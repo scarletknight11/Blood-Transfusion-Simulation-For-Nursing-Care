@@ -1,0 +1,24 @@
+/PatientCanvas off
+/LabelCanvas off
+/CheckCanvas off
+/COWCanvas off
+
+#$Patient outline.on
+#Prompt 'PatientIdle: turning outline on for ' + $Patient
+$Patient outline.on
+#Prompt 'PatientIdle: turned outline on'
+#Wait 1
+
+Do '05/PatientIdle.txt'
+
+$item = $Patient
+Do '05/WaitForSelectItem.txt'
+ScoreTracker gain 1
+ScoreTracker complete 0
+Player align $PlayerPatPos
+
+$item = $Nurse
+Do '05/WaitForSelectItem.txt'
+Do '05/WaitForNurseCall.txt'
+Prompt 'Returned from WaitForNurseCall'
+Do '05/PatientIdle.txt'

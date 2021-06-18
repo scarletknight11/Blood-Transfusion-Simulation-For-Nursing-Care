@@ -1,0 +1,135 @@
+#PatientIdle - main patient Loop
+# $Patient - patient object
+# $WristTag
+# $IDLabel
+
+Debug 'PatientIdle:Entering'
+Player align $PlayerLookPat
+#Player lookAt $PlayerLookPat
+Debug 'PatientIdle: align PlayerLookPos'
+#Wait 5
+#Player lookat $PlayerPatPos
+JoystickCanvas on
+PatientCanvas off
+
+$Patient reset
+$WristTag reset
+$IDLabel reset
+$GXMForm reset
+$InfusionSet reset
+
+$Patient outline.on
+$WristTag outline.on
+$IDLabel outline.on
+$GXMForm outline.on
+$InfusionSet outline.on
+
+
+
+Label 'Loop'
+
+	Debug 'PatientIdle:Loop'
+	$onOff = false
+
+	If
+		$Nurse pressed
+	Then
+		$Nurse resetPressed
+		Do '05/AllClicks.txt'
+		Do '05/WaitForNurseCall.txt'
+		$onOff = true
+		Do '05/AllClicks.txt'
+	Endif
+
+	If
+		$Patient pressed
+	Then
+		$Patient resetPressed
+		Do '05/AllClicks.txt'
+		Do '05/LGPatientMeet.txt'
+		$Patient reset
+		$onOff = true
+		Do '05/AllClicks.txt'
+	Endif
+
+
+
+	If
+		$WristTag pressed
+	Then
+		$WristTag resetPressed
+		Do '05/AllClicks.txt'
+		Do '05/CorrectPatient.txt'
+		$WristTag resetPressed
+		Player align $PlayerLookPat .2
+		$onOff = true
+		Do '05/AllClicks.txt'
+	Endif
+	Wait .01
+
+	If
+		$IDLabel pressed
+	Then
+		$IDLabel resetPressed
+		Do '05/AllClicks.txt'
+#		$IDLabel localrotatetox 90
+		$NameCheck2 = true
+		$item = IDLabel
+		$Answer = 'Y'
+		$tasknum = 4
+		$LabelPos = $BloodLocation    #IDLabelPos
+		$question = 'Is this the correct patient?'
+		$IDLabel reset
+		$IDLabel outline.off
+		Do '05/CheckScorableItem.txt'
+#		$IDLabel localrotatetox 0
+		Wait .21
+		$IDLabel LocalMoveY 0.05
+		$onOff = true
+		Do '05/AllClicks.txt'
+	Endif
+	Wait .01
+
+	If
+		$GXMForm pressed
+	Then
+		$GXMForm resetPressed
+		Do '05/AllClicks.txt'
+		Do '05/GXMForm.txt'
+		$onOff = true
+		Do '05/AllClicks.txt'
+		Player align $PlayerLookCow
+	Endif
+
+	If
+		$InfusionSet pressed
+	Then
+		$InfusionSet resetPressed
+		Do '05/AllClicks.txt'
+		$BloodCheck2 = true
+		Do '05/Bag.txt'
+		$onOff = true
+		Do '05/AllClicks.txt'
+	Endif
+	If
+		$ChecklistButton pressed
+	Then
+		$ChecklistButton resetPressed
+		Do '05/AllClicks.txt'
+		Do 'ShowList.txt'
+	Endif
+	Wait .01
+Goto 'Loop'
+
+#unused
+		Wait 10
+		Player lookAt $WristTag 0.0,0.4,-0.05
+		#		$WristTag resetPressed
+		$item = $WristTag 
+		$Answer = 'Y'
+		$tasknum = 2
+		$LabelPos = 'WristSpot'
+		$question = 'Is the ID label correct?'
+		$WristTag localrotatetox -90
+#Wait 5
+		Do '05/CheckScorableItem.txt'

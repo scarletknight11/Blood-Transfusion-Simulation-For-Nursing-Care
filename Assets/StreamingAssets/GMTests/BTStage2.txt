@@ -1,0 +1,11 @@
+Do 'GMTests/PatientEnters.txt' 
+#GM Load 'GMTests/Env/TVOn.txt'
+Patient Grab NameForm
+Prompt 'Check how patient is feeling.'
+Do 'GMTests/CheckPatient.txt'
+Viewer lookAt Patient/Face
+Patient Release
+Prompt 'Wait for next patient.'
+Wait 1
+Do 'GMTests/Env/TVOn.txt'
+Wait 9

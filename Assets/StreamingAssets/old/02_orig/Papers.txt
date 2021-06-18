@@ -1,0 +1,13 @@
+If
+ScoreTracker rangecomplete 2-8
+Then
+Goto 'Skip'
+Else
+/Canvas/SelectionPanel off
+Player lookAt GXMForm
+Player follow GXMForm
+GM Wait 1
+Player follow false
+GM Do '02/GXMFormSkips.txt'
+Label 'Skip'
+Endif

@@ -1,0 +1,77 @@
+#Debug.on
+#DebugCanvas.on
+End off
+Begin off
+
+Debug '05Setup.txt started'
+$Bed = 'Bed2'
+$Patient = 'Bed2/Patient1/TEMP_Patient'
+$WristTag = 'Bed2/Patient1/WristTag'
+$PatientFace = $Patient + '/metarig/spine/spine.001/spine.002/spine.003/spine.004'
+$PatLookPlayer = $Patient + '/TurntoPlayer'
+$PatLookReset = $Patient + '/TurnForward'
+$ChecklistButton = 'ChecklistButton'
+$Checklist = 'ChecklistCanvas'
+
+$Scene = '05/LGPatientIdle.txt'
+$Check01 = $Checklist + '/Background/Check01'
+$Check02 = $Checklist + '/Background/Check02'
+$Check03 = $Checklist + '/Background/Check03'
+$Check04 = $Checklist + '/Background/Check04'
+$str1 = 'Ask the patient for their information'
+$Check01 write $str1
+$str2 = 'Verify patient information'
+$str3 = 'Verify patient compatibility'
+$str4 = 'Check the blood bag'
+$Check02 write $str2
+$Check03 write $str3
+$Check04 write $str4
+
+$Bloodbox = 'Bloodbox2(Clone)'
+$IDLabel = 'Cart2/Misc5'
+$Dish = 'COW0(Clone)/KidneyDish(Clone)'
+$None = 'Null'
+$InfusionSet = 'Cart2/Misc4'
+$GXMFirst = true
+$Deflook = 'Cart2 far'
+#$Deflook = 'Cart2/Far'
+$BloodLocation = 'COW0(Clone)/BloodPosScene05'
+$BloodboxLocation = 'COW0(Clone)/Pos05'
+$IDLabelPos = 'COW0(Clone)/IDLabelPos'
+
+$InfusionSet clickable false
+$IDLabel clickable false
+$WristTag clickable false
+$Patient clickable false
+
+#Wait 1
+
+$Bloodbox moveto $BloodboxLocation
+#$IDLabel align $IDLabelPos
+$Nurse = 'Nurse1'
+$NursePatPos = 'Bed02Nurse'
+#$PlayerPatPos = PlayerPatPos #'Bed2 medium'
+$PlayerPatPos = 'Bed2/Medium'
+#$PlayerLookPat = PlayerPatPos #'Bed2/Close'
+$PlayerLookPat = 'PlayerPatPos'
+$PlayerLookCow = 'PlayerCowPos'
+$InfusionSet align $BloodLocation 0.01
+$IDLabel align $BloodLocation 0.01
+Wait .020051   #Time neede for things to move/align
+#Prompt 'Move blood'
+#$GXMForm = 'Cart2/Misc3'
+$GXMForm = 'COW0(Clone)/GXMFormVariant(Clone)'
+$GXMForm localrotatetoY 180
+$GXMForm localmoveZ 0.1
+$Dish delete
+
+ScoreTracker setstages 5
+
+$NameCheck1 = false
+$NameCheck2 = false
+$BloodCheck1 = false
+$BloodCheck2 = false
+$Checklist off
+$IDLabel LocalMoveY 0.05
+
+Do '05/LG05Start.txt'

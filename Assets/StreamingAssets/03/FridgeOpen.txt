@@ -1,0 +1,19 @@
+wait 1
+Player align PlayerPos
+wait 1
+ZoomSpot Menu.Question Open the Fridge?
+   ZoomSpot Menu.on ZoomSpot
+WaitFor 
+   ZoomSpot Menu.Done 
+Wait 1
+ If
+    ZoomSpot Menu.Result Y
+Then
+   $RefrigeratorDoor play open
+   ScoreTracker gain 1
+   ScoreTracker complete 2
+   Do '03/IceCheck.txt'
+Else
+#   Do '03/Scene03Start.txt'
+    Return
+Endif

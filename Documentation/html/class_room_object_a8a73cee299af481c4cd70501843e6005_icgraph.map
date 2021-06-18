@@ -1,0 +1,4 @@
+<map id="RoomObject.Spawn" name="RoomObject.Spawn">
+<area shape="rect" id="node2" href="$class_room_object.html#ac2c70e62649bf5a716ac906160b1ad6b" title="MonoSpawn is used to handle instantiation of an object at time of level generation. WebGL builds can&#39;t handle Asyncronous loading of objects and non&#45;Monobehaviour classes cannot run coroutines. So, to solve this, the RoomObject class uses that Monobehaviour object of the script that requested the Spawn() to actually run and manage the Coroutine. " alt="" coords="195,5,368,30"/>
+<area shape="rect" id="node3" href="$class_room_object.html#a495befc3f5df6b9281359b66db12cca5" title="MonoCreate has the same issues as MonoSpawn, above. " alt="" coords="195,54,368,79"/>
+</map>

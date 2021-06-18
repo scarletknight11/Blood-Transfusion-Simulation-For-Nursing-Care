@@ -1,0 +1,23 @@
+Room	0	RoomLrgDoubleWard_base02																										
+Bed	1	PatientBed01	Patient	1	PatientTemp																							
+Wall	1	Poster03																										
+BedsideHead	1	RackInfusionBag01	InfusionBag	1	InfusionBag05																							
+Nurse	1	NurseClickable01																										
+Bed	2	PatientBed01	Patient	1	PatientTemp																							
+Wall	2	Poster04																										
+BedsideHead	2	RackInfusionBag01	InfusionBag	1	InfusionBag03																							
+BedsideMid	2	Placeholder																										
+Cart	2	Placeholder																										
+Bed	3	PatientBed01	Patient	1	PatientTemp																							
+Wall	3	Poster02																										
+BedsideHead	3	RackInfusionBag01	InfusionBag	1	InfusionBag04																							
+BedsideHeadLeft	3	MonitorStand02	Computer	1	VitalsMonitor01																							
+Cart	3	Trolley02																										
+Nurse	3	NurseClickable01																										
+Bed	4	PatientBed01	Patient	1	PatientTemp																							
+Wall	4	Poster05																										
+BedsideHead	4	RackInfusionBottle02	InfusionBottle	1	InfusionBottle01	InfusionBottleLiquid	1	InfusionBottleLiquid01	InfusionBottle	2	InfusionBottle02	InfusionBottleLiquid	2	InfusionBottleLiquid02														
+BedsideMid	4	Placeholder																										
+Cart	4	Placeholder																										
+Wall	5	Poster06																										
+Desk	6	DeskSet02	Computer	1	ComputerSetCLMM01	Phone	2	Telephone01	Document	3	DocGXMForm	Document	4	DocGXMForm														

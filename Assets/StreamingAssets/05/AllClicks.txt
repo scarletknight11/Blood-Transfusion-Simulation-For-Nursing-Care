@@ -1,0 +1,5 @@
+$Patient clickable $onOff
+$WristTag clickable $onOff
+$IDLabel clickable $onOff
+$GXMForm clickable $onOff
+$InfusionSet clickable $onOff

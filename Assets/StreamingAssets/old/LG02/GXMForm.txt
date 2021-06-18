@@ -1,0 +1,54 @@
+#GXMForm.txt - Loop and check all the form items
+
+$GXMForm lookAtMe 0.0 0.3 -0.05
+
+$GXMForm reset
+
+$autoAdvance = true
+If
+  $autoAdvance = true
+Then
+  $itemCheck = 'Forms/CheckFormItemStatus.txt'
+Else
+  $itemCheck = 'Forms/CheckFormItemPressed.txt'
+Endif
+
+$formpage = 'GXMForm'
+
+Label 'GXMLoop'
+
+ 
+  #### PATIENT
+  $item = '2'
+  Do 'Forms/CheckItemSkip.txt'
+  $formitem = $GXMForm +/SignatureLine'
+  $question = 'Is this the correct patient?'
+  Do $itemCheck
+
+  #### BLOODLINE
+  $item = '3'
+  Do 'Forms/CheckItemSkip.txt'
+  $formitem = $GXMForm+'/BloodLine'
+  $question = 'Is the blood ordered correct?'
+  Do $itemCheck
+
+  #### VALID 
+  $item = '4'
+  Do 'Forms/CheckItemSkip.txt'
+  $formitem = $GXMForm+'/ValidLine'
+  $question = 'Is it valid?'
+  Do $itemCheck
+
+  #### EXIT
+  If
+    $GXMForm+'/Buttons/Exit' pressed
+  Then
+    Debug 'Exiting Form'
+    $GXMForm+'/Buttons/Exit' reset
+    $range = '2-4'
+    Do 'Forms/FormCheckComplete.txt'
+    Player align DefLook
+    Return                
+  Endif
+
+Goto 'GXMLoop'

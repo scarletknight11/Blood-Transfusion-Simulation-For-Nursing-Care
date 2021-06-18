@@ -1,0 +1,34 @@
+# SCENARIO GOALS
+# 0 = RightSet
+# 1 = DishAdded
+
+# OLD VARIABLE DECLARATIONS
+#$KidneyDish = 'KidneyDish'
+
+#Debug.on
+Debug 'LG04Setup.txt'
+End off
+
+#Wait 3
+$Player = 'Player'
+$Shelf = 'Cabinet2/Shelf4'
+$InfusionSet01 = 'Cabinet2/Misc1'
+$InfusionSet02 = 'Cabinet2/Misc2'
+$InfusionSet03 = 'Cabinet2/Misc3'
+$SetOrig01 = 'Cabinet2/Med01'
+$SetOrig02 = 'Cabinet2/Med02'
+$SetOrig03 = 'Cabinet2/Med03'
+$SetLook = 'SetLook'
+
+$SetCOWPosition = 'Cart1/Misc4'
+$PlayerCOWLook = 'PlayerCOWLook'
+
+$KidneyDish = 'Cabinet4/Misc2'
+$KidDishOrig = 'Cart1/Misc2'
+$DoorSingle = 'DoorEntry'
+
+$Shelf outline.on
+
+ScoreTracker setstages 4
+Do '04/LG04Scene04Start.txt'
+

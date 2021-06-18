@@ -1,0 +1,4 @@
+If
+    $InfusionSet isChosen
+Then
+    $InfusionSet rotatetoy 0

@@ -1,0 +1,7 @@
+If
+    ScoreTracker iscomplete 2
+Then
+    Do '03/IceCheck.txt'
+Else
+    Do '03/FridgeOpen.txt'
+Endif

@@ -1,0 +1,22 @@
+
+$Bed = 'Beds/Bed'
+$Patient = 'Patient/TEMP_Patient'
+$WristTag = 'Patient/WristTag'
+
+$COW = 'COW'
+$GXMForm = 'GXMForm'
+$IDLabel = 'IDLabel'
+$Nurse = 'Nurse'
+
+$GXMDeskPos = 'GXMDeskPos'
+$IDDeskPos = 'IDDeskPos'
+
+$COWPatientPos = 'COWPatientPos'
+$Deflook = 'DefLook'
+$PlayerPatPos = 'PlayerPatPos'
+$PlayerLookPat = 'PlayerLookPat'
+$NursePatPos = 'NursePatPos'
+
+ScoreTracker setstages 1
+End off
+Do '01/LG01Start.txt'

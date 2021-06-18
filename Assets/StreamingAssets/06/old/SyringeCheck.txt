@@ -1,0 +1,23 @@
+SyringeCanvas on
+Label 'Loop'
+Wait 1
+If
+	SyringeCanvas/Amount/Aspirate pressed
+Then
+	SyringeCanvas/Amount/Aspirate reset
+Endif
+If
+	SyringeCanvas/Amount/PushandFlush pressed
+Then
+	SyringeCanvas/Amount/PushandFlush reset
+	SalineTracker reducesaline
+Endif
+If
+	SalineTracker salineamount 1
+Then
+Wait 1
+	ScoreTracker gain 1
+	ScoreTracker complete 5
+	Do '06/Dish.txt'
+Endif
+Goto 'Loop'

@@ -1,0 +1,53 @@
+Wait 1
+Desk1/Computer1 outlineon
+Desk1/Phone2 outlineon
+Desk1/Document3 outlineon
+Desk1/Document4 outlineon
+Label '01Loop'
+MainCamera lookat Desk1 medium
+IF
+  Desk1/Computer1 pressed
+THEN
+  Desk1/Computer1 reset
+  MainCamera lookat Desk1/Computer1 far
+  Wait 2
+  MainCamera lookat Desk1/Computer1 medium
+  Wait 2
+  MainCamera lookat Desk1/Computer1 close
+  Wait 2
+  Desk1/Computer1 changeshader good
+ENDIF
+IF
+  Desk1/Phone2 pressed
+THEN
+  Desk1/Phone2 reset
+  MainCamera lookat Desk1/Phone2 far
+  Wait 2
+  MainCamera lookat Desk1/Phone2 medium
+  Wait 2
+  MainCamera lookat Desk1/Phone2 close
+  Wait 2
+  Desk1/Phone2 changeshader good
+ENDIF
+IF
+  Desk1/Document3 pressed
+THEN
+  Desk1/Document3 reset
+  MainCamera lookat Desk1/Document3 far
+  Wait 2
+  MainCamera lookat Desk1/Document3 medium
+  Wait 2
+  MainCamera lookat Desk1/Document3 close
+  Wait 2
+  Desk1/Document3 changeshader good
+ENDIF
+IF
+  Desk1/Document4 pressed
+THEN
+  Desk1/Document4 reset
+  MainCamera lookat Desk1/Document4 medium
+  Wait 2
+  Desk1/Document4 changeshader good
+ENDIF
+Wait 1
+Goto '01Loop'

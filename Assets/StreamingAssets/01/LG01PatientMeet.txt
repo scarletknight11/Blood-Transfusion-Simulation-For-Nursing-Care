@@ -1,0 +1,78 @@
+Debug 'Entering PatientMeet.txt'
+#Start->PatientChoice->PatientMeet
+		$Patient outline.off
+
+Wait .1
+Player lookat $PlayerLookPat
+/JoystickCanvas off
+/CheckCanvas on
+Label 'MeetLoop'
+	Debug 'In PatientMeet Loop'
+	Wait .1
+
+	If
+		/CheckCanvas/Choices/Speak pressed
+	Then
+		/CheckCanvas/Choices/Speak reset
+		TurnOff /CheckCanvas/Choices/Speak
+		/CheckCanvas off
+		If
+			ScoreTracker iscomplete 4
+		Then
+			$taskNum = 8
+		Else
+			Debug 'PatientTalkCheck: not complete.  CheckPatient'
+			$taskNum = 4
+		Endif
+		Do '01/LG01PatientCheck.txt'
+		#		Do '01/LG01PatientTalkCheck.txt'
+		Player align $PlayerPatPos 
+		$TaskSpoke = 1
+		#Return
+		Goto 'MeetDone' 
+	Endif
+
+	Wait .1
+	If
+		/CheckCanvas/Choices/Blood pressed
+	Then
+		/CheckCanvas/Choices/Blood reset
+		TurnOff /CheckCanvas/Choices/Blood
+		$TaskBlood = 1
+		/CheckCanvas off
+		Prompt 'Blood has been collected.'
+		Wait 2
+		Prompt ''
+		ScoreTracker gain 1
+		ScoreTracker complete 6
+		Player align $PlayerPatPos 
+		Goto 'MeetDone' 
+		Prompt 'Error: Did not break out of loop'
+		Wait 1
+	Endif
+	Wait .1
+Goto 'MeetLoop'
+
+Label 'MeetDone'
+Debug 'PatientMeet: out of loop'
+
+/JoystickCanvas on
+
+Debug 'TaskSpoke=' + TaskSpoke + ', TaskBlood=' + TaskBlood
+#Wait 2
+$MeetDone = (TaskSpoke + TaskBlood)
+Debug 'MeetDone = ' + MeetDone
+#Wait 2
+$Patient outline.on
+If 
+	$(MeetDone>1)
+Then
+	Debug 'MeetDone is done, so turn off outline'
+	#Wait 5
+	$Patient outline.color good
+	$Patient resetPressed
+	$Patient selectable false
+	/JoystickCanvas on
+Endif
+Debug 'Leaving PatientMeet.txt'
+#Wait 1

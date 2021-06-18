@@ -1,0 +1,41 @@
+GXMForm lookAtMe 0.0,0.3,-0.05
+GXMForm reset
+#GXMForm/SignatureLine reset
+#GXMForm/BloodLine reset
+#GXMForm/ValidLine reset
+Label 'Loop'
+$scene = 'Form/FormItem.txt'
+$formitem = 'MedForm/SignatureLine'
+$question = 'Is this the correct patient?'
+If 
+  $formitem pressed
+Then
+  $formitem reset
+  #Do $scene
+  Do 'Form/CheckFormItem.txt'
+Endif
+#If 
+#  GXMForm/SignatureLine pressed
+#Then
+#  GXMForm/SignatureLine reset
+#  Do '02/PatientCheckGXM.txt'
+#Endif
+If
+  GXMForm/BloodLine pressed
+Then
+  GXMForm/BloodLine reset
+  Do '02/BloodOrderGXM.txt'
+Endif
+If
+  GXMForm/ValidLine pressed
+Then
+  GXMForm/ValidLine reset
+  Do '02/ValidGXM.txt'
+Endif
+If
+  GXMForm/Canvas/Exit pressed
+Then
+  GXMForm/Canvas/Exit reset
+  Do '02/GXMCheck.txt'
+Endif
+Goto 'Loop'

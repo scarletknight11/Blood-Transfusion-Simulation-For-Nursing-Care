@@ -1,0 +1,9 @@
+Room	0	RoomSmlStorage_base																										
+Cart	1	COW00	Computer	1	ComputerSetCOW01	Misc	2	Placeholder	Misc	3	FoldedBloodPressureCuff01	Misc	4	Placeholder	Misc	5	LiquidSoap01	Misc	6		Misc	7		Misc	8		Misc	9
+Desk	1	Table01	Computer	1		Document	2		Document	3		Document	4															
+Cabinet	1	StandingShelf01	Misc	1		Misc	2		Misc	3																		
+Cabinet	2	StandingShelfBins01	Misc	1	IVSet01	Misc	2	IVSet01	Misc	3	IVSet01																	
+Cabinet	3	Refrigerator01																										
+Cabinet	4	CounterCabinet01	Misc	1		Misc	2	KidneyDish01	Misc	3		Misc	4	TapeRoll01														
+Wall	1	Poster04																										
+Wall	3	Poster06																										

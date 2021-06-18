@@ -1,0 +1,22 @@
+Soap align ZoomSpot
+/COWCanvas off
+ZoomSpot Menu.Question 'Use Sanitizer?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+ZoomSpot Menu.Result Y
+Then
+ScoreTracker gain 1
+ScoreTracker complete 2
+	Soap align SoapSpot
+Wait 1
+Soap reset
+	Do '06/COWStart.txt'
+Else
+	Soap align SoapSpot
+Wait 1
+Soap reset
+	Do '06/COWStart.txt'
+Endif

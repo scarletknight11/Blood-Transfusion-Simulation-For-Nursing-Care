@@ -1,0 +1,10 @@
+$Monitor = 'computer set(Clone)' #'Monitor'
+$GXMForm = 'GXMForm'
+$ConsentForms = 'ConsentForms'
+$Phone = 'telephone(Clone)' #'Phone'
+
+#Wait 5
+End off
+ScoreTracker setstages 2
+wait 1
+Do '02/02MainLoop.txt'

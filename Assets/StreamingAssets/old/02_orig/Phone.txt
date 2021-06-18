@@ -1,0 +1,10 @@
+If
+ ScoreTracker iscomplete 1
+Then
+ Do '02/Scene02Test.txt'
+Else
+/Canvas/SelectionPanel off
+Wait 1
+Player align PhoneLook
+Wait 1
+GM Do '02/CallBloodBank.txt'

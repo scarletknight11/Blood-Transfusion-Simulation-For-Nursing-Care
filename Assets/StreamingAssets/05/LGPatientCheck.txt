@@ -1,0 +1,135 @@
+#PatientStart->PatientIdle->PatientMeet->PatientCheck
+Debug 'Entering PatientCheck.txt'
+
+/CheckCanvas off
+/JoystickCanvas off
+/PatientCanvas on
+#Player lookat $PlayerLookPat
+Player align $PlayerLookPat
+
+/PatientCanvas/Choices/ALL off
+/PatientCanvas/Choices/Name on
+/PatientCanvas/Choices/Blood on
+		/PatientCanvas/Choices/Name resetPressed
+		/PatientCanvas/Choices/Blood resetPressed
+
+#Wait 1
+$PatientFace align $PatLookPlayer 2.5
+Prompt 'Hello, did you have something to ask?'
+$checkedOnce = false
+Label 'PCLoop'
+	Debug 'PatientCheck Loop'
+	Wait .1
+	If
+		/PatientCanvas/Choices/Name pressed
+	Then
+		Debug 'PatientCheck Name Pressed'
+
+		/PatientCanvas/Choices/Name reset
+		#don't turn off Canvas before sending reset
+		/PatientCanvas off
+		Speaker2 'Nurse: Hello.  I need to do some verification before I conduct the blood transfuion.'
+		Wait 2
+		Speaker2 'May I have your name and IC number?'
+		Wait 1
+		Speaker1 'Patient: My name is Tan Ah Kow. My IC Number is S0000000X.'
+		Wait 2
+		Speaker2 'Thank you for your verification.'
+		Wait 1
+		Speaker2 ''
+		#Prompt ''
+		$item = $None
+		$question = 'Is this the correct patient?'
+		$tasknum = 8	
+		$Answer = 'Y'
+		$LabelPos = $None
+		#$patientHead play TurnRight
+		$NameCheck1 = true
+		$checkedOnce = $NameCheck2 = true
+
+		If
+			$checkedOnce
+		Then
+			Do '05/CheckScorableItem.txt'
+		Else
+			Do '05/DoScorableItem.txt'		
+		Endif
+
+		Speaker2 ''
+		Speaker1 ''
+		Goto 'LeavePCLoop'
+	Endif
+
+	If
+		/PatientCanvas/Choices/Blood pressed
+	Then
+		Debug 'PatientCheck Blood Pressed'
+		/PatientCanvas/Choices/Blood reset
+		#don't turn off before sending reset
+		/PatientCanvas off
+		Speaker2 'Nurse: Hello.  I need to do some verification before I conduct the blood transfuion.'
+		Wait 2
+		Speaker2 'May I have your blood type?'
+		Wait 1
+		Speaker1 'Patient: A+'
+		Wait 2
+		Speaker2 'Thank you for your verification.'
+		Wait 1
+		Speaker2 ''
+		#Do '05/LGCorrectBlood.txt'
+		$item = $None
+		$question = 'Is this the correct blood type?'
+		$Answer = 'Y'
+		$tasknum = 5
+		$LabelPos = $None
+		#$patientHead play TurnRight
+		$BloodCheck1 = true
+		$checkedOnce = (BloodCheck2 = true )
+		If
+			$checkedOnce
+		Then
+			Do '05/CheckScorableItem.txt'
+		Else
+			Do '05/DoScorableItem.txt'
+		Endif
+
+		Speaker2 ''
+		Speaker1 ''
+		Goto 'LeavePCLoop'
+	Endif
+	Debug 'PatientCheck End of Loop'
+	Wait .21
+Goto 'PCLoop'
+
+Label 'LeavePCLoop'
+
+/PatientCanvas off
+/JoystickCanvas on
+$PatientFace align $PatLookReset 1.5
+Prompt ''
+
+#Do '05/LGPatientIdle.txt'
+
+#Return
+
+Label 'MeetDone'
+Debug 'PatientMeet: out of loop'
+
+/JoystickCanvas on
+
+Debug 'TaskSpoke=' + NameCheck1 + ', TaskBlood=' + BloodCheck1
+#Wait 2
+$MeetDone = NameCheck1 + BloodCheck1
+Debug 'MeetDone = ' + MeetDone
+#Wait 2
+$Patient outline.on
+If 
+	$(MeetDone>1)
+Then
+	Debug 'MeetDone is done, so turn off outline'
+#	Wait 5
+	$Patient outline.color good
+	$Patient resetPressed
+	$Patient selectable false
+	/JoystickCanvas on
+Endif

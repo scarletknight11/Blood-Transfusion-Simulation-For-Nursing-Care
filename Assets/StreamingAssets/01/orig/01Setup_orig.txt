@@ -1,0 +1,3 @@
+ScoreTracker setstages 1
+End off
+Do '01/01Start.txt'

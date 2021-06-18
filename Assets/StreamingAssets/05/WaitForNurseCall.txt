@@ -1,0 +1,27 @@
+Debug 'WaitForNurseCall'
+$Nurse Menu.Question 'Call Nurse?'
+$Nurse Menu.on
+#Nurse
+
+Wait .5
+#Label 'NurseCallLoop'
+    WaitFor
+        $Nurse Menu.Done
+    Wait .1
+    If
+        $Nurse Menu.Result Y
+    Then
+        ScoreTracker gain 1
+        ScoreTracker complete 1
+        $Nurse align $NursePatPos 2 #Player
+#        $Nurse play 'idle'
+        #$Nurse follow false
+	$Nurse outline.off
+        Return
+    Else
+        $Nurse clickable false
+        $Nurse outline.off
+        Return
+    Endif
+    Wait .21
+#Goto 'NurseCallLoop'

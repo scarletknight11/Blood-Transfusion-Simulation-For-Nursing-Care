@@ -1,0 +1,22 @@
+/JoystickCanvas off
+Wait 2
+ZoomSpot Menu.Question 'Is this correct?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+    ZoomSpot Menu.Done
+Wait 1
+If
+    ZoomSpot Menu.Result Y
+Then
+    $InfusionSet reset
+    /JoystickCanvas on
+    Do '04/SettoCow.txt'
+Else
+    $InfusionSet reset
+    $InfusionSet selectable false
+    $InfusionSet moveto $SetOrig
+    $Player lookAt $InfusionSet
+    $InfusionSet matchrotation $SetOrig
+    $InfusionSet playerreplace
+    /JoystickCanvas on
+Endif

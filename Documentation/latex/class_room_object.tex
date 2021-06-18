@@ -1,0 +1,188 @@
+\hypertarget{class_room_object}{}\section{Room\+Object Class Reference}
+\label{class_room_object}\index{Room\+Object@{Room\+Object}}
+
+
+\hyperlink{class_room_object}{Room\+Object}\+: Class used for each object and sub-\/object in a room (furniture, medical equipment, etc.).  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_room_object}{Room\+Object} {\bfseries Get\+Sub\+Object} (string key)\hypertarget{class_room_object_a7551cc9378c0a715f9c474ab9700df51}{}\label{class_room_object_a7551cc9378c0a715f9c474ab9700df51}
+
+\item 
+void {\bfseries Set\+Sub\+Object} (string key, \hyperlink{class_room_object}{Room\+Object} value)\hypertarget{class_room_object_a226cc6c90cce4179c76c26d9928eece8}{}\label{class_room_object_a226cc6c90cce4179c76c26d9928eece8}
+
+\item 
+Dictionary$<$ string, \hyperlink{class_room_object}{Room\+Object} $>$ {\bfseries Get\+All\+Sub\+Objects} ()\hypertarget{class_room_object_a7f2767bb854edcd01da10165a83fe6e4}{}\label{class_room_object_a7f2767bb854edcd01da10165a83fe6e4}
+
+\item 
+int {\bfseries Count\+Sub\+Objects} ()\hypertarget{class_room_object_ade600b4ed09c67049577169c2e0d7725}{}\label{class_room_object_ade600b4ed09c67049577169c2e0d7725}
+
+\item 
+void \hyperlink{class_room_object_ac2c70e62649bf5a716ac906160b1ad6b}{Mono\+Spawn} (Mono\+Behaviour requester, Transform ref\+Transform, Transform my\+Parent=null)
+\begin{DoxyCompactList}\small\item\em Mono\+Spawn is used to handle instantiation of an object at time of level generation. Web\+GL builds can\textquotesingle{}t handle Asyncronous loading of objects and non-\/\+Monobehaviour classes cannot run coroutines. So, to solve this, the \hyperlink{class_room_object}{Room\+Object} class uses that Monobehaviour object of the script that requested the \hyperlink{class_room_object_a8a73cee299af481c4cd70501843e6005}{Spawn()} to actually run and manage the Coroutine. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_room_object_a8a73cee299af481c4cd70501843e6005}{Spawn} (Transform ref\+Transform, Transform my\+Parent=null)
+\begin{DoxyCompactList}\small\item\em Spawn is used to handle instantiation of an object at time of level generation. \end{DoxyCompactList}\item 
+void \hyperlink{class_room_object_a495befc3f5df6b9281359b66db12cca5}{Mono\+Create} (Mono\+Behaviour requester, Transform ref\+Transform, Transform my\+Parent=null)
+\begin{DoxyCompactList}\small\item\em Mono\+Create has the same issues as Mono\+Spawn, above. \end{DoxyCompactList}\item 
+I\+Enumerator \hyperlink{class_room_object_a30b0d74a7687520afada4fcc75b149b8}{Create} (Transform ref\+Transform, Transform my\+Parent=null)
+\begin{DoxyCompactList}\small\item\em Create is used to handle instantiation of an object dynamically while the level is running. Works like \hyperlink{class_room_object_a8a73cee299af481c4cd70501843e6005}{Spawn()}, but created to return notification of spawned object to script that requested the spawn. Which it does not seem to be doing yet T\+O\+DO make this function talk back to the script that requested it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries loc\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\hypertarget{class_room_object_a62de13bd465f1c3887fab7bfcba1fa14}{}\label{class_room_object_a62de13bd465f1c3887fab7bfcba1fa14}
+
+\item 
+int {\bfseries loc\+Num}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\hypertarget{class_room_object_a4f3fc564f819a477f7652297db4270f5}{}\label{class_room_object_a4f3fc564f819a477f7652297db4270f5}
+
+\item 
+Transform {\bfseries loc\+Transform}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\hypertarget{class_room_object_ab87c47750239563a0f63c1a0586bfb46}{}\label{class_room_object_ab87c47750239563a0f63c1a0586bfb46}
+
+\item 
+string {\bfseries object\+Asset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\hypertarget{class_room_object_aac6b31bcce4faf313c8e1123da3cad12}{}\label{class_room_object_aac6b31bcce4faf313c8e1123da3cad12}
+
+\item 
+Game\+Object {\bfseries game\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\hypertarget{class_room_object_a57d715cef98078120360f9ce93b30a8f}{}\label{class_room_object_a57d715cef98078120360f9ce93b30a8f}
+
+\item 
+Async\+Operation\+Handle$<$ Game\+Object $>$ {\bfseries handle}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\hypertarget{class_room_object_a186f3a34e1a575eabefaeaa89676cdca}{}\label{class_room_object_a186f3a34e1a575eabefaeaa89676cdca}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_room_object}{Room\+Object}\+: Class used for each object and sub-\/object in a room (furniture, medical equipment, etc.). 
+
+\subsection{Member Function Documentation}
+\index{Room\+Object@{Room\+Object}!Create@{Create}}
+\index{Create@{Create}!Room\+Object@{Room\+Object}}
+\subsubsection[{\texorpdfstring{Create(\+Transform ref\+Transform, Transform my\+Parent=null)}{Create(Transform refTransform, Transform myParent=null)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Room\+Object.\+Create (
+\begin{DoxyParamCaption}
+\item[{Transform}]{ref\+Transform, }
+\item[{Transform}]{my\+Parent = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_room_object_a30b0d74a7687520afada4fcc75b149b8}{}\label{class_room_object_a30b0d74a7687520afada4fcc75b149b8}
+
+
+Create is used to handle instantiation of an object dynamically while the level is running. Works like \hyperlink{class_room_object_a8a73cee299af481c4cd70501843e6005}{Spawn()}, but created to return notification of spawned object to script that requested the spawn. Which it does not seem to be doing yet T\+O\+DO make this function talk back to the script that requested it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref\+Transform} & Reference to existing transform with same position/rotation where new object should instantiate.\\
+\hline
+{\em my\+Parent} & (optional) Parent object that spawning object should be made a child of. Default is null.\\
+\hline
+\end{DoxyParams}
+\index{Room\+Object@{Room\+Object}!Mono\+Create@{Mono\+Create}}
+\index{Mono\+Create@{Mono\+Create}!Room\+Object@{Room\+Object}}
+\subsubsection[{\texorpdfstring{Mono\+Create(\+Mono\+Behaviour requester, Transform ref\+Transform, Transform my\+Parent=null)}{MonoCreate(MonoBehaviour requester, Transform refTransform, Transform myParent=null)}}]{\setlength{\rightskip}{0pt plus 5cm}void Room\+Object.\+Mono\+Create (
+\begin{DoxyParamCaption}
+\item[{Mono\+Behaviour}]{requester, }
+\item[{Transform}]{ref\+Transform, }
+\item[{Transform}]{my\+Parent = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_room_object_a495befc3f5df6b9281359b66db12cca5}{}\label{class_room_object_a495befc3f5df6b9281359b66db12cca5}
+
+
+Mono\+Create has the same issues as Mono\+Spawn, above. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em requester} & The Mono\+Behaviour that requested the spawn, which will be the Mono\+Behaviour that will actually run the Coroutine needed to spawn.\\
+\hline
+{\em ref\+Transform} & Reference to existing transform with same position/rotation where new object should instantiate.\\
+\hline
+{\em my\+Parent} & (optional) Parent object that spawning object should be made a child of. Default is null.\\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_object_a495befc3f5df6b9281359b66db12cca5_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Room\+Object@{Room\+Object}!Mono\+Spawn@{Mono\+Spawn}}
+\index{Mono\+Spawn@{Mono\+Spawn}!Room\+Object@{Room\+Object}}
+\subsubsection[{\texorpdfstring{Mono\+Spawn(\+Mono\+Behaviour requester, Transform ref\+Transform, Transform my\+Parent=null)}{MonoSpawn(MonoBehaviour requester, Transform refTransform, Transform myParent=null)}}]{\setlength{\rightskip}{0pt plus 5cm}void Room\+Object.\+Mono\+Spawn (
+\begin{DoxyParamCaption}
+\item[{Mono\+Behaviour}]{requester, }
+\item[{Transform}]{ref\+Transform, }
+\item[{Transform}]{my\+Parent = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_room_object_ac2c70e62649bf5a716ac906160b1ad6b}{}\label{class_room_object_ac2c70e62649bf5a716ac906160b1ad6b}
+
+
+Mono\+Spawn is used to handle instantiation of an object at time of level generation. Web\+GL builds can\textquotesingle{}t handle Asyncronous loading of objects and non-\/\+Monobehaviour classes cannot run coroutines. So, to solve this, the \hyperlink{class_room_object}{Room\+Object} class uses that Monobehaviour object of the script that requested the \hyperlink{class_room_object_a8a73cee299af481c4cd70501843e6005}{Spawn()} to actually run and manage the Coroutine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em requester} & The Mono\+Behaviour that requested the spawn, which will be the Mono\+Behaviour that will actually run the Coroutine needed to spawn.\\
+\hline
+{\em ref\+Transform} & Reference to existing transform with same position/rotation where new object should instantiate.\\
+\hline
+{\em my\+Parent} & (optional) Parent object that spawning object should be made a child of. Default is null.\\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_object_ac2c70e62649bf5a716ac906160b1ad6b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Room\+Object@{Room\+Object}!Spawn@{Spawn}}
+\index{Spawn@{Spawn}!Room\+Object@{Room\+Object}}
+\subsubsection[{\texorpdfstring{Spawn(\+Transform ref\+Transform, Transform my\+Parent=null)}{Spawn(Transform refTransform, Transform myParent=null)}}]{\setlength{\rightskip}{0pt plus 5cm}I\+Enumerator Room\+Object.\+Spawn (
+\begin{DoxyParamCaption}
+\item[{Transform}]{ref\+Transform, }
+\item[{Transform}]{my\+Parent = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_room_object_a8a73cee299af481c4cd70501843e6005}{}\label{class_room_object_a8a73cee299af481c4cd70501843e6005}
+
+
+Spawn is used to handle instantiation of an object at time of level generation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref\+Transform} & Reference to existing transform with same position/rotation where new object should instantiate.\\
+\hline
+{\em my\+Parent} & (optional) Parent object that spawning object should be made a child of. Default is null.\\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_object_a8a73cee299af481c4cd70501843e6005_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_object_a8a73cee299af481c4cd70501843e6005_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/pjd37/\+Documents/\+Git\+Hub/\+Blood\+Transfusion/\+B\+T/\+Assets/\+Scripts/\+Level\+Gen/Room\+Generator.\+cs\end{DoxyCompactItemize}

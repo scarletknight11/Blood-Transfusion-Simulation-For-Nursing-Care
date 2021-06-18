@@ -1,0 +1,7 @@
+If
+    ScoreTracker allcomplete
+Then
+    PerfectEnd on
+Else
+    Return
+Endif

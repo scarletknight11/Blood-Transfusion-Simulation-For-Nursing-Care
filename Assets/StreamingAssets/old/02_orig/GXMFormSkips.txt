@@ -1,0 +1,21 @@
+If
+ScoreTracker iscomplete 2
+Then 
+Goto 8
+Else
+GM Do '02/GXMForm.txt'
+Endif
+If
+ScoreTracker iscomplete 3
+Then 
+Goto 15
+Else 
+GM Do '02/GXMForm.txt'
+Endif
+If
+ScoreTracker iscomplete 4
+Then
+Goto 21
+Else
+ Do '02/GXMForm.txt'
+Endif

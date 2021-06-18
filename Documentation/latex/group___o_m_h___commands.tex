@@ -1,0 +1,201 @@
+\hypertarget{group___o_m_h___commands}{}\section{O\+M\+H\+\_\+\+Commands}
+\label{group___o_m_h___commands}\index{O\+M\+H\+\_\+\+Commands@{O\+M\+H\+\_\+\+Commands}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{group___o_m_h___commands_ga86c01c29831daf58f5b0ecc3ce65ee58}{Object\+Message\+Handler\+Base.\+Handle\+Message} (string msg, string param=null)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Commands for O\+MH 
+
+\subsection{Function Documentation}
+\index{O\+M\+H\+\_\+\+Commands@{O\+M\+H\+\_\+\+Commands}!Handle\+Message@{Handle\+Message}}
+\index{Handle\+Message@{Handle\+Message}!O\+M\+H\+\_\+\+Commands@{O\+M\+H\+\_\+\+Commands}}
+\subsubsection[{\texorpdfstring{Handle\+Message(string msg, string param=null)}{HandleMessage(string msg, string param=null)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Object\+Message\+Handler\+Base.\+Handle\+Message (
+\begin{DoxyParamCaption}
+\item[{string}]{msg, }
+\item[{string}]{param = {\ttfamily null}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{group___o_m_h___commands_ga86c01c29831daf58f5b0ecc3ce65ee58}{}\label{group___o_m_h___commands_ga86c01c29831daf58f5b0ecc3ce65ee58}
+
+
+
+
+\subsection*{\hyperlink{class_follow}{Follow} }
+
+{\bfseries  follow A\+I\+M\+\_\+\+O\+B\+J\+E\+CT \mbox{[}T\+A\+G\+E\+T\+\_\+\+O\+B\+J\+E\+CT $\vert$ T\+A\+R\+G\+E\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+T\+AG\mbox{]} }
+
+Follows the object T\+A\+R\+G\+E\+T\+\_\+\+O\+B\+J\+E\+CT or the object with tag T\+A\+R\+G\+E\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+T\+AG.
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\+A\+R\+G\+E\+T\+\_\+\+O\+B\+J\+E\+CT} & obect to move towards \\
+\hline
+{\em T\+A\+R\+G\+E\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+T\+AG} & tag of obect to move towards\\
+\hline
+\end{DoxyParams}
+Examples\+:
+\begin{DoxyCode}
+\hyperlink{class_player}{Player} \hyperlink{class_follow}{Follow} \hyperlink{class_player}{Player}
+\hyperlink{class_player}{Player} \hyperlink{class_follow}{Follow} $Nurse
+Cart \hyperlink{class_follow}{Follow} MainCamera
+\end{DoxyCode}
+ 
+
+
+
+
+
+ \subsection*{Switch\+To\+Scene }
+
+{\bfseries  Switch\+To\+Scene S\+C\+E\+N\+E\+\_\+\+N\+A\+ME }
+
+Switches to S\+C\+E\+N\+E\+\_\+\+N\+A\+ME parameter 
+\begin{DoxyParams}{Parameters}
+{\em S\+C\+E\+N\+E\+\_\+\+N\+A\+ME} & scene to switch to\\
+\hline
+\end{DoxyParams}
+Examples\+:
+\begin{DoxyCode}
+SwitchToScene \textcolor{stringliteral}{'Level2'}
+SwitchToScene $level
+\end{DoxyCode}
+ 
+
+
+
+Clickable objects and buttons
+
+\subsection*{Clickable.\+reset }
+
+\subsection*{Reset }
+
+{\bfseries  Clickable.\+Reset }
+
+Resets clicked-\/on flag
+
+Examples\+:
+\begin{DoxyCode}
+$Patient Clickable.reset
+$GXMForm reset
+\end{DoxyCode}
+ 
+
+
+
+\subsection*{Clickable.\+Is\+Pressed }
+
+\subsection*{Pressed }
+
+{\bfseries  Clickable.\+Is\+Pressed }
+
+Checks whether object was clicked on (clicked-\/on flag set) \begin{DoxyReturn}{Returns}
+whether object is pressed
+\end{DoxyReturn}
+Examples\+:
+\begin{DoxyCode}
+If 
+   $Patient Clickable.IsPressed
+Then
+   Do \textcolor{stringliteral}{'PatientCheck.txt'}
+Endif
+\end{DoxyCode}
+ 
+
+
+
+\subsection*{Clickable.\+On }
+
+\subsection*{Selectable }
+
+{\bfseries  Clickable.\+On \mbox{[} true $\vert$ false \mbox{]} }
+
+Checks whether object was clicked on (clicked-\/on flag set) 
+\begin{DoxyParams}{Parameters}
+{\em true} & or 1 for on, false or 0 for off. Omitted parameter is on.\\
+\hline
+\end{DoxyParams}
+Examples\+:
+\begin{DoxyCode}
+$Patient Clickable.On \textcolor{keyword}{true}
+$Patient Clickable.On $CanSelect
+$Patient Clickable.On
+\end{DoxyCode}
+ 
+
+
+
+Audio commands
+
+M\+O\+V\+E\+TO message sets camera position and rotation. moveto/align/orient target\+Object look\+At target\+Object viewer\+Object(for position) look\+At target\+Object (\char`\"{}close\char`\"{}, \char`\"{}medium\char`\"{}, or \char`\"{}far\char`\"{}(using \hyperlink{class_camera_target_params}{Camera\+Target\+Params} data)) 
+
+L\+O\+O\+K\+AT message sets camera position and rotation. look\+At target\+Object offset look\+At target\+Object viewer\+Object(for position) look\+At target\+Object (\char`\"{}close\char`\"{}, \char`\"{}medium\char`\"{}, or \char`\"{}far\char`\"{}(using \hyperlink{class_camera_target_params}{Camera\+Target\+Params} data)) 
+
+
+
+
+
+\subsection*{Menu.\+on }
+
+\subsection*{Menu.\+question }
+
+\subsection*{Menu.\+choices }
+
+\subsection*{Menu.\+done }
+
+\subsection*{Menu.\+result }
+
+\subsection*{Menu.\+choice }
+
+{\bfseries  Menu.\+on } -\/ turn object\textquotesingle{}s menu on
+
+{\bfseries  Menu.\+question} -\/ set menu\textquotesingle{}s question
+
+{\bfseries  Menu.\+choices C\+H\+O\+I\+C\+E\+\_\+\+S\+T\+R\+I\+N\+GS} -\/ set multiple-\/choice choices
+
+{\bfseries  Menu.\+done } -\/ true when choice has been made
+
+{\bfseries  Menu.\+result M\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+NG } -\/ bool containing whether choice matches M\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+NG
+
+{\bfseries  Menu.\+choice } -\/ string containing the choice that user made
+
+Switches to S\+C\+E\+N\+E\+\_\+\+N\+A\+ME parameter 
+\begin{DoxyParams}{Parameters}
+{\em C\+H\+O\+I\+C\+E\+\_\+\+S\+T\+R\+I\+N\+GS} & choices separated by space or comma. If choice has a space or commad, enclose in single quotes. \\
+\hline
+{\em M\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+NG} & string exactly matching one of the choices\\
+\hline
+\end{DoxyParams}
+Examples\+:
+\begin{DoxyCode}
+ ZoomSpot Menu.Choices \textcolor{stringliteral}{'Turn'} \textcolor{stringliteral}{'Cancel'} \textcolor{stringliteral}{'Put Back'}
+
+ ZoomSpot Menu.Question \textcolor{stringliteral}{'Infusion Set'}
+ ZoomSpot Menu.Choices \textcolor{stringliteral}{'Turn'} \textcolor{stringliteral}{'Cancel'} \textcolor{stringliteral}{'Put Back'}
+ ZoomSpot Menu.on ZoomSpot
+ WaitFor
+     ZoomSpot Menu.Done
+/ If
+     ZoomSpot Menu.Result \textcolor{stringliteral}{'Turn'}
+ Then
+      Prompt \textcolor{stringliteral}{'Chose to turn it'}
+\end{DoxyCode}
+ 
+
+
+
+Reimplemented in \hyperlink{class_object_message_handler_ae72846a48ca851170d68bef2ca496f07}{Object\+Message\+Handler}.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___o_m_h___commands_ga86c01c29831daf58f5b0ecc3ce65ee58_cgraph}
+\end{center}
+\end{figure}
+
+

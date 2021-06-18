@@ -1,0 +1,5 @@
+<map id="RoomObject.MonoSpawn" name="RoomObject.MonoSpawn">
+<area shape="rect" id="node2" href="$class_room_object.html#a8a73cee299af481c4cd70501843e6005" title="Spawn is used to handle instantiation of an object at time of level generation. " alt="" coords="227,11,367,37"/>
+<area shape="rect" id="node3" href="$class_room_generator.html#ae830ed790aac77b46d07122adfeabf8b" title="An object finished spawning in. If we&#39;ve finished spawning all objects, tell the Game Manager to star..." alt="" coords="416,5,610,43"/>
+<area shape="rect" id="node4" href="$class_game_manager.html#a0a09751dc063771cce98baeaff6dca56" title="StartScenario is a public function that allows another script to start the scene&#39;s scenario (RoomGene..." alt="" coords="659,11,853,37"/>
+</map>

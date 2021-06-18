@@ -1,0 +1,24 @@
+#Player lookat $PatLook
+Player align $PatLook
+/PatientCanvas on
+JoystickCanvas off
+$PatientFace align $PatLookPlayer
+Prompt 'Hello, did you have something to ask?'
+Wait .1
+Label 'PCLoop'
+	/PatientCanvas on
+	#/PatientCanvas/Choices/ALL off
+	/PatientCanvas/Choices/Education on
+	If
+		/PatientCanvas/Choices/Education pressed
+	Then
+		/PatientCanvas/Choices/Education reset
+		ScoreTracker gain 1
+		ScoreTracker complete 0
+		/PatientCanvas off
+		Do '06/PatientSpeak.txt'
+		JoystickCanvas on
+		Return
+	ENDIF
+	Wait .1
+Goto 'PCLoop'

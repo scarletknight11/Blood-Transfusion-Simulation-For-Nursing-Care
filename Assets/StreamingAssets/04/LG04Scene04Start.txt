@@ -1,0 +1,44 @@
+$Player align PlayerOrig
+#$Player lookat PlayerLook
+Debug 'LG04Scene04Start.txt'
+#Wait 3
+$Shelf outline.on
+
+Label 'Scene4_StartLoop'
+
+
+
+	$InfusionSet01 correctset
+
+	If
+		$Shelf pressed
+	Then
+		$Shelf outline.off
+		$InfusionSet = $InfusionSet01
+		$SetOrig = $SetOrig01
+		$InfusionSet01 outline.on
+		$InfusionSet02 outline.on
+		$InfusionSet03 outline.on
+		$Shelf reset
+		#Player lookat $InfusionSet01 #BinLook
+		$Player align $SetLook
+		#Wait .51
+		#Player lookat $InfusionSet01 #BinLook
+
+#		Do '04/LG04SetPicking.txt'
+	ENDIF
+
+	$InfusionSet = $InfusionSet01
+	$SetOrig = $SetOrig01
+	Do '04/LG04SetPicking.txt'
+
+	$InfusionSet = $InfusionSet02
+	$SetOrig = $SetOrig02
+	Do '04/LG04SetPicking.txt'
+
+	$InfusionSet = $InfusionSet03
+	$SetOrig = $SetOrig03
+	Do '04/LG04SetPicking.txt'
+
+	Wait .1
+Goto 'Scene4_StartLoop'

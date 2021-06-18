@@ -1,0 +1,15 @@
+If
+    InfusionSet01 isChosen
+Then
+    ScoreTracker gain 1
+    ScoreTracker complete 0
+    InfusionSet01 moveto SetCOWPosition
+    InfusionSet01 rotatetoy 180
+    InfusionSet01 rotatetox 180
+    InfusionSet01 rotatetoz 270
+    Do '04/PlayertoCOW.txt'
+Endif
+
+$InfusionSet moveto SetCOWPosition
+$InfusionSet matchrotation SetCOWPosition
+Do '04/PlayertoCOW.txt'

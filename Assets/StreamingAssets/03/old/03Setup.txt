@@ -1,0 +1,10 @@
+#BloodBox MoveTo Table/BoxTable
+#Create telephone 'telephone'
+#telephone MoveTo Table/TelephoneLoc
+
+$RefrigeratorDoor = 'RefrigeratorDoor'
+
+$lidoff = false
+ScoreTracker setstages 3
+End off
+Do '03/Scene03Start.txt'

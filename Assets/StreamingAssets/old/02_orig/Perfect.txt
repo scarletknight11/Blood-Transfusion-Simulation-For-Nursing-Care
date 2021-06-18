@@ -1,0 +1,16 @@
+If
+ScoreTracker allcomplete
+Then
+PerfectEnd on
+Else
+Goto 16
+Endif
+Label 'Loop'
+If
+End pressed
+Then
+End reset
+SceneManager switchtoscene Scenes/MainMenu
+Endif
+Goto 'Loop'
+Wait 1

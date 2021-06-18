@@ -1,0 +1,2 @@
+BadEnd on
+UICompletionTracker showtext

@@ -1,0 +1,37 @@
+If
+    Canvas/Scene01 pressed
+Then
+    SceneManager switchToScene Scenes/01
+Endif
+GM If
+Canvas/Scene02 pressed
+GM Then
+SceneManager switchToScene Scenes/02
+GM ENDIF
+GM If
+Canvas/Scene03 pressed
+GM Then
+SceneManager switchToScene Scenes/03
+GM ENDIF
+If
+Canvas/Scene04 pressed
+Then
+SceneManager switchToScene Scenes/04
+Endif
+If
+Canvas/Scene05 pressed
+Then
+SceneManager switchToScene Scenes/05
+Endif
+If
+Canvas/Scene06 pressed
+Then
+SceneManager switchToScene Scenes/06
+Endif
+If
+Canvas/Scene07 pressed
+Then
+SceneManager switchToScene Scenes/07
+Endif
+GM Wait 1
+GM goto 1

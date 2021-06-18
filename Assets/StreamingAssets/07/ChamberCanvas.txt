@@ -1,0 +1,10 @@
+ChamberCanvas on
+Player align ChamberLook
+Label 'Loop' 
+If
+	ChamberCanvas/Chamber/CheckFlow pressed
+Then
+	ChamberCanvas/Chamber/CheckFlow reset
+	Do '07/ChamberCheck.txt'
+Endif
+Goto 'Loop'

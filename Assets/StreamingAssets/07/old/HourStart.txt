@@ -1,0 +1,31 @@
+/StartCanvas off
+/PatientCanvas off
+/CannulaCanvas off
+/ComplaintCanvas off
+/TimeCanvas off
+Speaker1 ''
+/Player align PlayerStart
+Prompt 'After 1 hour of starting Blood Transfusion'
+Wait 2
+Prompt ''
+Label 'Loop'
+If
+	Cannula pressed
+Then
+	Cannula reset
+	Do '07/HourCannulaCanvas.txt'
+Endif
+If
+	Patient pressed
+Then
+	Patient reset
+	Do '07/Patient02.txt'
+Endif
+If
+	InfusionSet pressed
+Then
+	InfusionSet reset
+	Do '07/ChamberCanvas.txt'
+Endif
+Wait 1
+Goto 'Loop'

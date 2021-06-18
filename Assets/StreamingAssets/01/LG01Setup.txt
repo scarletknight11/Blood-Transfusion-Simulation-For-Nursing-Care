@@ -1,0 +1,76 @@
+#Debug.on
+#DebugCommands.on
+#Game.delay 0.2
+#DebugCanvas.on
+
+	/CheckCanvas off
+	/PatientCanvas off
+
+$Bed = 'Bed2'
+End off
+#Prompt 'Turn end off'
+#Wait 10
+$Patient = 'Bed2/Patient1/TEMP_Patient'
+$WristTag = 'Bed2/Patient1/WristTag'
+$TagView = $WristTag + '/TagView'
+$PatientFace = $Patient + '/metarig/spine/spine.001/spine.002/spine.003/spine.004'
+$PatLookPlayer = $Patient + '/TurntoPlayer'
+$PatLookReset = $Patient + '/TurnForward'
+
+$COW = 'Cart7'    #$COW = 'COW1(Clone)'
+#$COW outline.on
+$COWPatientPos = 'Cart02'   #$COWPatientPos = 'Cart02'
+
+#Debug 'Moving COW ' + COW + ' to ' + COWPatientPos
+#$COW moveto $COWPatientPos
+
+$GXMDeskPos = $COW + '/Pos02'
+$IDDeskPos = $COW + '/Pos03'
+$GXMForm = 'Desk7/Document3'
+$IDLabel = 'Desk7/Document4'
+
+$Deflook = 'table1(Clone)/far'   
+#$Deflook = 'table1(Clone)/MiddlePos close'   
+#far'
+Debug 'Deflook = ' + Deflook
+Player align $Deflook
+Wait 1
+$PlayerPatPos = 'Bed2/Medium'
+$PlayerLookPat = 'Bed2/Close'
+$Nurse = 'Nurse1'
+$NursePatPos = 'Bed02Nurse'
+
+ScoreTracker setstages 1
+
+#Do '01/LG01TagCheck.txt'
+#Wait 5
+
+Do '01/LG01Start.txt'
+
+#$COWPos01 = 'Cart7/Pos01'
+#$COWPos02 = 'Cart7/Pos03'
+
+$result1 = true
+$result2 = true
+If
+		$result1
+	Then
+		Prompt 'In outer Then'
+		Wait 1
+		If
+			$result2
+		Then
+			$taskNum = 8
+		Else
+			Debug 'PatientTalkCheck: not complete.  CheckPatient'
+			$taskNum = 4
+		Endif
+		Prompt 'After inner Endif tasknum= ' + taskNum
+		Wait 1
+	Endif
+
+
+Prompt 'After both ifs'
+Wait 1
+
+

@@ -1,0 +1,23 @@
+Player lookat $Monitor close
+$Monitor resetPressed
+$Monitor outline.off
+Wait 1.21
+   ZoomSpot Menu.Question Is there a valid prescription?
+   ZoomSpot Menu.on ZoomSpot
+WaitFor 
+   ZoomSpot Menu.Done 
+$Monitor outline.on
+If
+    ZoomSpot Menu.Result Y
+Then
+#   $Monitor changeshader good
+   ScoreTracker gain 1
+   ScoreTracker complete 0
+Else
+#   $Monitor changeshader bad
+   ScoreTracker gain 0
+Endif
+Wait .1
+#$Monitor enableclick
+#Player lookat $Deflook
+#Wait .1

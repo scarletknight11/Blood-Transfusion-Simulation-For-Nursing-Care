@@ -1,0 +1,23 @@
+ 
+   Viewer lookAt $formitem 0.0,0.2,-0.05
+#     View lookAt MedForm/SignatureLine 0.0,0.2,-0.05
+   Wait 2
+   MedForm Menu.Question $question
+   MedForm Menu.on $formitem
+   WaitFor 
+   MedForm Menu.Done 
+   Wait 1
+   $mark = 'Mark'+formitem
+   If
+    MedForm Menu.Result Y
+   Then
+    Create CheckMark $mark
+   Else
+     Create XMark $mark
+   Endif
+#   SigMark MoveTo MedForm/SignatureLine
+#   SigMark MoveTo $formitem
+   $mark MoveTo $formitem
+   Wait 3
+   MedForm lookAtMe 0.0,0.3,-0.05  #zoom out still looking at MedForm
+   Wait 1

@@ -1,0 +1,13 @@
+Label 'Loop'
+	Debug 'WaitForSelectedItem' + item
+	$item outline.on
+	If
+		$item pressed
+	Then
+		$item reset
+		$item outline.off
+		Player lookat $item
+		Return
+	Endif
+	Wait .1
+Goto 'Loop'

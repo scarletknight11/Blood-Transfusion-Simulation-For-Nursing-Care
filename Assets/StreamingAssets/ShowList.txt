@@ -1,0 +1,10 @@
+$Checklist on
+Label 'Loop'
+If
+	$ChecklistButton pressed
+Then
+	$ChecklistButton resetPressed
+	$Checklist off
+	Do $Scene
+Endif
+Goto 'Loop'

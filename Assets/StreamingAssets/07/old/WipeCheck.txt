@@ -1,0 +1,23 @@
+/DishCanvas off
+/WipeCanvas on
+Label 'Loop'
+If
+	WipeCanvas/One pressed
+Then 
+	WipeCanvas/One reset
+Endif
+If
+	WipeCanvas/One/Five pressed
+Then
+	WipeCanvas/One/Five reset
+Endif
+If	
+	WipeCanvas/One/Ten pressed
+Then
+	ScoreTracker gain 1
+	ScoreTracker complete 12
+	WipeCanvas/One/Ten reset
+	Wipe1 reset
+	Do '07/Dish.txt'
+Endif
+Goto 'Loop'

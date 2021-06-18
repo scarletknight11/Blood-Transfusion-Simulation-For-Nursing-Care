@@ -1,0 +1,25 @@
+GXMForm lookAtMe 0.0,0.3,-0.05
+GXMForm reset
+#GXMForm/SignatureLine reset
+#GXMForm/BloodLine reset
+#GXMForm/ValidLine reset
+Label 'Loop'
+#### PATIENT
+$formitem = 'MedForm/SignatureLine'
+$question = 'Is this the correct patient?'
+Do 'GMXFormItem.txt'
+#### BLOODLINE
+$formitem = 'MedForm/BloodLine'
+$question = 'Is the blood ordered correct?'
+#### VALID 
+$formitem = 'MedForm/ValidLine'
+$question = 'Is it valid?'
+Do 'GMXFormItem.txt'
+#### EXIT
+If
+  GXMForm/Canvas/Exit pressed
+Then
+  GXMForm/Canvas/Exit reset
+  Do '02/GXMCheck.txt'
+Endif
+Goto 'Loop'

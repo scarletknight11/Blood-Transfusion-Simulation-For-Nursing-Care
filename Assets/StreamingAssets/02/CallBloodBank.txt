@@ -1,0 +1,21 @@
+$Phone selectable false
+#Wait .3
+ZoomSpot menu.Question Call Blood Bank?
+ZoomSpot menu.on ZoomSpot
+WaitFor 
+ZoomSpot menu.done 
+Wait .1
+If
+   ZoomSpot menu.Result Y
+Then
+   ScoreTracker gain 1
+   ScoreTracker complete 1
+   wait .1
+#   $Phone changeshader good
+   Wait .25
+   Do 'EndCheck.txt'
+Else
+#   Player lookat $Deflook
+   $Phone selectable true
+#   Do '02/02MainLoop.txt'
+Endif

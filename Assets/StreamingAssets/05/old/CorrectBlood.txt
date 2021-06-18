@@ -1,0 +1,13 @@
+/PatientCanvas off
+ZoomSpot Menu.Question 'Is this the correct blood type?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+    ZoomSpot Menu.Done
+Wait .1
+If
+    ZoomSpot Menu.Result Y
+Then
+    ScoreTracker gain 1
+    ScoreTracker complete 5
+Endif
+Do '05/PatientIdle.txt'

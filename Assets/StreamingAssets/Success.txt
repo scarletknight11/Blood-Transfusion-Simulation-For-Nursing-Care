@@ -1,0 +1,16 @@
+If
+    ScoreTracker percentachieved 80
+Then
+    UICompletion good
+Else
+    Do 'Failure.txt'
+Endif
+Label 'Loop'
+    If
+        Leave pressed
+    Then
+        Leave reset
+        SceneManager switchtoscene Scenes/MainMenu
+    Endif
+    Wait .1
+Goto 'Loop'

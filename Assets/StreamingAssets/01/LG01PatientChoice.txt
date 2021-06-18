@@ -1,0 +1,75 @@
+#PatientChoice
+#Start->PatientChoice
+
+Debug 'PatientChoice.txt'
+
+#Player lookat $PlayerPatPos medium
+$COW moveto $COWPatientPos
+Wait .15
+Player align $PlayerPatPos 
+Debug 'Moving COW'
+
+JoystickCanvas on
+PatientCanvas off
+CheckCanvas off
+
+$Nurse outline.on
+$Patient outline.on
+$WristTag outline.on
+$IDLabel outline.on
+$IDLabel selectable true
+$IDLabel outline.color off
+
+$Patient reset
+
+#wait 1
+Label 'PCLoop'
+	Debug 'In PatientChoice Loop'
+#	Wait .1
+
+	If
+		$Nurse pressed
+	Then
+		$Nurse reset
+		$Nurse selectable false
+		$Nurse outline.off
+		Player lookat $Nurse
+		Do '01/LG01NurseCall.txt'
+		Player align $PlayerPatPos 
+	Endif
+
+	If
+		$Patient pressed
+	Then
+		$Patient reset
+		$Patient selectable false
+#		$Patient outline.off
+		Do '01/LG01PatientMeet.txt'
+#		$Patient outline.on
+		JoystickCanvas on
+		Player align $PlayerPatPos 
+	Endif
+
+	If
+		$WristTag pressed
+	Then
+		$WristTag reset
+		$WristTag selectable false
+		$WristTag outline.off
+		Do '01/LG01TagCheck.txt'
+		Player align $PlayerPatPos 
+	Endif
+
+	If
+		$IDLabel pressed
+	Then
+		$IDLabel reset
+		$IDLabel selectable false
+		$IDLabel outline.off
+		Do '01/LG01LabelBlood.txt'
+		Player align $PlayerPatPos 
+
+	Endif
+
+	wait .11
+Goto 'PCLoop'

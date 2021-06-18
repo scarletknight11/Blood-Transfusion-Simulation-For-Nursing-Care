@@ -1,0 +1,38 @@
+wait .1
+Player align PlayerTable
+wait .1
+Table outline.off
+GXMForm/FormGeom outline.on
+BloodBox/Divider outline.on
+
+Label 'Loop'
+    wait .1
+    If
+        BloodBox/Lid pressed
+    Then
+        BloodBox/Lid reset
+        Do '03/LidOpen.txt'
+    ENDIF
+
+    If
+        IcePack pressed
+    Then
+        IcePack reset
+        Do '03/IceBoxCheck.txt'
+    ENDIF
+
+    If
+        Divider pressed
+    Then
+        Divider reset
+        Do '03/DividerCheck.txt'
+    ENDIF
+
+    If
+        Paper pressed
+    Then
+        Paper reset
+        Do '03/GXMCheck.txt'
+    ENDIF
+
+Goto 'Loop'

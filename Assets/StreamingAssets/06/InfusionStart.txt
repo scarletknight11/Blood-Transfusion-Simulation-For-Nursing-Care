@@ -1,0 +1,19 @@
+IVCanvas on
+DripCanvas off
+Player align IVLook
+Prompt ''
+Label 'Loop'
+If
+	InfusionSet pressed
+Then
+	InfusionSet reset
+	Player lookat PlayerSqueezeLook
+	Do '06/BagSqueeze.txt'
+Endif
+If
+	InfusionClamp pressed
+Then
+	InfusionClamp reset
+	Do '06/ClampRelease.txt'
+Endif
+Goto 'Loop'

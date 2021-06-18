@@ -1,0 +1,9 @@
+Label 'Loop'
+If
+	Nurse pressed
+Then
+	Player lookat Nurse
+	Do '01/NurseCall.txt'
+ENDIF
+Wait 1
+Goto 'Loop'

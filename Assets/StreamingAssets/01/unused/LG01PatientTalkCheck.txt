@@ -1,0 +1,12 @@
+Debug 'PatientTalkCheck'
+#Start->PatientChoice->PatientMeet->PatientTalkCheck
+#Wait 1
+If
+    ScoreTracker iscomplete 4
+Then
+    $taskNum = 8
+Else
+    Debug 'PatientTalkCheck: not complete.  CheckPatient'
+    $taskNum = 4
+Endif
+    Do '01/LG01PatientCheck.txt'

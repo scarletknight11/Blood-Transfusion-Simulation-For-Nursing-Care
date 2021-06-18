@@ -1,0 +1,16 @@
+/Patient on
+ExamRoom1/ER1Door rotateY 10.2
+GM Wait 3
+/Patient follow true
+GM Wait 3
+/Patient follow false
+GM Wait 3
+GM If
+/RoomLight isOn
+GM Then
+/RoomLight off
+GM Else
+/RoomLight on
+GM Wait 2
+GM Endif
+#GM Goto 2

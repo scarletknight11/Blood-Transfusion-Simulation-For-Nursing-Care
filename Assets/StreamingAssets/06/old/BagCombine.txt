@@ -1,0 +1,14 @@
+Player lookat BloodBag
+/COWCanvas off
+/BloodCanvas on
+Label 'Loop'
+If
+	BloodBag pressed
+Then
+	BloodBag moveto BagTableEnd
+	ScoreTracker gain 1
+	ScoreTracker complete 7
+	Wait 1
+	Do '06/PoleSetup.txt'
+Endif
+Goto 'Loop'

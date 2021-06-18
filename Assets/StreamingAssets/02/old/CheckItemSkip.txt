@@ -1,0 +1,13 @@
+#CheckItemSkip - if scoretracker has item complete, then item requires a pressed
+# $item - item number in score tracker
+  If
+    ScoreTracker iscomplete $item
+  Then
+    Prompt $'Item #' + item + ' is complete'
+    $formCheck = 'Forms/CheckFormItemPressed.txt'
+    Pause .3
+  Else
+    Prompt $'Item #' + item + ' is NOT complete'
+    $formCheck = 'Forms/CheckFormItemStatus.txt'
+    Pause .3
+  Endif

@@ -1,0 +1,11 @@
+BadEnd on
+UICompletionTracker showtext
+Label 'Loop'
+If
+End pressed
+Then
+End reset
+SceneManager switchtoscene Scenes/MainMenu
+Endif
+Goto 'Loop'
+Wait 1

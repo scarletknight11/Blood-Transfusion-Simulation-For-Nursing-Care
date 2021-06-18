@@ -1,0 +1,3 @@
+ScoreTracker setstages 7
+End off
+Do '07/07Start.txt'

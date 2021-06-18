@@ -1,0 +1,11 @@
+Label Line 1
+Label Line2
+GM Prompt 'Prompt 1'
+GM Wait 1
+Prompt 'Prompt 2'
+Wait 1
+Prompt 'Number 3'
+Wait 1
+Goto Line 1
+Prompt 'Number 4'
+Wait 1

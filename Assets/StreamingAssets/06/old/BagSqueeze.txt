@@ -1,0 +1,12 @@
+DripCanvas on
+IVCanvas off
+Label 'Loop'
+If
+	DripCanvas/Squeeze pressed
+Then
+	DripCanvas/Squeeze reset
+	Prompt 'The bag has been filled to 50 percent'
+	Wait 1	
+	Do '06/SecondSqueeze.txt'
+Endif
+Goto 'Loop'

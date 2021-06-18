@@ -1,0 +1,23 @@
+MainCamera lookat Desk1/Phone2  -0.5 0.5 -1.0
+Wait 2
+MainCamera lookat Desk1/Computer1 0.0 0.25 -1.0
+Wait 2
+MainCamera lookat Chair1 1.0 2.0 -1.5
+Wait 2
+MainCamera lookat Desk1/Document3 -0.0 0.5 -0.5
+Wait 2
+MainCamera lookat Desk1/Document4 -0.0 0.5 -0.5
+Wait 2
+MainCamera lookat Desk1/Document3 -0.0 1.25 -0.5
+Wait 2
+MainCamera lookat Desk1/Document4 -0.0 1.25 -0.5
+Wait 2
+MainCamera lookat Desk1/Document3 -0.0 0.35 -0.15
+Wait 2
+MainCamera lookat Desk1/Document4 -0.0 0.35 -0.15
+Wait 2
+MainCamera lookat SuzieWalk  1.0 1.5 -1.0
+Wait 2
+MainCamera lookat Chair1 -2.0 1.0 -2.0
+Wait 2
+MainCamera lookat Chair1 1.0 1.0 -1.75

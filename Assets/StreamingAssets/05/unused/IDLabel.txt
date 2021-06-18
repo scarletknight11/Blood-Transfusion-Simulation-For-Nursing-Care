@@ -1,0 +1,20 @@
+StandingComputerdesk/IDLabel align ZoomSpot
+StandingComputerdesk/IDLabel rotatetoz 90
+ZoomSpot Menu.Question 'Is this the correct patient?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+Wait 1
+If
+	ZoomSpot Menu.Result Y
+Then
+	IDLabel reset
+	StandingComputerdesk/IDLabel align LabelPos
+	ScoreTracker gain 1
+	ScoreTracker complete 4
+	Do '05/PatientIdle.txt'
+Else
+	IDLabel reset
+	StandingComputerdesk/IDLabel align LabelPos
+	Do '05/PatientIdle.txt'
+Endif

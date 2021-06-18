@@ -1,0 +1,11 @@
+If
+ScoreTracker iscomplete 7
+Then
+Goto 9
+Else
+BloodBox/Lid play Close
+wait 1
+ScoreTracker gain 1
+ScoreTracker complete 7
+Do 'EndCheck.txt'
+Endif

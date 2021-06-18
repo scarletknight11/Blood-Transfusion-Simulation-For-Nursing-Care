@@ -1,0 +1,9 @@
+If
+    ScoreTracker rangecomplete 5-8
+Then
+    Prompt 'RANGE COMPLETE'
+    return
+Else
+    Prompt 'DO CONSENT FORM'
+    Do '02/ConsentForms.txt'
+Endif

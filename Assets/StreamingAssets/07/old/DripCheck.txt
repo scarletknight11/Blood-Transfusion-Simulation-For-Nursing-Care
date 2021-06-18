@@ -1,0 +1,13 @@
+Label 'Loop'
+If
+	ChamberCheck/Chamber/DripFactor says 20
+Then
+	Do '07/TimeCheck.txt'
+Endif
+If
+	ChamberCheck/Chamber/Volume says 258
+Then
+	Goto 'Loop'
+Else
+	Do '07/ChamberCheck.txt'
+Endif

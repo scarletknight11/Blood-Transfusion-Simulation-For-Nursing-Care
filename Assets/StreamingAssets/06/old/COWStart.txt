@@ -1,0 +1,55 @@
+WipeCanvas off
+/SyringeCanvas off
+/IVCanvas off
+/DripCanvas off
+Player align DeskStart
+Label 'Loop'
+If
+	Soap pressed
+Then
+	Soap reset
+	Do '06/Sanitizer.txt'
+Endif
+If
+	Gloves pressed
+Then
+	Gloves reset
+	Do '06/Gloves.txt'
+Endif
+If
+	KidneyDish pressed
+Then
+	KidneyDish reset
+	Do '06/Dish.txt'
+Endif
+If
+	BloodBag pressed
+Then
+	BloodBag reset
+	BloodBag align BagTableSpot
+Endif
+If
+	Set pressed
+Then
+	Set reset
+	Set align SetTablePos
+	Do '06/BagCombine.txt'
+Endif
+If
+	PressureCuff pressed
+Then
+	PressureCuff reset
+	PressureCuff align CuffPos
+	ScoreTracker gain 1
+	ScoreTracker complete 11
+	Player lookat Patient/Cube
+	Do '06/Connector.txt'
+Endif
+If
+	Vitalsmonitor pressed
+Then
+Vitalsmonitor reset
+Do '06/MonitorTwo.txt'
+Endif
+Wait 1
+Goto 'Loop'

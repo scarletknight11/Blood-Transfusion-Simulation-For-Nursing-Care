@@ -1,0 +1,29 @@
+#$foo = 'bar'
+#Prompt 'foo = ' + foo
+
+$Player = 'Player'
+$Monitor = 'Monitor'
+$GXMForm = 'GXMForm'
+$ConsentForms = 'ConsentForms'
+$Phone = 'Phone'
+
+$GXMForm outline.on
+$ConsentForms outline.on
+$Phone outline.on
+$Monitor outline.on
+
+$MonLook = $Monitor + ' close'
+$GXMLook = $GXMForm + '/ShotMedium'
+#$GXMLook = $GXMForm + ' medium'
+$ConLook = $ConsentForms + ' medium'
+$PhoLook = $Phone +' close'
+
+#$DefLook = 'DefCamPos'
+#$DefCamPos = 'DefCamPos'
+$Deflook = 'Table/FrontMiddle'
+
+#Wait 5
+End off
+ScoreTracker setstages 2
+wait .1
+Do '02/02MainLoop.txt'

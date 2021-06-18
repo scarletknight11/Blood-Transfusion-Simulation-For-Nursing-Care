@@ -1,0 +1,38 @@
+/PatientCanvas off
+/LabelCanvas off
+/CheckCanvas off
+/COWCanvas off
+
+Player lookat $Deflook
+
+$item = $Nurse
+#Do '05/WaitForSelectItem.txt'
+$Nurse outline.on
+Debug 'Nurse Selected.  Call Nurse?'
+
+#Do '05/WaitForNurseCall.txt'
+Debug 'Returned from WaitForNurseCall'
+
+#Main Patient loop
+Do '05/LGPatientIdle.txt'
+
+Return
+
+####### NOT USED  ############
+
+#$Patient outline.on
+Debug 'PatientIdle: turning outline on for Patient' 
+$Patient outline.on
+Debug 'PatientIdle: turned outline on'
+
+$item = $Patient
+Do '05/WaitForSelectItem.txt'
+ScoreTracker gain 1
+ScoreTracker complete 0
+
+Debug 'Looking at PlayerPatPos'
+Player align $PlayerPatPos
+Wait 1
+
+
+Do '05/LGPatientIdle.txt'

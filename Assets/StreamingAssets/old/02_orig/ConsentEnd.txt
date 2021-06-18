@@ -1,0 +1,7 @@
+If
+ScoreTracker rangecomplete 5-8
+Then
+ConsentForm/FormGeom changeshader good
+Else
+ConsentForm/FormGeom changeshader bad
+Endif

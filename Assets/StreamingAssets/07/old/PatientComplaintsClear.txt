@@ -1,0 +1,18 @@
+/PatientCanvas off
+/ComplaintCanvas on
+Label 'Loop'
+If
+/ComplaintCanvas/Symptom pressed
+Then
+/ComplaintCanvas/Symptom reset
+/ComplaintCanvas off
+Speaker1 'Are you okay? Do you feel any pain?'
+Wait 2
+Patient reset
+Prompt 'I am good, thank you. I feel well.'
+Wait 2
+ScoreTracker gain 1
+ScoreTracker complete 2
+Do '07/07Start.txt'
+Endif
+Goto 'Loop'

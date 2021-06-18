@@ -1,0 +1,13 @@
+Label 'Loop'
+If
+	ChamberCheck/Chamber/TotalTime says 4
+Then
+	Do '07/StartDripTest.txt'
+Endif
+If
+	ChamberCheck/Chamber/DripFactor says 20
+Then
+	Goto 'Loop'
+Else
+	Do '07/DripCheck.txt'
+Endif

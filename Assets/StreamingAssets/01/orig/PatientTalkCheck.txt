@@ -1,0 +1,7 @@
+If
+ScoreTracker iscomplete 4
+Then
+Do '01/PatientCheckTwo.txt'
+Else
+Do '01/PatientCheck.txt'
+Endif

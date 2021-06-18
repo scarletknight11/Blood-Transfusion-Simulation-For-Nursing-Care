@@ -1,0 +1,25 @@
+If
+    ScoreTracker iscomplete 5
+Then
+    Return
+Endif
+
+If
+    ScoreTracker iscomplete 3
+Then
+    wait 1
+    IcePack align IceBox
+    wait 1
+Else
+    Return
+Endif
+If
+    ScoreTracker iscomplete 1
+Then
+    wait 1
+    IcePack align IceBox
+    wait 1
+    ScoreTracker gain 1
+    ScoreTracker complete 4
+Else
+Endif

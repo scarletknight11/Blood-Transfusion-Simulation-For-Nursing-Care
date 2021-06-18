@@ -1,0 +1,26 @@
+ If
+  Monitor pressed
+ Then
+  Monitor reset
+  Do '02/Monitor.txt'
+ Endif
+ If
+  GXMForm pressed
+ Then
+  GXMForm reset 
+  Do '02/GXMFormSkips.txt'
+ ENDIF
+ If
+  ConsentForm/FormGeom pressed
+ Then
+  ConsentForm/FormGeom reset
+  Do '02/ConsentFormSkips.txt'
+ ENDIF
+ If
+  Phone pressed
+ Then
+  Phone reset
+  Do '02/Phone.txt'
+ ENDIF
+ Wait 1
+Goto 1

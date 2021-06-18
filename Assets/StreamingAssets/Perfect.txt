@@ -1,0 +1,17 @@
+If
+    ScoreTracker allcomplete
+Then
+    UICompletion perfect
+Else
+    Do 'Success.txt'
+Endif
+
+Label 'Loop'
+    If
+        Leave pressed
+    Then
+        Leave reset
+        SceneManager switchtoscene Scenes/MainMenu
+    Endif
+    Wait .1
+Goto 'Loop'

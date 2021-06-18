@@ -1,0 +1,32 @@
+Label '01Loop'
+/CheckCanvas off
+/PatientCanvas off
+If
+	GXMForm pressed
+Then
+	GXMForm reset
+	GXMForm align $GXMDeskPos
+	GXMForm parentto COW
+	ScoreTracker gain 1
+	ScoreTracker complete 1
+ENDIF
+Wait 1
+If
+	IDLabel pressed
+Then
+	IDLabel reset
+	IDLabel align $IDDeskPos
+	IDLabel parentto COW
+	ScoreTracker gain 1
+	ScoreTracker complete 0
+ENDIF
+Wait 1
+If
+	Beds/Bed pressed
+Then
+	Beds/Bed reset
+	ScoreTracker gain 1
+	ScoreTracker complete 2
+	Do '01/PatientChoice.txt'
+ENDIF
+Goto '01Loop'

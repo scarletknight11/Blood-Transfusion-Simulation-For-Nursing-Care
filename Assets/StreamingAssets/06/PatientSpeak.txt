@@ -1,0 +1,40 @@
+Prompt ''
+
+$PatientFace lookAtMe
+Speaker2 ''
+Speaker1 'Patient: Nurse, are you giving me the blood transfusion?'
+Wait 2
+
+#$NurseFace lookAtMe   
+Speaker1 ''
+Speaker2 'Nurse: Yes. When the blood is transfusing, let me know'
+Wait 2
+Speaker2 'if you feel unwell, like chills, rigor, or fever.'
+Wait 2
+Speaker2 'Nurse: Also let me know if you notice any'
+Wait 2
+Speaker2 ' red spots or rashes over your body.'
+Wait 2
+
+$PatientFace lookAtMe
+Speaker2 ''
+Speaker1 'Patient: How long will it take?'
+Wait 2
+
+#$NurseFace lookAtMe   
+Speaker1 ''
+Speaker2 'Nurse: The transfusion takes about 4 hours.'
+Wait 2
+
+$PatientFace lookAtMe
+Speaker2 ''
+Speaker1 'Patient: Okay. Thank you'
+Wait 2
+
+Speaker2 ''
+Speaker1 ''
+
+$Patient play TurnRight
+$PatientFace align $PatLookReset
+Return
+#Do '06/06Start.txt'

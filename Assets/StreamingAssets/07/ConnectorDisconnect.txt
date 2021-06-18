@@ -1,0 +1,18 @@
+Player align ConnectorLook
+ZoomSpot Menu.Question 'Disconnect Connector?'
+ZoomSpot Menu.on ZoomSpot
+WaitFor
+ZoomSpot Menu.Done
+If
+ZoomSpot Menu.Result Y
+Then
+Prompt 'You disconnect the connector.'
+ScoreTracker gain 1
+ScoreTracker complete 15
+Wait 1
+$Cannula reset
+Do '07/Dish.txt'
+Else
+$Cannula reset
+Do '07/Dish.txt'
+Endif
