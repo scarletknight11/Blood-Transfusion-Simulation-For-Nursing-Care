@@ -1,0 +1,58 @@
+{
+  "Name": "Acetoacetate",
+  "MolarMass": {
+    "ScalarMassPerAmount": {
+      "Value": 102.09,
+      "Unit": "g/mol"
+    }
+  },
+  "State": "Liquid",
+  "Clearance": {
+    "SystemicClearance": {
+      "FractionExcretedInFeces": {
+        "Scalar0To1": {
+        }
+      },
+      "FractionUnboundInPlasma": {
+        "Scalar0To1": {
+          "Value": 1.0
+        }
+      },
+      "IntrinsicClearance": {
+        "ScalarVolumePerTimeMass": {
+          "Unit": "mL/min kg"
+        }
+      },
+      "RenalClearance": {
+        "ScalarVolumePerTimeMass": {
+          "Unit": "mL/min kg"
+        }
+      },
+      "SystemicClearance": {
+        "ScalarVolumePerTimeMass": {
+          "Value": 17.8,
+          "Unit": "mL/min kg"
+        }
+      }
+    },
+    "RenalClearance": {
+      "Regulation": {
+        "ChargeInBlood": "Neutral",
+        "FractionUnboundInPlasma": {
+          "Scalar0To1": {
+            "Value": 1.0
+          }
+        },
+        "ReabsorptionRatio": {
+          "Value": "Infinity"
+        },
+        "TransportMaximum": {
+          "ScalarMassPerTime": {
+            "Value": "Infinity",
+            "Unit": "mg/min"
+          }
+        }
+      }
+    }
+  }
+}
