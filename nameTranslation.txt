@@ -36,6 +36,7 @@ CPOHHFKDLEG⇨ClampAngle
 ACEPIANFALH⇨collision
 BCFJMLLMLAC⇨comparer
 AEJJEAINKHC⇨ComputeHeaders
+LGLCJEMPJJG⇨context
 PEEMHPGKGOH⇨CreateChildren
 NDEJBCDJLAB⇨CreateClone
 GAALGDKEIDL⇨CreateCylinder
@@ -86,6 +87,8 @@ EPOHNBGMBEF⇨normalised
 NFLJKIBOHCC⇨obj
 JMKKKLAFHBK⇨OldClone
 ANOGOHFCCIL⇨OnCollisionEnter3D
+CLOILEHMGLE⇨OnTeleportActivate
+PGGEDDDDDPB⇨OnTeleportCancel
 JEDFJAJPCMP⇨outline
 ECEGICMIDEM⇨p_input
 IFMMBIMBCEM⇨pair
