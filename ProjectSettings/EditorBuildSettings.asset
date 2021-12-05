@@ -5,93 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 1be2101ac0d5c644387839028d57b036
-  - enabled: 1
-    path: Assets/Scenes/01.unity
-    guid: 0e27a8babc3d1ab468d4e5cba973e6f7
-  - enabled: 1
-    path: Assets/Scenes/02.unity
-    guid: 297a7126e7e9a6846abf5e54c5650cae
-  - enabled: 1
-    path: Assets/Scenes/03.unity
-    guid: b04df9dfc83b8d1409110f531ad97e7d
-  - enabled: 1
-    path: Assets/Scenes/04.unity
-    guid: 92728ed00d78a494186da80521ef86e2
-  - enabled: 1
-    path: Assets/Scenes/05.unity
-    guid: 79b3ef7373f797b48b1c64119fa14329
-  - enabled: 1
-    path: Assets/Scenes/06.unity
-    guid: 3a31ecdc8962d8747af695cb511286d9
-  - enabled: 1
-    path: Assets/Scenes/07.unity
-    guid: f549030774cfdfd43bebb0338f380161
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomLrgDoubleWard_base01.unity
-    guid: b0fa5f97672da52428f6ff84a4c0c52c
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomLrgDoubleWard_base02.unity
-    guid: d5d744e41e613784ea3a6033cfa4eea8
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomLrgPatient_base.unity
-    guid: 2a3a749804737b74f9f9277a43e34918
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomMedBreak_3couch.unity
-    guid: f45218dd9c1340f4597551ba28514e1c
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomMedExam_3bed.unity
-    guid: b3a3514ca5e649d48af5bf1c6b5d22b6
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomMedExam_base.unity
-    guid: 27fda95552348c3488eb12e89ee9dea6
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomMedOffice_base.unity
-    guid: 398505bffd9f211409b5daca810f55fc
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomMedPatient_3bed.unity
-    guid: 670dbdd8d0f573340b8e59b714e1a8cb
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomXLGPatient_base.unity
-    guid: bafe963876585714da0029989082dcc4
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomXLGWaiting_base.unity
-    guid: 3cd5a327f9633cc429669392908cf928
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomLrgOffice_base.unity
-    guid: 50e790e8087cb0d4fbe958111c4c45ef
-  - enabled: 1
-    path: Assets/ScenesRooms/RoomSmlStorage_base.unity
-    guid: 51dd81029da7f8b4892603b59a543925
   - enabled: 0
-    path: Assets/Scenes/RoomGenerationTest.unity
-    guid: a82fc469666768041806f1c66eff6c47
+    path: Assets/PolygonStarter/Scenes/Demo.unity
+    guid: 5215016c20f88ea498985ac3e0ab4f9d
   - enabled: 0
-    path: Assets/Scenes/RoomGenWalkingDemo.unity
-    guid: 5a86a1a9177fc674ca1a9863290a991b
-  - enabled: 0
-    path: Assets/Scenes/orig/01.unity
-    guid: c5645d60735f77d4a9f7253d40a23347
-  - enabled: 0
-    path: Assets/Scenes/orig/02.unity
-    guid: 1d543b60293d0b5418c40f3f7f71bfd7
-  - enabled: 0
-    path: Assets/Scenes/orig/03.unity
-    guid: 96d0f8fe175a14f46b895b6dc85bba1e
-  - enabled: 0
-    path: Assets/Scenes/orig/04.unity
-    guid: efa2e3bdbb380c1498ed1bbb2fc140bc
-  - enabled: 0
-    path: Assets/Scenes/orig/05.unity
-    guid: c6dc0091b388ef74f8d5762000043172
-  - enabled: 0
-    path: Assets/Scenes/orig/06.unity
-    guid: 9065e6317ca6aa4408ee976e1dc96447
-  - enabled: 0
-    path: Assets/Scenes/orig/07.unity
-    guid: 60e00b0bc40819c41a83c131573a048a
+    path: Assets/BT/Scenes/BT_Stage1.unity
+    guid: b5a70f39a4e3043f6906a7011cd957f1
+  - enabled: 1
+    path: Assets/Scenes/birthdeliverysimulation.unity
+    guid: b037824a837627c42b88aea8dc4d1225
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2960e7d0c0c67d0458293b344a3f82f8,
       type: 2}
